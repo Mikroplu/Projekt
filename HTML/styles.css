@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+body, html{
+	width:100%;
+	height:100%;
+	margin:0;
+}
+#header{
+	width:100%;
+	height:10%;
+	background-color: black;
+}
+
+#footer{
+	width:100%;
+	height:10%;
+	background-color: black;
+}
+
+#content1{
+	width:100%;
+	height:80%;
+	background-color:gray;
+	display: block;
+}
+
+#content2{
+	width:100%;
+	height:80%;
+	background-color:gray;
+	display:none;
+	
+}
+
+#content3{
+	width:100%;
+	height:80%;
+	background-color:gray;
+	display:none;
+}
+
+#content4{
+	width:100%;
+	height:80%;
+	background-color:gray;
+	display:none;
+}
+
