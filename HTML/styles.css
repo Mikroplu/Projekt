@@ -4,6 +4,7 @@ body, html{
 	height:100%;
 	margin:0;
 }
+
 #header{
 	width:100%;
 	height:10%;
@@ -15,18 +16,29 @@ body, html{
 	height:10%;
 	background-color: black;
 }
+.subcontent{
+	margin:auto;
+	width:50%;
+	height:100%;
+	background-color: white;
+}
+@media only screen and (max-width: 500px) {
+    .subcontent{
+        width:800px;
+    }
+}
 
 #content1{
 	width:100%;
 	height:80%;
-	background-color:gray;
+	background-color:green;
 	display: block;
 }
 
 #content2{
 	width:100%;
 	height:80%;
-	background-color:gray;
+	background-color:red;
 	display:none;
 	
 }
@@ -34,7 +46,7 @@ body, html{
 #content3{
 	width:100%;
 	height:80%;
-	background-color:gray;
+	background-color:orange;
 	display:none;
 }
 
@@ -44,4 +56,3 @@ body, html{
 	background-color:gray;
 	display:none;
 }
-
