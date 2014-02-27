@@ -56,3 +56,34 @@ body, html{
 	background-color:gray;
 	display:none;
 }
+
+#login_button{
+	float:right;
+}
+
+#register_button{
+	float:right;
+}
+
+.menu_button{
+	float:left;
+}
+
+
+#buttons_menu{
+	width:500px;
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
