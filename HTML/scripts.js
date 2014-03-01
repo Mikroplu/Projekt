@@ -9,3 +9,20 @@ function showdiv(id){
 	
 	document.getElementById(id).style.display="block";
 };
+
+
+
+
+
+var para = $('.menu_button').click(showdiv('content2'));
+
+
+
+
+
+$.get('file:///home/indrek/git/Projekt/HTML/index.html', function(data)){
+	alert(data);
+}
+
+
+
