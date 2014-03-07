@@ -55,10 +55,10 @@ public class servlet1 extends HttpServlet {
 			Class.forName("org.postgresql.Driver");
 			
 			
-			String url = "jdbc:postgresql://ec2-184-73-194-196.compute-1.amazonaws.com:5432/d1b1v14hn05aoi";
+			String url = "jdbc:postgresql://ec2-184-73-251-115.compute-1.amazonaws.com:5432/dfh8pe9gkitn22";
 			Properties props = new Properties();
-			props.setProperty("user","lodtbvtubgdxfv");
-			props.setProperty("password","7VzXXNa3ZvkiCO2h79xPcRQoVr");
+			props.setProperty("user","vryoynyziocgrs");
+			props.setProperty("password","T6JbGvxZfTtZviY37Cdc1O4mfJ");
 			props.setProperty("ssl","true");
 			Connection conn = DriverManager.getConnection(url, props);
 			String name = request.getParameter("userName");
