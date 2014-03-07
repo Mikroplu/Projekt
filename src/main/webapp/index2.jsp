@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta charset="UTF-8">
-<title>Pubi321</title>
 <link rel="stylesheet" type="text/css" href="styles.css"></link>
 	<script type="text/javascript" src="scripts.js"></script>
 	<script
@@ -12,7 +11,7 @@
 	<title>Ryhm321</title>
 </head>
 <body>
-<div id="header">
+	<div id="header">
 		<div id="buttons_menu">
 			<button class="menu_button" onclick="showdiv('content1')">Pealeht</button>
 			<button class="menu_button" onclick="showdiv('content2')">Register</button>
@@ -67,6 +66,5 @@
 
 
 	<div id="footer">Footer</div>
-
 </body>
 </html>
