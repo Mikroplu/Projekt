@@ -61,6 +61,7 @@ public class servlet1 extends HttpServlet {
 			props.setProperty("password","T6JbGvxZfTtZviY37Cdc1O4mfJ");
 			props.setProperty("ssl","true");
 			Connection conn = DriverManager.getConnection(url, props);
+			
 			String name = request.getParameter("userName");
 			String email = request.getParameter("userEmail");
 			String password = request.getParameter("userPassword");
