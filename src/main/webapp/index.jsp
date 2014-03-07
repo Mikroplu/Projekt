@@ -9,7 +9,6 @@
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
 		type="text/javascript"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>Ryhm321</title>
 </head>
 <body>
 <div id="header">
