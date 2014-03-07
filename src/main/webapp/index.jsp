@@ -36,7 +36,7 @@
 	<div id="content2" class="content">
 		<div class="subcontent">
 			Div content2
-			<form action="servlet1" method="post">
+			<form action="servlet" method="post">
 			Name: <input type="text" name="userName"><br>
 			Email: <input type="text" name="userEmail"><br>	
 			Password: <input type="password" name=userPassword><br>
