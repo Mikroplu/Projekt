@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Pubi321</title>
-<link rel="stylesheet" type="text/css" href="styles.css"></link>
+<link rel="stylesheet" type="text/css" href="styles.css">
 	<script type="text/javascript" src="scripts.js"></script>
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
@@ -39,9 +39,9 @@
 			Div content2
 			<form action="servlet1" method="post">
 			Name: <input type="text" name="userName"><br>
-			Email: <input type="text" name="userEmail"></input><br></br>	
-			Password: <input type="password" name=userPassword></input><br></br>
-			<input type="submit"  value="Submit"></input>
+			Email: <input type="text" name="userEmail"><br>	
+			Password: <input type="password" name=userPassword><br>
+			<input type="submit"  value="Submit">
 			</form>
 		</div>
 	</div>
