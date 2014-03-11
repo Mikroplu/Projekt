@@ -60,6 +60,7 @@ public class servlet extends HttpServlet {
 			props.setProperty("user","vryoynyziocgrs");
 			props.setProperty("password","T6JbGvxZfTtZviY37Cdc1O4mfJ");
 			props.setProperty("ssl","true");
+			props.setProperty("sslfactor", "org.postgresql.ssl.NonValidatingFactory");
 			Connection conn = DriverManager.getConnection(url, props);
 			
 			String name = request.getParameter("userName");
