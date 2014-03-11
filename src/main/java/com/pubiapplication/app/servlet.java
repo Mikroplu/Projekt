@@ -69,8 +69,8 @@ public class servlet extends HttpServlet {
 			String ip = request.getRemoteAddr();
 			
 		    String test = "INSERT INTO users VALUES("+lisa_ylakomad(name)+","+lisa_ylakomad(email)+","+lisa_ylakomad(password)+","+lisa_ylakomad(ip)+");";
-			Statement st = conn.createStatement();
-			ResultSet rs = st.executeQuery(test);
+			Statement st = conn.prepareStatement(test);
+			st.executeUpdate(test);
 			
 		} catch (SQLException e) {
 			out.println(e);
