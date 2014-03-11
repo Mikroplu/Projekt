@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 @WebServlet(value="/servlet")
-public class servlet1 extends HttpServlet {
+public class servlet extends HttpServlet {
 
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
