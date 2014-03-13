@@ -3,7 +3,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <link rel="stylesheet" type="text/css" href="styles.css">
-
 	<script
 		src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
 		type="text/javascript"></script>
@@ -16,24 +15,27 @@
 			<button class="menu_button" id="Showcontent2">Show content2</button>
 			<button class="menu_button" id="Showcontent3">Show content3</button>
 			<button class="menu_button" id="Showcontent4">Show content4</button>
-		</div>
 
-		<button id="login_button">Login</button>
-		<button id="register_button">Register</button>
-	</div>
-
-
-	<div id="content1" class="content">
-		<div class="subcontent">
-			Div content1
-			<p>Siin on content1 sisu</p>
+			<button class="menu_button" id="login_button">Login</button>
+			<button class="menu_button" id="register_button">Register</button>
 		</div>
 	</div>
 
 
-
-	<div id="content2" class="content">
+	<div id="content1" class="contents">
 		<div class="subcontent">
+			<div class="content">
+				Div content1
+				<p>Siin on content1 sisu</p>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="content2" class="contents">
+		<div class="subcontent">
+			<div class="content">
 			Div content2
 			<p>
 				<form action="servlet" method="post">
@@ -43,24 +45,29 @@
 											type="submit" value="Submit">
 				</form>
 			</p>
+			</div>
 		</div>
 	</div>
 
 
 
-	<div id="content3" class="content">
+	<div id="content3" class="contents">
 		<div class="subcontent">
-			Div content3
-			<p>Siin on content3 sisu</p>
+			<div class="content">
+				Div content3
+				<p>Siin on content3 sisu</p>
+			</div>
 		</div>
 	</div>
 
 
 
-	<div id="content4" class="content">
+	<div id="content4" class="contents">
 		<div class="subcontent">
-			Div content4
-			<p>Siin on content4 sisu</p>
+			<div class="content">
+				Div content4
+				<p>Siin on content4 sisu</p>
+			</div>
 		</div>
 	</div>
 
