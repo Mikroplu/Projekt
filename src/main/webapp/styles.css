@@ -5,13 +5,13 @@ body, html{
 	margin:0;
 }
 
-#header{
+#_header{
 	width:100%;
 	height:10%;
 	background-color: black;
 }
 
-#footer{
+#_footer{
 	width:100%;
 	height:10%;
 	background-color: black;
@@ -28,14 +28,14 @@ body, html{
     }
 }
 
-#content1{
+#_content1{
 	width:100%;
 	height:80%;
 	background-color:green;
 	display: block;
 }
 
-#content2{
+#_content2{
 	width:100%;
 	height:80%;
 	background-color:red;
@@ -43,25 +43,25 @@ body, html{
 	
 }
 
-#content3{
+#_content3{
 	width:100%;
 	height:80%;
 	background-color:orange;
 	display:none;
 }
 
-#content4{
+#_content4{
 	width:100%;
 	height:80%;
 	background-color:gray;
 	display:none;
 }
 
-#login_button{
+#_login_button{
 	float:right;
 }
 
-#register_button{
+#_register_button{
 	float:right;
 }
 
@@ -70,7 +70,7 @@ body, html{
 }
 
 
-#buttons_menu{
+#_buttons_menu{
 	width:500px;
 	
 	
