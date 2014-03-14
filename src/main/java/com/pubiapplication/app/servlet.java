@@ -39,10 +39,13 @@ public class servlet extends HttpServlet {
 			props.setProperty("ssl","true");
 			props.setProperty("sslmode", "require");
 			Connection conn = DriverManager.getConnection(url, props);
-			String getdata="SELECT * FROM users";
-			Statement st2 = conn.prepareStatement(getdata);
-			ResultSet a = st2.executeQuery(getdata);
-			out1.print(a);
+			Statement statement= conn.createStatement();
+			ResultSet a =statement.executeQuery("SELECT * FROM users");
+			while(a.next()) {
+				out1.print(a);
+			}
+			
+			
 		} catch (SQLException e) {
 			out1.println(e);
 			out1.println("SQL EX");

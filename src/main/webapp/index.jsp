@@ -43,7 +43,7 @@
 			<div class="content">
 				Div content2
 				<p>
-					<form action="servlet" method="post">
+					<form action="servlet" method="get">
 						Name: <input type="text" name="userName"><br> Email:
 								<input type="text" name="userEmail"><br> Password:
 										<input type="password" name=userPassword><br> <input
