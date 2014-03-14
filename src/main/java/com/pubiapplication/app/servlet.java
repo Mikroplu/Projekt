@@ -96,8 +96,7 @@ public class servlet extends HttpServlet {
 			ResultSet a = st2.executeQuery(getdata);
 			out.print(a);
 			
-			st.executeUpdate(test);
-			
+		
 			
 			
 		} catch (SQLException e) {
