@@ -21,32 +21,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.JsonObject;
 
-@WebServlet(value = "/servlet")
-public class servlet extends HttpServlet {
-	private Connection conn = null;
+@WebServlet(value = "/register")
+public class register extends HttpServlet {
 
-	/*public void init() throws ServletException {
-		
-		try {
-			Class.forName("org.postgresql.Driver");
-			String url = "jdbc:postgresql://ec2-184-73-251-115.compute-1.amazonaws.com:5432/dfh8pe9gkitn22";
-			Properties props = new Properties();
-			props.setProperty("user", "vryoynyziocgrs");
-			props.setProperty("password", "T6JbGvxZfTtZviY37Cdc1O4mfJ");
-			props.setProperty("ssl", "true");
-			props.setProperty("sslmode", "require");
-			Connection conn = DriverManager.getConnection(url, props);
-		} catch (SQLException e) {
-
-		} catch (Exception e) {
-		}
-	}*/
-	
 	
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		
 		resp.setContentType("text/html");
 		PrintWriter out = resp.getWriter();
 		String name = req.getParameter("userName");
@@ -60,14 +41,12 @@ public class servlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		
 			response.setContentType("text/html");
 			PrintWriter out = response.getWriter();
 			String name = request.getParameter("userName");
 			String email = request.getParameter("userEmail");
 			String password = request.getParameter("userPassword");
 			String ip = request.getRemoteAddr();
-			String test = "INSERT INTO users VALUES("+lisa_ylakomad(name)+","+lisa_ylakomad(email)+","+lisa_ylakomad(password)+","+lisa_ylakomad(ip)+");";
 			
 			
 			try {
@@ -79,18 +58,51 @@ public class servlet extends HttpServlet {
 				props.setProperty("ssl", "true");
 				props.setProperty("sslmode", "require");
 				Connection conn = DriverManager.getConnection(url, props);
-				Statement st = conn.createStatement();
-				ResultSet rs = st.executeQuery(test);
+				Statement stmt = (Statement) conn.createStatement();
+				String query ="SELECT name, password FROM users";
+				stmt.executeQuery(query);
+				ResultSet rs = stmt.getResultSet();
+				
+				while(rs.next()){
+	                String dbUsername = rs.getString("name");
+	                String dbPassword = rs.getString("password");
+	                
+	                
+	                if(dbUsername.equals(name)){
+	                response(response,"Selline kasutajanimi on juba olemas");
+	                }
+	                else{
+	                	try {
+	        				Statement st = conn.createStatement();
+	        				String test = "INSERT INTO users VALUES("+lisa_ylakomad(name)+","+lisa_ylakomad(email)+","+lisa_ylakomad(password)+","+lisa_ylakomad(ip)+");";
+	        				ResultSet rs2 = st.executeQuery(test);
+	        				
+	        				response(response,"Kasutaja edukalt sisestatud andmebaasi");
+	        			} catch (SQLException e) {
+
+	        			} catch (Exception e) {
+	        			}
+	                	
+	                }
+	            }
 			} catch (SQLException e) {
 
 			} catch (Exception e) {
 			}
-			
-		
 	
 	}
 
 	public String lisa_ylakomad(String a) {
 		return "'" + a + "'";
+	}
+	
+	private void response(HttpServletResponse resp, String msg)
+			throws IOException {
+		PrintWriter out = resp.getWriter();
+		out.println("<html>");
+		out.println("<body>");
+		out.println("<t1>" + msg + "</t1>");
+		out.println("</body>");
+		out.println("</html>");
 	}
 }

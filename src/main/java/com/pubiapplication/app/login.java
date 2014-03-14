@@ -19,18 +19,14 @@ import javax.servlet.http.HttpSession;
 
 @WebServlet(value = "/login")
 public class login extends HttpServlet {
-	String query;
-    String dbUsername, dbPassword;
-
+	
     boolean login = false;
-	
-	
+    
+    
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		String user = req.getParameter("user");
 		String pass = req.getParameter("password");
-		
-		
 		try {
 			Class.forName("org.postgresql.Driver");
 			String url = "jdbc:postgresql://ec2-184-73-251-115.compute-1.amazonaws.com:5432/dfh8pe9gkitn22";
@@ -39,22 +35,22 @@ public class login extends HttpServlet {
 			props.setProperty("password", "T6JbGvxZfTtZviY37Cdc1O4mfJ");
 			props.setProperty("ssl", "true");
 			props.setProperty("sslmode", "require");
+			
 			Connection conn = DriverManager.getConnection(url, props);
+			
 			Statement stmt = (Statement) conn.createStatement();
-			query ="SELECT name, password FROM users";
+			String query ="SELECT name, password FROM users";
 			stmt.executeQuery(query);
 			ResultSet rs = stmt.getResultSet();
 			
 			while(rs.next()){
-                dbUsername = rs.getString("name");
-                dbPassword = rs.getString("password");
+                String dbUsername = rs.getString("name");
+                String dbPassword = rs.getString("password");
                 
                 if(dbUsername.equals(user) && dbPassword.equals(pass)){
                     login = true;
                     response(resp,"Selline kasutaja ja parool on andmebaasis");
                 }
-               
-        
             }
 			
 		} catch (SQLException e) {
