@@ -26,12 +26,6 @@
 
 			<div class="content">
 				PUBI JA LINNA VALIK
-				<p>
-					<select id="linna_valik">
-						<option value="">select</option>
-					</select>
-				</p>
-
 			</div>
 		</div>
 	</div>
@@ -42,7 +36,6 @@
 		<div class="subcontent">
 			<div class="content">
 				Div content2
-				
 			</div>
 		</div>
 	</div>
