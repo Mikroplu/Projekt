@@ -29,7 +29,7 @@ public class servlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		java.io.PrintWriter out1 = resp.getWriter();
+		java.io.PrintWriter out = resp.getWriter();
 		try {
 			Class.forName("org.postgresql.Driver");
 			String url = "jdbc:postgresql://ec2-184-73-251-115.compute-1.amazonaws.com:5432/dfh8pe9gkitn22";
@@ -42,19 +42,19 @@ public class servlet extends HttpServlet {
 			Statement statement= conn.createStatement();
 			ResultSet a =statement.executeQuery("SELECT * FROM users");
 			while(a.next()) {
-				out1.print(a);
+				out.print(a);
 			}
 			
 			
 		} catch (SQLException e) {
-			out1.println(e);
-			out1.println("SQL EX");
+			out.println(e);
+			out.println("SQL EX");
 		} catch (Exception e) {
-			out1.println(e);
-			out1.println("EX");
+			out.println(e);
+			out.println("EX");
 		}
 		
-		ServletOutputStream out = resp.getOutputStream();
+	
 		String name = req.getParameter("userName");
 		String email = req.getParameter("userEmail");
 		String password = req.getParameter("userPassword");
