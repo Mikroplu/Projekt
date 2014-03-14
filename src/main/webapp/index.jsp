@@ -42,14 +42,7 @@
 		<div class="subcontent">
 			<div class="content">
 				Div content2
-				<p>
-					<form action="servlet" method="get">
-						Name: <input type="text" name="userName"><br> Email:
-								<input type="text" name="userEmail"><br> Password:
-										<input type="password" name=userPassword><br> <input
-												type="submit" value="Submit">
-					</form>
-				</p>
+				
 			</div>
 		</div>
 	</div>
@@ -60,6 +53,25 @@
 		<div class="subcontent">
 			<div class="content">
 				Div content3
+			</div>
+		</div>
+	</div>
+
+
+
+	<div id="content4" class="contents">
+		<div class="subcontent">
+			<div class="content">
+				Div content4
+				<p>Siin on content4 sisu</p>
+			</div>
+		</div>
+	</div>
+	
+	<div id="login_content" class="contents">
+		<div class="subcontent">
+			<div class="content">
+				Div login_content
 				<p>
 					<form action="login" method="get">
 						<table>
@@ -78,14 +90,19 @@
 			</div>
 		</div>
 	</div>
-
-
-
-	<div id="content4" class="contents">
+	
+	<div id="register_content" class="contents">
 		<div class="subcontent">
 			<div class="content">
-				Div content4
-				<p>Siin on content4 sisu</p>
+				Div register content
+				<p>
+					<form action="servlet" method="get">
+						Name: <input type="text" name="userName"><br> Email:
+								<input type="text" name="userEmail"><br> Password:
+										<input type="password" name=userPassword><br> <input
+												type="submit" value="Submit">
+					</form>
+				</p>
 			</div>
 		</div>
 	</div>
