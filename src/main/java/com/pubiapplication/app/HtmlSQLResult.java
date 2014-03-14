@@ -2,9 +2,9 @@ package com.pubiapplication.app;
 
 import java.beans.Statement;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSetMetaData;
-import javax.resource.cci.ResultSet;
-import java.sql.*;
+import java.sql.SQLException;
 
 class HtmlSQLResult {
 	  private String sql;
@@ -23,7 +23,7 @@ class HtmlSQLResult {
 	    //out.append("Results of SQL Statement: " + sql + "<P>\n");
 
 	    try {
-	      java.sql.Statement stmt = con.createStatement();
+	    	PreparedStatement stmt = con.prepareStatement(sql);
 
 	      if (stmt.execute(sql)) {
 	        // There's a ResultSet to be had
