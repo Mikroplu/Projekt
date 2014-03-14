@@ -81,27 +81,6 @@
 			</div>
 		</div>
 	</div>
-	
-	<div id="login_content" class="contents">
-		<div class="subcontent">
-			<div class="content">
-				Div login_content
-			</div>
-		</div>
-	</div>
-	
-	<div id="register_content" class="contents">
-		<div class="subcontent">
-			<div class="content">
-				Div register content
-				
-			</div>
-		</div>
-	</div>
-
-
-
-
 
 	<div id="footer">Footer</div>
 	<script type="text/javascript" src="scripts.js"></script>
