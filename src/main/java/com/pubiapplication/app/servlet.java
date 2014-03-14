@@ -36,14 +36,14 @@ public class servlet extends HttpServlet {
 			props.setProperty("ssl", "true");
 			props.setProperty("sslmode", "require");
 			Connection conn = DriverManager.getConnection(url, props);
-
 		} catch (SQLException e) {
 
 		} catch (Exception e) {
 		}
 	}
-
-
+	
+	
+	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
@@ -60,17 +60,9 @@ public class servlet extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		java.io.PrintWriter out = response.getWriter();
-
-		try {
-			Class.forName("org.postgresql.Driver");
-			String url = "jdbc:postgresql://ec2-184-73-251-115.compute-1.amazonaws.com:5432/dfh8pe9gkitn22";
-			Properties props = new Properties();
-			props.setProperty("user", "vryoynyziocgrs");
-			props.setProperty("password", "T6JbGvxZfTtZviY37Cdc1O4mfJ");
-			props.setProperty("ssl", "true");
-			props.setProperty("sslmode", "require");
-			Connection conn = DriverManager.getConnection(url, props);
+			response.setContentType("text/html");
+			PrintWriter out = response.getWriter();
+		
 			String name = request.getParameter("userName");
 			String email = request.getParameter("userEmail");
 			String password = request.getParameter("userPassword");
@@ -78,20 +70,7 @@ public class servlet extends HttpServlet {
 			String test = "INSERT INTO users VALUES(" + lisa_ylakomad(name)
 					+ "," + lisa_ylakomad(email) + ","
 					+ lisa_ylakomad(password) + "," + lisa_ylakomad(ip) + ");";
-			// Statement st = conn.prepareStatement(test);
-
-			String getdata = "SELECT * FROM users";
-			Statement st2 = conn.prepareStatement(getdata);
-			ResultSet a = st2.executeQuery(getdata);
-			out.print(a);
-
-		} catch (SQLException e) {
-			out.println(e);
-			out.println("SQL EX");
-		} catch (Exception e) {
-			out.println(e);
-			out.println("EX");
-		}
+			
 	}
 
 	public String lisa_ylakomad(String a) {
