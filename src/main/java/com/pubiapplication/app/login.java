@@ -53,22 +53,13 @@ public class login extends HttpServlet {
                     login = true;
                     response(resp,"Selline kasutaja ja parool on andmebaasis");
                 }
-                else response(resp,"Kasutajanimi/parool puuduvad andmebaasis");
                
+        
             }
 			
 		} catch (SQLException e) {
 
 		} catch (Exception e) {
-		}
-		
-	
-	    
-	    
-		if ("Kasutaja".equals(user) && "Parool".equals(pass)) {
-			response(resp, "Kasutajanimi ja parool esinevad andmebaasis");
-		} else {
-			response(resp, "Sellist kasutajat ei esine andmebaasis");
 		}
 	}
 	

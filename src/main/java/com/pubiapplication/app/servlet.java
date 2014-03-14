@@ -25,7 +25,7 @@ import com.google.gson.JsonObject;
 public class servlet extends HttpServlet {
 	private Connection conn = null;
 
-	public void init() throws ServletException {
+	/*public void init() throws ServletException {
 		
 		try {
 			Class.forName("org.postgresql.Driver");
@@ -40,7 +40,7 @@ public class servlet extends HttpServlet {
 
 		} catch (Exception e) {
 		}
-	}
+	}*/
 	
 	
 	
@@ -62,24 +62,20 @@ public class servlet extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 			response.setContentType("text/html");
 			PrintWriter out = response.getWriter();
-		
 			String name = request.getParameter("userName");
 			String email = request.getParameter("userEmail");
 			String password = request.getParameter("userPassword");
 			String ip = request.getRemoteAddr();
-			String insert_user = "INSERT INTO users VALUES(" + lisa_ylakomad(name)
-					+ "," + lisa_ylakomad(email) + ","
-					+ lisa_ylakomad(password) + "," + lisa_ylakomad(ip) + ");";
+			String test = "INSERT INTO users VALUES("+lisa_ylakomad(name)+","+lisa_ylakomad(email)+","+lisa_ylakomad(password)+","+lisa_ylakomad(ip)+");";
+			Statement st;
 			
 			try {
-				Statement stmt = (Statement) conn.createStatement();
-				stmt.executeQuery(insert_user);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				st = conn.createStatement();
+				ResultSet rs = st.executeQuery(test);
+			} catch (SQLException e1) {
+				e1.printStackTrace();
 			}
-			
-			
+		
 			
 	}
 
