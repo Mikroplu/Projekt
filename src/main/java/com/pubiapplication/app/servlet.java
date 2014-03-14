@@ -67,9 +67,19 @@ public class servlet extends HttpServlet {
 			String email = request.getParameter("userEmail");
 			String password = request.getParameter("userPassword");
 			String ip = request.getRemoteAddr();
-			String test = "INSERT INTO users VALUES(" + lisa_ylakomad(name)
+			String insert_user = "INSERT INTO users VALUES(" + lisa_ylakomad(name)
 					+ "," + lisa_ylakomad(email) + ","
 					+ lisa_ylakomad(password) + "," + lisa_ylakomad(ip) + ");";
+			
+			try {
+				Statement stmt = (Statement) conn.createStatement();
+				stmt.executeQuery(insert_user);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			
 			
 	}
 

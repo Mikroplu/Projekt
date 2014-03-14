@@ -49,13 +49,11 @@ public class login extends HttpServlet {
                 dbUsername = rs.getString("name");
                 dbPassword = rs.getString("password");
                 
-                response(resp,dbPassword+dbUsername);
-
                 if(dbUsername.equals(user) && dbPassword.equals(pass)){
                     login = true;
-                    response(resp,"Kasutaja leiti");
+                    response(resp,"Selline kasutaja ja parool on andmebaasis");
                 }
-                else response(resp,"Kasutajat ei leitud");
+                else response(resp,"Kasutajanimi/parool puuduvad andmebaasis");
                
             }
 			
