@@ -22,8 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.JsonObject;
 
 @WebServlet(value = "/servlet")
-
-
 public class servlet extends HttpServlet {
 	private Connection conn = null;
 
@@ -50,18 +48,14 @@ public class servlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		resp.setContentType("text/html");
-		HtmlSQLResult result = new HtmlSQLResult("SELECT * FROM users",conn);
 		PrintWriter out = resp.getWriter();
-		out.println("<HTML><HEAD><TITLE>USERS</TITLE></HEAD>");
-	    out.println("<BODY>");
-	    out.println("<H2>Employees:</H2>");
-	    out.println(result);
-	    out.println("</BODY></HTML>");
-	    
-	    
 		String name = req.getParameter("userName");
 		String email = req.getParameter("userEmail");
 		String password = req.getParameter("userPassword");
+		out.println(name);
+		out.println(email);
+		out.println(password);
+		
 	}
 
 	protected void doPost(HttpServletRequest request,
