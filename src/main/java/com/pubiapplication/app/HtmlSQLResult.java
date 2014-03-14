@@ -20,7 +20,7 @@ class HtmlSQLResult {
 	    StringBuffer out = new StringBuffer();
 
 	    // Uncomment the following line to display the SQL command at start of table
-	    out.append("Results of SQL Statement: " + sql + "<P>\n");
+	    //out.append("Results of SQL Statement: " + sql + "<P>\n");
 
 	    try {
 	      java.sql.Statement stmt = con.createStatement();
