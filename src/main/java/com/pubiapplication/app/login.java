@@ -41,13 +41,15 @@ public class login extends HttpServlet {
 			props.setProperty("sslmode", "require");
 			Connection conn = DriverManager.getConnection(url, props);
 			Statement stmt = (Statement) conn.createStatement();
-			query ="SELECT username, password FROM users";
+			query ="SELECT name, password FROM users";
 			stmt.executeQuery(query);
 			ResultSet rs = stmt.getResultSet();
 			
 			while(rs.next()){
                 dbUsername = rs.getString("name");
                 dbPassword = rs.getString("password");
+                
+                response(resp,dbPassword+dbUsername);
 
                 if(dbUsername.equals(user) && dbPassword.equals(pass)){
                     login = true;
