@@ -62,7 +62,7 @@
 			<div class="content">
 			REGISTER
 				<p>
-					<form action="servlet" method="post">
+					<form action="register" method="post">
 						Name: <input type="text" name="userName"><br> Email:
 								<input type="text" name="userEmail"><br> Password:
 										<input type="password" name=userPassword><br> <input
