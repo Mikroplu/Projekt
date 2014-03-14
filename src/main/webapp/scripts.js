@@ -2,24 +2,26 @@
 
 $(document).ready(function() {
 	$('#Showcontent1').click(function() {
-		$('.content').hide();
+		$('.contents').hide();
 	    $('#content1').show();
 	});
 	$('#Showcontent2').click(function() {
-		$('.content').hide();
+		$('.contents').hide();
 	    $('#content2').show();
 	});
 	$('#Showcontent3').click(function() {
-		$('.content').hide();
+		$('.contents').hide();
 	    $('#content3').show();
 	});
 	$('#Showcontent4').click(function() {
-		$('.content').hide();
+		$('.contents').hide();
 	    $('#content4').show();
 	});
+	
+	// Muudab nuppude klassid
+    $('button').click(function(){
+    	$('.menu_button').removeClass('menu_button_clicked');
+        $(this).addClass('menu_button_clicked');
+   });
 });
-
-
-
-
 
