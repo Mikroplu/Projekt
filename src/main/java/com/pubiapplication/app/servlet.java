@@ -42,7 +42,7 @@ public class servlet extends HttpServlet {
 			Statement statement= conn.createStatement();
 			ResultSet a =statement.executeQuery("SELECT * FROM users");
 			while(a.next()) {
-				out.print(a);
+				out.print(a.toString());
 			}
 			
 			
