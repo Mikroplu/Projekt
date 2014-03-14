@@ -14,17 +14,20 @@ import javax.servlet.http.HttpServletResponse;
 public class login extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		
-		
 		String user = req.getParameter("user");
 		String pass = req.getParameter("password");
-		
-		
 		if ("Kasutaja".equals(user) && "Parool".equals(pass)) {
 			response(resp, "Kasutajanimi ja parool esinevad andmebaasis");
 		} else {
 			response(resp, "Sellist kasutajat ei esine andmebaasis");
 		}
+	}
+	
+	
+	protected void doPost(HttpServletRequest request,
+			HttpServletResponse response) throws ServletException, IOException {
+		
+			
 	}
 
 	private void response(HttpServletResponse resp, String msg)
