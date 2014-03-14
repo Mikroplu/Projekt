@@ -18,6 +18,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
+import com.google.gson.JsonObject;
+
+
 
 
 @WebServlet(value="/servlet")
@@ -26,11 +29,11 @@ public class servlet extends HttpServlet {
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
+		
 		ServletOutputStream out = resp.getOutputStream();
 		String name = req.getParameter("userName");
 		String email = req.getParameter("userEmail");
 		String password = req.getParameter("userPassword");
-		String ip = req.getRemoteAddr();
 		out.println("<html>");
 		out.println("<head>");
 		out.println("<title>This is the response</title>");
@@ -40,7 +43,6 @@ public class servlet extends HttpServlet {
 		out.println("Kasutajanimi: " + name);
 		out.println("Email: " + email);
 		out.println("Parool: " + password);
-		out.println("Ip: " + ip);
 		out.println("</body>");
 		out.println("</html>");
 		out.close();
@@ -51,10 +53,9 @@ public class servlet extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		java.io.PrintWriter out = response.getWriter();
 		
+	
 		try {
 			Class.forName("org.postgresql.Driver");
-			
-			
 			String url = "jdbc:postgresql://ec2-184-73-251-115.compute-1.amazonaws.com:5432/dfh8pe9gkitn22";
 			Properties props = new Properties();
 			props.setProperty("user","vryoynyziocgrs");
@@ -62,15 +63,15 @@ public class servlet extends HttpServlet {
 			props.setProperty("ssl","true");
 			props.setProperty("sslmode", "require");
 			Connection conn = DriverManager.getConnection(url, props);
-			
 			String name = request.getParameter("userName");
 			String email = request.getParameter("userEmail");
 			String password = request.getParameter("userPassword");
 			String ip = request.getRemoteAddr();
-			
 		    String test = "INSERT INTO users VALUES("+lisa_ylakomad(name)+","+lisa_ylakomad(email)+","+lisa_ylakomad(password)+","+lisa_ylakomad(ip)+");";
 			Statement st = conn.prepareStatement(test);
 			st.executeUpdate(test);
+			
+			
 			
 		} catch (SQLException e) {
 			out.println(e);
@@ -79,8 +80,6 @@ public class servlet extends HttpServlet {
 			out.println(e);
 			out.println("EX");
 		}
-		
-		
 	}
 	public String lisa_ylakomad(String a){
 		return "'"+a+"'";
