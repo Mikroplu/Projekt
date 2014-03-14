@@ -11,22 +11,21 @@
 <body>
 	<div id="header">
 		<div id="buttons_menu">
-			<button class="menu_button" id="Showcontent1">Show content1</button>
-			<button class="menu_button" id="Showcontent2">Show content2</button>
-			<button class="menu_button" id="Showcontent3">Show content3</button>
-			<button class="menu_button" id="Showcontent4">Show content4</button>
-
-			<button class="menu_button" id="login_button">Login</button>
-			<button class="menu_button" id="register_button">Register</button>
+			<button class="menu_button" id="Showcontent1">Main</button>
+			<button class="menu_button" id="Showcontent2">Login</button>
+			<button class="menu_button" id="Showcontent3">Register</button>
+			<button class="menu_button" id="Showcontent4">Mingi asi</button>
+			<button class="menu_button" id="login_button">Nupp1</button>
+			<button class="menu_button" id="register_button">Nupp2</button>
 		</div>
 	</div>
 
 
 	<div id="content1" class="contents">
 		<div class="subcontent">
+
 			<div class="content">
-				Div content1
-				<p>Siin on content1 sisu</p>
+				PUBI JA LINNA VALIK
 			</div>
 		</div>
 	</div>
@@ -36,15 +35,22 @@
 	<div id="content2" class="contents">
 		<div class="subcontent">
 			<div class="content">
-			Div content2
-			<p>
-				<form action="servlet" method="post">
-					Name: <input type="text" name="userName"><br> Email: <input
-							type="text" name="userEmail"><br> Password: <input
-									type="password" name=userPassword><br> <input
-											type="submit" value="Submit">
-				</form>
-			</p>
+			LOGIN
+				<p>
+					<form action="login" method="get">
+						<table>
+							<tr>
+								<td>User</td>
+								<td><input name="user" />
+							</tr>
+							<tr>
+								<td>password</td>
+								<td><input name="password" />
+							</tr>
+						</table>
+						<input type="submit" />
+					</form>
+				</p>
 			</div>
 		</div>
 	</div>
@@ -54,8 +60,15 @@
 	<div id="content3" class="contents">
 		<div class="subcontent">
 			<div class="content">
-				Div content3
-				<p>Siin on content3 sisu</p>
+			REGISTER
+				<p>
+					<form action="register" method="post">
+						Name: <input type="text" name="userName"><br> Email:
+								<input type="text" name="userEmail"><br> Password:
+										<input type="password" name=userPassword><br> <input
+												type="submit" value="Submit">
+					</form>
+				</p>
 			</div>
 		</div>
 	</div>
@@ -65,13 +78,11 @@
 	<div id="content4" class="contents">
 		<div class="subcontent">
 			<div class="content">
-				Div content4
+				MINGI ASI
 				<p>Siin on content4 sisu</p>
 			</div>
 		</div>
 	</div>
-
-
 
 	<div id="footer">Footer</div>
 	<script type="text/javascript" src="scripts.js"></script>
