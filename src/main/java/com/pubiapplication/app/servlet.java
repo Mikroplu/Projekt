@@ -50,7 +50,7 @@ public class servlet extends HttpServlet {
 			throws ServletException, IOException {
 		
 		resp.setContentType("text/html");
-		HtmlSQLResult result = new HtmlSQLResult("SELECT NAME, PHONE FROM EMPLOYEES",conn);
+		HtmlSQLResult result = new HtmlSQLResult("SELECT * FROM users",conn);
 		PrintWriter out = resp.getWriter();
 		out.println("<HTML><HEAD><TITLE>USERS</TITLE></HEAD>");
 	    out.println("<BODY>");
