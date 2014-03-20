@@ -6,7 +6,7 @@ $(document).ready(function() {
 			if (responseJson != null) {
 				var $combobox = $("#linnad");
 				$.each(responseJson, function(key, value) {
-					$('<option>').val(key).text(value).appendTo($combobox);
+					alert(key + "=" + value);
 				});
 			}
 		});
