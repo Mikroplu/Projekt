@@ -84,14 +84,20 @@
 				<p>
 					VALI SOBIV LAUD
 
+
+					<form action="register" method="post">
+						Name: <input type="text" name="userName"><br> Email:
+								<input type="text" name="userEmail"><br> Password:
+										<input type="password" name=userPassword><br> <input
+												type="submit" value="Submit">
+					</form>
+
 				</p>
 				<button class="menu_button" id="laua_valik">Edasi</button>
 
 			</div>
 		</div>
 	</div>
-
-
 
 	<div id="content4" class="contents">
 		<div class="subcontent">
