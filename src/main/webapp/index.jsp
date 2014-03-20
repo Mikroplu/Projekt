@@ -27,7 +27,8 @@
 				VALI LINN
 				<p>
 					<select name="linnad" id="linnad">
-						
+						<option disabled="disabled" selected="selected">Vali linn</option>
+
 					</select>
 
 				</p>
@@ -59,7 +60,7 @@
 					</form> -->
 				VALI LINN
 				<p>
-					<select>
+					<select id="pubi_valik">
 						<option value="Pahad Poisid">Pahad Poisid</option>
 						<option value="Pubi 2">Pubi 2</option>
 						<option value="Pubi 3">Pubi 3</option>

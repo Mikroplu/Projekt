@@ -16,21 +16,21 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.reflect.TypeToken;
 
-@WebServlet("/linnad")
-public class Populeerilinnad extends HttpServlet {
+@WebServlet("/pubid")
+public class PopuleeriPubid extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	public Populeerilinnad() {
+	public PopuleeriPubid() {
 	}
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		ArrayList<Linnad> linnad = new ArrayList<Linnad>();
-		linnad = fetchLinnad.getAllLinnad();
+		ArrayList<Pubid> pubid = new ArrayList<Pubid>();
+		pubid = fetchPubid.getAllLinnad();
 		Gson gson = new Gson();
-		JsonElement element = gson.toJsonTree(linnad,
-				new TypeToken<List<Linnad>>() {
+		JsonElement element = gson.toJsonTree(pubid,
+				new TypeToken<List<Pubid>>() {
 				}.getType());
 		JsonArray jsonArray = element.getAsJsonArray();
 		response.setContentType("application/json");

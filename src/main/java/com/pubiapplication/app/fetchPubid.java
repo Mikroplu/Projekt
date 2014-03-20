@@ -12,7 +12,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Properties;
 
-public class fetchLinnad {
+public class fetchPubid {
 
 	private static Connection connection = null;
 
@@ -39,22 +39,24 @@ public class fetchLinnad {
 		}
 	}
 
-	public static ArrayList<Linnad> getAllLinnad() {
+	public static ArrayList<Pubid> getAllLinnad() {
 		
-		connection = fetchLinnad.getConnection();
-		ArrayList<Linnad> linnade_list = new ArrayList<Linnad>();
+		connection = fetchPubid.getConnection();
+		ArrayList<Pubid> pubide_list = new ArrayList<Pubid>();
 		
 		try {
 			Statement statement = connection.createStatement();
-			ResultSet rs = statement.executeQuery("SELECT * FROM linnad");
+			ResultSet rs = statement.executeQuery("SELECT * FROM pubid");
 			while (rs.next()) {
-				Linnad linn = new Linnad();
-				linn.setNimi(rs.getString("nimi"));
-				linnade_list.add(linn);
+				Pubid pubi = new Pubid();
+				pubi.setNimi(rs.getString("nimi"));
+				pubi.setAsukoht(rs.getString("asukoht"));
+				pubi.setLaudade_arv(rs.getInt("laudade_arv"));
+				pubide_list.add(pubi);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		return linnade_list;
+		return pubide_list;
 	}
 }

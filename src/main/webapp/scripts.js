@@ -2,15 +2,22 @@
 
 $(document).ready(function() {
 	$("#linnad").click(function(event) {
-		$.get('linnad', function(responseJson) {
+		$.get('pubid', function(responseJson) {
 			if (responseJson != null) {
 				var $combobox = $("#linnad");
 				$.each(responseJson, function(key, value) {
-					alert(value.nimi);
 					$("#linnad").append('<option>'+value.nimi+'</option>');
 				});
 			}
 		});
+	});
+	
+	$("#linnad").on('change',function(){
+		for(var i=0;i<responseJson.length;i++){
+		
+		}
+		
+		
 	});
 
 	$('#Showcontent1').click(function() {
