@@ -8,6 +8,7 @@ $(document).ready(function() {
 				var combobox = $("#linnad");
 				$.each(responseJson, function(key, value) {
 					var rowNew = $("<option></option>");
+					alert(value['nimi']);
 					rowNew.children().eq(0).text(value['nimi']);
 					rowNew.appendTo(combobox);
 				});
