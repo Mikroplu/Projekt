@@ -11,9 +11,9 @@
 <body>
 	<div id="header">
 		<div id="buttons_menu">
-			<button class="menu_button" id="Showcontent1">Main</button>
-			<button class="menu_button" id="Showcontent2">Login</button>
-			<button class="menu_button" id="Showcontent3">Register</button>
+			<button class="menu_button" id="Showcontent1">Linna valik</button>
+			<button class="menu_button" id="Showcontent2">Pubi valik</button>
+			<button class="menu_button" id="Showcontent3">Laua valik</button>
 			<button class="menu_button" id="Showcontent4">Mingi asi</button>
 			<button class="menu_button" id="login_button">Nupp1</button>
 			<button class="menu_button" id="register_button">Nupp2</button>
@@ -23,10 +23,21 @@
 
 	<div id="content1" class="contents">
 		<div class="subcontent">
-
 			<div class="content">
-				PUBI JA LINNA VALIK
+				VALI LINN
+				<p>
+					<select name="linnad" id="linnad">
+						<option value="Tartu">Tartu</option>
+						<option value="Tallinn">Tallinn</option>
+						<option value="Valga">Valga</option>
+						<option value="Pärnu">Pärnu</option>
+						<option value="Viljandi">Viljandi</option>
+					</select>
+
+				</p>
+				<button class="menu_button" id="linna_valik">Edasi</button>
 			</div>
+
 		</div>
 	</div>
 
@@ -35,9 +46,9 @@
 	<div id="content2" class="contents">
 		<div class="subcontent">
 			<div class="content">
-			LOGIN
-				<p>
-					<form action="login" method="get">
+				PUBI VALIK
+
+				<!-- <form action="login" method="get">
 						<table>
 							<tr>
 								<td>User</td>
@@ -49,8 +60,18 @@
 							</tr>
 						</table>
 						<input type="submit" />
-					</form>
+					</form> -->
+				VALI LINN
+				<p>
+					<select>
+						<option value="Pahad Poisid">Pahad Poisid</option>
+						<option value="Pubi 2">Pubi 2</option>
+						<option value="Pubi 3">Pubi 3</option>
+						<option value="Pubi 4">Pubi 4</option>
+						<option value="Pubi 5">Pubi 5</option>
+					</select>
 				</p>
+				<button class="menu_button" id="pubi_valik">Edasi</button>
 			</div>
 		</div>
 	</div>
@@ -60,15 +81,12 @@
 	<div id="content3" class="contents">
 		<div class="subcontent">
 			<div class="content">
-			REGISTER
 				<p>
-					<form action="register" method="post">
-						Name: <input type="text" name="userName"><br> Email:
-								<input type="text" name="userEmail"><br> Password:
-										<input type="password" name=userPassword><br> <input
-												type="submit" value="Submit">
-					</form>
+					VALI SOBIV LAUD
+
 				</p>
+				<button class="menu_button" id="laua_valik">Edasi</button>
+
 			</div>
 		</div>
 	</div>
@@ -78,8 +96,15 @@
 	<div id="content4" class="contents">
 		<div class="subcontent">
 			<div class="content">
-				MINGI ASI
-				<p>Siin on content4 sisu</p>
+				LOGIN
+				<p>
+					<form action="register" method="post">
+						Name: <input type="text" name="userName"><br> Email:
+								<input type="text" name="userEmail"><br> Password:
+										<input type="password" name=userPassword><br> <input
+												type="submit" value="Submit">
+					</form>
+				</p>
 			</div>
 		</div>
 	</div>

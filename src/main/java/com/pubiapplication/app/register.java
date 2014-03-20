@@ -23,7 +23,7 @@ import com.google.gson.JsonObject;
 
 @WebServlet(value = "/register")
 public class register extends HttpServlet {
-
+	
 	
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -66,8 +66,6 @@ public class register extends HttpServlet {
 				while(rs.next()){
 	                String dbUsername = rs.getString("name");
 	                String dbPassword = rs.getString("password");
-	                
-	                
 	                if(dbUsername.equals(name)){
 	                response(response,"Selline kasutajanimi on juba olemas");
 	                }
