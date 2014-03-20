@@ -8,10 +8,9 @@ $(document).ready(function() {
 				$.each(responseJson, function(key, value) {
 					$("#linnad").append('<option>'+value.asukoht+'</option>');
 						
-				}
-					
-			});
-		}
+				)};
+			}
+		)};
 	});
 	
 	
