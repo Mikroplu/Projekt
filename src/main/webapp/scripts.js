@@ -2,15 +2,11 @@
 
 $(document).ready(function() {
 	$("#linnad").click(function(event) {
-		alert("0");
 		$.get('linnad', function(responseJson) {
-			alert("1");
 			if (responseJson != null) {
-				alert("2");
 				var combobox = $("#linnad");
 				$.each(responseJson, function(key, value) {
 					var rowNew = $("<option></option>");
-					alert(value['nimi']);
 					rowNew.children().eq(0).text(value['nimi']);
 					rowNew.appendTo(combobox);
 				});
