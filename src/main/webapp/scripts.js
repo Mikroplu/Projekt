@@ -6,10 +6,9 @@ $(document).ready(function() {
 			if (responseJson != null) {
 				var $combobox = $("#linnad");
 				$.each(responseJson, function(key, value) {
-					for(var i=0;i<responseJson.length;i++){
-						if($("#linnad").children[i].text != value.asukoht){
+					
 							$("#linnad").append('<option>'+value.asukoht+'</option>');
-						}
+						
 							
 					}
 					
