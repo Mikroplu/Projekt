@@ -2,6 +2,7 @@ package com.pubiapplication.app;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -47,18 +48,18 @@ public class fetchLinnad {
 	 public static ArrayList<Linnad> getAllLinnad() {
 		 	     connection = fetchLinnad.getConnection();
 		 	        ArrayList<Linnad> linnade_list = new ArrayList<Linnad>();
+		 	       
 		 	        try {
 		 	            Statement statement = connection.createStatement();
-		 	            ResultSet rs = statement.executeQuery("SELECT * FROM linnad");
+		 	            ResultSet rs = statement.executeQuery("SELECT * FROM users");
 		 	            while(rs.next()) {
-		 	             Linnad linn=new Linnad();
-		 	             linn.setNimi(rs.getString("nimi"));
-		 	             linnade_list.add(linn);
+		 	            	Linnad linn=new Linnad();
+		 	            	linn.setNimi(rs.getString("kasutajanimi"));
+		 	            	linnade_list.add(linn);
 		 	            }
 		 	        } catch (SQLException e) {
 		 	            e.printStackTrace();
 		 	        }
-		 	 
 		 	        return linnade_list;
 		 	    }
 }

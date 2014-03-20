@@ -1,6 +1,7 @@
 package com.pubiapplication.app;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +21,7 @@ public class Populeerilinnad extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	public Populeerilinnad() {
+		
 	}
 
 	protected void doGet(HttpServletRequest request,
@@ -27,6 +29,10 @@ public class Populeerilinnad extends HttpServlet {
 
 		ArrayList<Linnad> linnad = new ArrayList<Linnad>();
 		linnad = fetchLinnad.getAllLinnad();
+		
+		PrintWriter out = response.getWriter();
+		
+		out.print(linnad);
 		Gson gson = new Gson();
 		JsonElement element = gson.toJsonTree(linnad,
 				new TypeToken<List<Linnad>>() {

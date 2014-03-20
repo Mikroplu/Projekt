@@ -2,6 +2,7 @@
 
 $(document).ready(function() {
 	$("#linnad").click(function(event) {
+		alert("0");
 		$.get('linnad', function(responseJson) {
 			alert("1");
 			if (responseJson != null) {
