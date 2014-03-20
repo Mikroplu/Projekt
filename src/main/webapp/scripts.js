@@ -7,7 +7,7 @@ $(document).ready(function() {
 				var $combobox = $("#linnad");
 				$.each(responseJson, function(key, value) {
 					alert(value.nimi);
-					$("linna_valik").append(value.nimi);
+					$("linna_valik").append("agrsg");
 				});
 			}
 		});
