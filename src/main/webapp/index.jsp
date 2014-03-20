@@ -31,7 +31,7 @@
 					</select>
 
 				</p>
-				<button class="menu_button" id="edasi_nahh">Edasi</button>
+				<button class="menu_button" id="linna_valik">Edasi</button>
 			</div>
 
 		</div>
