@@ -6,16 +6,14 @@ $(document).ready(function() {
 			if (responseJson != null) {
 				var $combobox = $("#linnad");
 				$.each(responseJson, function(key, value) {
-					
-							$("#linnad").append('<option>'+value.asukoht+'</option>');
+					$("#linnad").append('<option>'+value.asukoht+'</option>');
 						
-							
-					}
+				}
 					
-				});
-			}
-		});
+			});
+		}
 	});
+	
 	
 	$("#linnad").on('change',function(){
 		for(var i=0;i<responseJson.length;i++){
