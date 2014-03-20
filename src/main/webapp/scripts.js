@@ -7,7 +7,7 @@ $(document).ready(function() {
 				var $combobox = $("#linnad");
 				$.each(responseJson, function(key, value) {
 					alert(value.nimi);
-					$("#linnad").append(value.nimi);
+					$("#linnad").append('<option>'+value.nimi+'</option>');
 				});
 			}
 		});
