@@ -3,7 +3,7 @@
 $(document).ready(function() {
 
 	$("#linnad").click(function(event) {
-		$.get('Populeerilinnad', function(responseJson) {
+		$.get('Populeeri', function(responseJson) {
 			if (responseJson != null) {
 				var combobox = $("#linnad");
 				$.each(responseJson, function(key, value) {

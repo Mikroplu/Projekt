@@ -15,7 +15,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.reflect.TypeToken;
 
-@WebServlet("/linnad")
+@WebServlet("/Populeeri")
 public class Populeerilinnad extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
