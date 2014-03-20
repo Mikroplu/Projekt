@@ -18,20 +18,19 @@ import com.google.gson.reflect.TypeToken;
 
 @WebServlet("/linnad")
 public class Populeerilinnad extends HttpServlet {
+
 	private static final long serialVersionUID = 1L;
 
 	public Populeerilinnad() {
-		
 	}
-
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
 		ArrayList<Linnad> linnad = new ArrayList<Linnad>();
 		linnad = fetchLinnad.getAllLinnad();
-		
+
 		PrintWriter out = response.getWriter();
-		
+
 		out.print(linnad);
 		Gson gson = new Gson();
 		JsonElement element = gson.toJsonTree(linnad,
@@ -40,11 +39,9 @@ public class Populeerilinnad extends HttpServlet {
 		JsonArray jsonArray = element.getAsJsonArray();
 		response.setContentType("application/json");
 		response.getWriter().print(jsonArray);
-
 	}
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-
 	}
 
 }
