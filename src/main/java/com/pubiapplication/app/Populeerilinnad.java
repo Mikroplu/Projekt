@@ -28,10 +28,6 @@ public class Populeerilinnad extends HttpServlet {
 
 		ArrayList<Linnad> linnad = new ArrayList<Linnad>();
 		linnad = fetchLinnad.getAllLinnad();
-
-		PrintWriter out = response.getWriter();
-
-		out.print(linnad);
 		Gson gson = new Gson();
 		JsonElement element = gson.toJsonTree(linnad,
 				new TypeToken<List<Linnad>>() {
