@@ -27,15 +27,11 @@
 				VALI LINN
 				<p>
 					<select name="linnad" id="linnad">
-						<option value="Tartu">Tartu</option>
-						<option value="Tallinn">Tallinn</option>
-						<option value="Valga">Valga</option>
-						<option value="Pärnu">Pärnu</option>
-						<option value="Viljandi">Viljandi</option>
+						
 					</select>
 
 				</p>
-				<button class="menu_button" id="linna_valik">Edasi</button>
+				<button class="menu_button" id="linnad">Edasi</button>
 			</div>
 
 		</div>
