@@ -4,11 +4,9 @@ $(document).ready(function() {
 	$("#linnad").click(function(event) {
 		$.get('linnad', function(responseJson) {
 			if (responseJson != null) {
-				var combobox = $("#linnad");
+				var $combobox = $("#linnad");
 				$.each(responseJson, function(key, value) {
-					var rowNew = $("<option><p></p></option>");
-					rowNew.children().eq(0).text(value['nimi']);
-					rowNew.appendTo(combobox);
+					$('<option>').val(key).text(value).appendTo($combobox);
 				});
 			}
 		});
