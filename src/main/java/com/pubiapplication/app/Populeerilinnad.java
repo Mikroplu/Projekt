@@ -15,7 +15,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.reflect.TypeToken;
 
-@WebServlet("/Populeeri")
+@WebServlet("/linnad")
 public class Populeerilinnad extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -25,10 +25,10 @@ public class Populeerilinnad extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		ArrayList<Linnad> country = new ArrayList<Linnad>();
-		country = fetchLinnad.getAllLinnad();
+		ArrayList<Linnad> linnad = new ArrayList<Linnad>();
+		linnad = fetchLinnad.getAllLinnad();
 		Gson gson = new Gson();
-		JsonElement element = gson.toJsonTree(country,
+		JsonElement element = gson.toJsonTree(linnad,
 				new TypeToken<List<Linnad>>() {
 				}.getType());
 		JsonArray jsonArray = element.getAsJsonArray();

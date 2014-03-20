@@ -49,8 +49,7 @@ public class fetchLinnad {
 		 	        ArrayList<Linnad> linnade_list = new ArrayList<Linnad>();
 		 	        try {
 		 	            Statement statement = connection.createStatement();
-		 	            ResultSet rs = statement.executeQuery("select * from linnad");
-		 	         
+		 	            ResultSet rs = statement.executeQuery("SELECT * FROM linnad");
 		 	            while(rs.next()) {
 		 	             Linnad linn=new Linnad();
 		 	             linn.setNimi(rs.getString("nimi"));

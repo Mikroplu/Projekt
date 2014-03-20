@@ -1,10 +1,11 @@
 //Peidab kõik elemendid klassiga "content"
 
 $(document).ready(function() {
-
 	$("#linnad").click(function(event) {
-		$.get('Populeeri', function(responseJson) {
+		$.get('linnad', function(responseJson) {
+			alert("1");
 			if (responseJson != null) {
+				alert("2");
 				var combobox = $("#linnad");
 				$.each(responseJson, function(key, value) {
 					var rowNew = $("<option></option>");
