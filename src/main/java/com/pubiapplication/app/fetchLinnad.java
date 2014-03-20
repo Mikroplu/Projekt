@@ -23,7 +23,7 @@ public class fetchLinnad {
 		 	        else {
 		 	            try {
 		 	                Properties prop = new Properties();
-		 	                InputStream inputStream = fetchLinnad.class.getClassLoader().getResourceAsStream("/db.properties");
+		 	                InputStream inputStream = fetchLinnad.class.getClassLoader().getResourceAsStream("databaseconnection.txt");
 		 	                prop.load(inputStream);
 		 	                String driver = prop.getProperty("driver");
 		 	                String url = prop.getProperty("url");
