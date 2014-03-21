@@ -1,0 +1,132 @@
+body, html{
+	width:100%;
+	height:100%;
+	margin:0;
+	font-family: sans-serif;
+	font-size: 16px;
+}
+
+#header{
+	width:100%;
+	height:10%;
+	background-color: #1C538A ;
+}
+
+#footer{
+	width:100%;
+	height:10%;
+	background-color: #143D66;
+}
+
+.content{
+	padding: 3%;	
+}
+
+.subcontent{
+	margin:auto;
+	width:65%;
+	height:100%;
+	background-color: #F6FAFF;
+	
+}
+@media only screen and (max-width: 500px) {
+    .subcontent{
+        width:800px;
+    }
+}
+
+#content1{
+	width:100%;
+	height:80%;
+	background-color: #EAF5FF;
+	display: block;
+}
+
+#content2{
+	width:100%;
+	height:80%;
+	background-color: #EAF5FF;
+	display:none;
+	
+}
+
+#content3{
+	width:100%;
+	height:80%;
+	background-color: #EAF5FF;
+	display:none;
+}
+
+#content4{
+	width:100%;
+	height:80%;
+	background-color: #EAF5FF;
+	display:none;
+}
+
+#login_button{
+	float:right;
+}
+
+#register_button{
+	float:right;
+}
+
+.menu_button{
+	float:left;
+	background-color: #F6FAFF;
+	border: 2px solid black;
+	padding: 9px;
+	font-family: sans-serif;
+	font-size: 19px;
+	font-weight: bold;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 1%;
+}
+
+.menu_button:hover {
+	float:left;
+	background-color: #91BCE8;
+	border: 2px solid black;
+	padding: 9px;
+	font-family: sans-serif;
+	font-size: 19px;
+	font-weight: bold;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 1%;	
+	
+}
+
+.menu_button_clicked {
+	float:left;
+	background-color: #66A3E0;
+	border: 2px solid black;
+	padding: 9px;
+	font-family: sans-serif;
+	font-size: 19px;
+	font-weight: bold;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 1%;	
+
+}
+
+
+#buttons_menu{
+	padding-left: 5%;
+	width:90%;	
+}
+
+
+
+
+
+
+
+
+
+
+
+
