@@ -2,46 +2,36 @@
 
 $(document).ready(
 		function() {
-			$("#linnad").click(
-					function(event) {
-						
-						$.get('pubid', function(responseJson) {
-							var linnad = document.getElementById("linnad");
-							while (linnad.firstChild) {
-								linnad.removeChild(linnad.firstChild);
-							}
-							if (responseJson != null) {
-								var $combobox = $("#linnad");
-								$.each(responseJson, function(key, value) {
-									$("#linnad").append(
-											'<option value='+value.asukoht+'>' + value.asukoht
-													+ '</option>');
+			$.get('pubid', function(responseJson) {
+				var linnad = document.getElementById("linnad");
+				while (linnad.firstChild) {
+					linnad.removeChild(linnad.firstChild);
+				}
+				if (responseJson != null) {
+					var $combobox = $("#linnad");
+					$.each(responseJson, function(key, value) {
+						$("#linnad").append(
+								'<option value=' + value.asukoht + '>'
+										+ value.asukoht + '</option>');
 
-								});
-							}
-						});
 					});
-			
-			
-			$("#linnad").click(
-					function(event) {
-						var linnad = document.getElementById("linnad");
-						var valitud_linn = linnad.options[linnad.selectedIndex].text;
-						$.get('pubinimed',valitud_linn, function(responseJson) {
-							if (responseJson != null) {
-								
-								$.each(responseJson, function(key, value) {
+				}
 
-								});
-							}
+			});
+
+			$("#linnad").click(function(event) {
+				var linnad = document.getElementById("linnad");
+				var valitud_linn = linnad.options[linnad.selectedIndex].text;
+				$.get('pubinimed', valitud_linn, function(responseJson) {
+					if (responseJson != null) {
+
+						$.each(responseJson, function(key, value) {
+
 						});
-					});
+					}
+				});
+			});
 
-			
-			
-			
-	
-			
 			$('#Showcontent1').click(function() {
 				$('.contents').hide();
 				$('#content1').show();
