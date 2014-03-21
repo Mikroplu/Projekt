@@ -4,8 +4,8 @@ $(document).ready(
 		function() {
 			$("#linnad").click(
 					function(event) {
+						
 						$.get('pubid', function(responseJson) {
-
 							var linnad = document.getElementById("linnad");
 							while (linnad.firstChild) {
 								linnad.removeChild(linnad.firstChild);
@@ -14,7 +14,25 @@ $(document).ready(
 								var $combobox = $("#linnad");
 								$.each(responseJson, function(key, value) {
 									$("#linnad").append(
-											'<option>' + value.asukoht
+											'<option value='+value.asukoht+'>' + value.asukoht
+													+ '</option>');
+
+								});
+							}
+						});
+					});
+			
+			
+			$("#linnad").click(
+					function(event) {
+						var linnad = document.getElementById("linnad");
+						var valitud_linn = e.options[e.selectedIndex].text;
+						$.get('pubinimed',valitud_linn, function(responseJson) {
+							if (responseJson != null) {
+								
+								$.each(responseJson, function(key, value) {
+									$("#linnad").append(
+											'<option value='+value.asukoht+'>' + value.asukoht
 													+ '</option>');
 
 								});
@@ -22,27 +40,13 @@ $(document).ready(
 						});
 					});
 
-			$("#linnad").click(function(event) {
-				var town = 'Tallinn';
-				$.ajax({
-					type : "GET",
-					url : "../pubinimed",
-					dataType : "json",
-					data : {
-						linn : town
-					},
-					success : function(data) {
-						if (data) {
-
-						}
-					},
-					error : function() {
-
-					}
-
-				});
-			});
-
+			
+			
+			
+			
+			var linnad = document.getElementById("linnad");
+			var valitud_linn = e.options[e.selectedIndex].text;
+			
 			$('#Showcontent1').click(function() {
 				$('.contents').hide();
 				$('#content1').show();
