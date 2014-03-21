@@ -26,14 +26,11 @@ $(document).ready(
 			$("#linnad").click(
 					function(event) {
 						var linnad = document.getElementById("linnad");
-						var valitud_linn = e.options[e.selectedIndex].text;
+						var valitud_linn = linnad.options[e.selectedIndex].text;
 						$.get('pubinimed',valitud_linn, function(responseJson) {
 							if (responseJson != null) {
 								
 								$.each(responseJson, function(key, value) {
-									$("#linnad").append(
-											'<option value='+value.asukoht+'>' + value.asukoht
-													+ '</option>');
 
 								});
 							}
@@ -43,9 +40,7 @@ $(document).ready(
 			
 			
 			
-			
-			var linnad = document.getElementById("linnad");
-			var valitud_linn = e.options[e.selectedIndex].text;
+	
 			
 			$('#Showcontent1').click(function() {
 				$('.contents').hide();
