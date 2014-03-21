@@ -28,6 +28,8 @@
 				<p>
 					<select name="linnad" id="linnad">
 						<option disabled="disabled" selected="selected">Vali linn</option>
+						<option>linn</option>
+						<option>Vali </option>
 
 					</select>
 
