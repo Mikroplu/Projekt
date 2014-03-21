@@ -8,6 +8,8 @@
 		type="text/javascript"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
+
+
 <body>
 	<div id="header">
 		<div id="buttons_menu">
@@ -27,8 +29,11 @@
 				VALI LINN
 				<p>
 					<select name="linnad" id="linnad">
-						<option disabled="disabled" selected="selected">Vali linn</option>
-
+						<option value="Tartu">Tartu</option>
+						<option value="Tallinn">Tallinn</option>
+						<option value="Valga">Valga</option>
+						<option value="Pärnu">Pärnu</option>
+						<option value="Viljandi">Viljandi</option>
 					</select>
 
 				</p>
@@ -60,7 +65,12 @@
 					</form> -->
 				VALI LINN
 				<p>
-					<select id="pubid">
+					<select>
+						<option value="Pahad Poisid">Pahad Poisid</option>
+						<option value="Pubi 2">Pubi 2</option>
+						<option value="Pubi 3">Pubi 3</option>
+						<option value="Pubi 4">Pubi 4</option>
+						<option value="Pubi 5">Pubi 5</option>
 					</select>
 				</p>
 				<button class="menu_button" id="pubi_valik">Edasi</button>
@@ -76,20 +86,14 @@
 				<p>
 					VALI SOBIV LAUD
 
-
-					<form action="register" method="post">
-						Name: <input type="text" name="userName"><br> Email:
-								<input type="text" name="userEmail"><br> Password:
-										<input type="password" name=userPassword><br> <input
-												type="submit" value="Submit">
-					</form>
-
 				</p>
 				<button class="menu_button" id="laua_valik">Edasi</button>
 
 			</div>
 		</div>
 	</div>
+
+
 
 	<div id="content4" class="contents">
 		<div class="subcontent">
@@ -99,8 +103,8 @@
 					<form action="register" method="post">
 						Name: <input type="text" name="userName"><br> Email:
 								<input type="text" name="userEmail"><br> Password:
-										<input type="password" name=userPassword><br> <input
-												type="submit" value="Submit">
+										<input type="password" name=userPassword><br> 
+										<button class=menu_button type="submit" value="Submit" id="register_button2">Register</button>
 					</form>
 				</p>
 			</div>
