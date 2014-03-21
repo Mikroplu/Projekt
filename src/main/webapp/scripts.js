@@ -1,6 +1,8 @@
-//Peidab kõik elemendid klassiga "content"
 
 $(document).ready(function() {
+ $.get('pubid', function(responseJson) { var linnad = document.getElementById("linnad"); while (linnad.firstChild) { linnad.removeChild(linnad.firstChild); } if (responseJson != null) { var $combobox = $("#linnad"); $.each(responseJson, function(key, value) { $("#linnad").append( '<option value='+value.asukoht+'>' + value.asukoht + '</option>'); }); } });
+	
+		
 	$('#Showcontent1').click(function() {
 		$('.contents').hide();
 	    $('#content1').show();
@@ -18,12 +20,23 @@ $(document).ready(function() {
 	    $('#content4').show();
 	});
 	
+	$('#login_button').click(function() {
+		$('.contents').hide();
+	    $('#content5').show();
+	});
 	
-	//Edasi nupud
+	$('#register_button').click(function() {
+		$('.contents').hide();
+	    $('#content4').show();
+	});
+	
+	
+	// Edasi nupud
 	$('#linna_valik').click(function() {
 		$('.contents').hide();
 	    $('#content2').show();
 	});
+	
 	
 	
 	$('#pubi_valik').click(function() {
@@ -36,29 +49,31 @@ $(document).ready(function() {
 	    $('#content3').show();
 	});
 	
+	// Tagasi nupud
+	$('#tagasi_pubi').click(function() {
+		$('.contents').hide();
+	    $('#content1').show();
+	});
+	
+	$('#tagasi_laud').click(function() {
+		$('.contents').hide();
+	    $('#content2').show();
+	});
+	
+	$('#tagasi_register').click(function() {
+		$('.contents').hide();
+	    $('#content1').show();
+	});
+	$('#tagasi_login').click(function() {
+		$('.contents').hide();
+	    $('#content1').show();
+	});
+	
 	// Muudab nuppude klassid
     $('button').click(function(){
     	$('.menu_button').removeClass('menu_button_clicked');
         $(this).addClass('menu_button_clicked');
    });
-    
-    
-    
-    
-    $('#linnad').change(function() { 
-        var value = $(this).attr('value'); 
-        var request = $.ajax({
-            url: "/getcities/",
-            type: "GET",
-            data: {country : value},
-            dataType: "json",
-
-            success: function(data) {
-             //Popluate combo here by unpacking the json
-            }
-        });
-
-
-    });
+ 
 });
 
