@@ -8,15 +8,17 @@
 		type="text/javascript"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
+
+
 <body>
 	<div id="header">
 		<div id="buttons_menu">
-			<button class="menu_button" id="Showcontent1">Linna valik</button>
-			<button class="menu_button" id="Showcontent2">Pubi valik</button>
-			<button class="menu_button" id="Showcontent3">Laua valik</button>
-			<button class="menu_button" id="Showcontent4">Mingi asi</button>
-			<button class="menu_button" id="login_button">Nupp1</button>
-			<button class="menu_button" id="register_button">Nupp2</button>
+			
+
+
+			
+			<button class="menu_button" id="register_button">Register</button>
+			<button class="menu_button" id="login_button">Login</button>
 		</div>
 	</div>
 
@@ -27,14 +29,19 @@
 				VALI LINN
 				<p>
 					<select name="linnad" id="linnad">
+<<<<<<< HEAD
 						<option disabled="disabled" selected="selected">Vali linn</option>
 						<option>linn</option>
 						<option>Vali </option>
 
+=======
+						
+>>>>>>> branch 'master' of https://github.com/Mikroplu/Projekt.git
 					</select>
 
 				</p>
 				<button class="menu_button" id="linna_valik">Edasi</button>
+				
 			</div>
 
 		</div>
@@ -46,26 +53,12 @@
 		<div class="subcontent">
 			<div class="content">
 				PUBI VALIK
-
-				<!-- <form action="login" method="get">
-						<table>
-							<tr>
-								<td>User</td>
-								<td><input name="user" />
-							</tr>
-							<tr>
-								<td>password</td>
-								<td><input name="password" />
-							</tr>
-						</table>
-						<input type="submit" />
-					</form> -->
-				VALI LINN
 				<p>
 					<select id="pubid">
 					</select>
 				</p>
 				<button class="menu_button" id="pubi_valik">Edasi</button>
+				<button class="menu_button" id="tagasi_pubi">Tagasi</button>
 			</div>
 		</div>
 	</div>
@@ -75,35 +68,50 @@
 	<div id="content3" class="contents">
 		<div class="subcontent">
 			<div class="content">
-				<p>
-					VALI SOBIV LAUD
-
-
-					<form action="register" method="post">
-						Name: <input type="text" name="userName"><br> Email:
-								<input type="text" name="userEmail"><br> Password:
-										<input type="password" name=userPassword><br> <input
-												type="submit" value="Submit">
-					</form>
-
-				</p>
+				<p>VALI SOBIV LAUD</p>
 				<button class="menu_button" id="laua_valik">Edasi</button>
+				<button class="menu_button" id="tagasi_laud">Tagasi</button>
 
 			</div>
 		</div>
 	</div>
 
+
+
 	<div id="content4" class="contents">
 		<div class="subcontent">
 			<div class="content">
-				LOGIN
+				Register
 				<p>
 					<form action="register" method="post">
 						Name: <input type="text" name="userName"><br> Email:
 								<input type="text" name="userEmail"><br> Password:
-										<input type="password" name=userPassword><br> <input
-												type="submit" value="Submit">
+										<input type="password" name=userPassword><br>
+												<button class=menu_button type="submit" value="Submit"
+													id="register_button2">Register</button>
+													
+													
 					</form>
+					<button class="menu_button" id="tagasi_register">Home</button>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div id="content5" class="contents">
+		<div class="subcontent">
+			<div class="content">
+				LOGIN
+				<p>
+					<form action="login" method="get">
+
+
+						User: <input name="user" /><br> Password: 
+						<input name="password" /><br>
+						<button type="submit" class=menu_button id="login_nupp">Login</button>
+						
+					</form>
+					<button class="menu_button" id="tagasi_login">Home</button>
 				</p>
 			</div>
 		</div>
