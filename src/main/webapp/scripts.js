@@ -1,7 +1,6 @@
 //Peidab kõik elemendid klassiga "content"
 
 $(document).ready(function() {
-	
 	function() {
 		$("#linnad").click(
 				function(event) {
