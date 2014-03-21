@@ -11,7 +11,7 @@ $(document).ready(
 					var $combobox = $("#linnad");
 					$.each(responseJson, function(key, value) {
 						$("#linnad").append(
-								'<option value=' + value.asukoht + '>'
+								'<option name=' + value.asukoht + ' value=' + value.asukoht + '>'
 										+ value.asukoht + '</option>');
 
 					});
@@ -20,7 +20,6 @@ $(document).ready(
 			});
 
 			$("#linna_valik").click(function(event) {
-				
 				$.get('pubinimed', 'Rakvere', function(responseJson) {
 					if (responseJson != null) {
 						$.each(responseJson, function(key, value) {
