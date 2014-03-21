@@ -13,10 +13,6 @@
 <body>
 	<div id="header">
 		<div id="buttons_menu">
-			
-
-
-			
 			<button class="menu_button" id="register_button">Register</button>
 			<button class="menu_button" id="login_button">Login</button>
 		</div>
@@ -28,10 +24,12 @@
 			<div class="content">
 				VALI LINN
 				<p>
-					<select name="linnad" id="linnad">
-						
-					</select>
+					<select name="linnad" id="linnad" class="comboBox">
+						<option disabled="disabled" selected="selected">Vali linn</option>
+						<option>linn</option>
+						<option>Vali </option>
 
+					</select>
 				</p>
 				<button class="menu_button" id="linna_valik">Edasi</button>
 				
