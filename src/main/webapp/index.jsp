@@ -60,12 +60,7 @@
 					</form> -->
 				VALI LINN
 				<p>
-					<select id="pubi_valik">
-						<option value="Pahad Poisid">Pahad Poisid</option>
-						<option value="Pubi 2">Pubi 2</option>
-						<option value="Pubi 3">Pubi 3</option>
-						<option value="Pubi 4">Pubi 4</option>
-						<option value="Pubi 5">Pubi 5</option>
+					<select id="pubid">
 					</select>
 				</p>
 				<button class="menu_button" id="pubi_valik">Edasi</button>

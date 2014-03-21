@@ -1,12 +1,14 @@
 //Peidab kõik elemendid klassiga "content"
 
-$(document).ready(function() {
-			$("#linnad").click(function(event) {
+$(document).ready(
+		function() {
+			$("#linnad").click(
+					function(event) {
 						$.get('pubid', function(responseJson) {
-							
+
 							var linnad = document.getElementById("linnad");
 							while (linnad.firstChild) {
-							    linnad.removeChild(linnad.firstChild);
+								linnad.removeChild(linnad.firstChild);
 							}
 							if (responseJson != null) {
 								var $combobox = $("#linnad");
@@ -20,7 +22,26 @@ $(document).ready(function() {
 						});
 					});
 
-			
+			$("#linnad").click(function(event) {
+				var town = 'Tallinn';
+				$.ajax({
+					type : "GET",
+					url : "../pubinimed",
+					dataType : "json",
+					data : {
+						linn : town
+					},
+					success : function(data) {
+						if (data) {
+
+						}
+					},
+					error : function() {
+
+					}
+
+				});
+			});
 
 			$('#Showcontent1').click(function() {
 				$('.contents').hide();

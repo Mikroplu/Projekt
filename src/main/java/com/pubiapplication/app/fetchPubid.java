@@ -59,4 +59,26 @@ public class fetchPubid {
 		}
 		return pubide_list;
 	}
+	
+	
+public static ArrayList<Pubid> getPubidByLinn(String linn) {
+		
+		connection = fetchPubid.getConnection();
+		ArrayList<Pubid> pubide_list = new ArrayList<Pubid>();
+		
+		try {
+			Statement statement = connection.createStatement();
+			ResultSet rs = statement.executeQuery("SELECT * FROM pubid WHERE linn="+linn);
+			while (rs.next()) {
+				Pubid pubi = new Pubid();
+				pubi.setNimi(rs.getString("nimi"));
+				pubi.setAsukoht(rs.getString("asukoht"));
+				pubi.setLaudade_arv(rs.getInt("laudade_arv"));
+				pubide_list.add(pubi);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return pubide_list;
+	}
 }
