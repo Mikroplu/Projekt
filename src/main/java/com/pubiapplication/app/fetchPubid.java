@@ -46,7 +46,7 @@ public class fetchPubid {
 		
 		try {
 			Statement statement = connection.createStatement();
-			ResultSet rs = statement.executeQuery("SELECT DISTINCT asukoht FROM pubid");
+			ResultSet rs = statement.executeQuery("SELECT DISTINCT asukoht FROM pubid ORDER BY ASC");
 			while (rs.next()) {
 				Pubid pubi = new Pubid();
 				pubi.setAsukoht(rs.getString("asukoht"));

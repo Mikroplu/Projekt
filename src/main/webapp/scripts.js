@@ -22,11 +22,10 @@ $(document).ready(
 			$("#linnad").click(function(event) {
 				var linnad = document.getElementById("linnad");
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
-				$.get('pubinimed', valitud_linn, function(responseJson) {
+				$.get('pubinimed', 'Rakvere', function(responseJson) {
 					if (responseJson != null) {
-
 						$.each(responseJson, function(key, value) {
-
+							alert(value);
 						});
 					}
 				});
