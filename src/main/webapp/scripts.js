@@ -19,9 +19,8 @@ $(document).ready(
 
 			});
 
-			$("#linnad").click(function(event) {
-				var linnad = document.getElementById("linnad");
-				var valitud_linn = linnad.options[linnad.selectedIndex].text;
+			$("#linna_valik").click(function(event) {
+				
 				$.get('pubinimed', 'Rakvere', function(responseJson) {
 					if (responseJson != null) {
 						$.each(responseJson, function(key, value) {
