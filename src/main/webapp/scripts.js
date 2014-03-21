@@ -1,27 +1,8 @@
-//Peidab kõik elemendid klassiga "content"
 
 $(document).ready(function() {
-	function() {
-		$("#linnad").click(
-				function(event) {
-					
-					$.get('pubid', function(responseJson) {
-						var linnad = document.getElementById("linnad");
-						while (linnad.firstChild) {
-							linnad.removeChild(linnad.firstChild);
-						}
-						if (responseJson != null) {
-							var $combobox = $("#linnad");
-							$.each(responseJson, function(key, value) {
-								$("#linnad").append(
-										'<option value='+value.asukoht+'>' + value.asukoht
-												+ '</option>');
-
-							});
-						}
-					});
-				});
-	}
+	$("#linnad").click(
+	function(event) { $.get('pubid', function(responseJson) { var linnad = document.getElementById("linnad"); while (linnad.firstChild) { linnad.removeChild(linnad.firstChild); } if (responseJson != null) { var $combobox = $("#linnad"); $.each(responseJson, function(key, value) { $("#linnad").append( '<option value='+value.asukoht+'>' + value.asukoht + '</option>'); }); } }); });
+	
 		
 	$('#Showcontent1').click(function() {
 		$('.contents').hide();
