@@ -12,10 +12,13 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Properties;
 
+import org.postgresql.jdbc4.Jdbc4Connection;
+
 public class fetchPubid {
-
+	static Jdbc4Connection getConnection2(){
+		return null;
+	}
 	private static Connection connection = null;
-
 	public static Connection getConnection() {
 		if (connection != null)
 			return connection;
@@ -40,10 +43,8 @@ public class fetchPubid {
 	}
 
 	public static ArrayList<Pubid> getAllLinnad() {
-		
 		connection = fetchPubid.getConnection();
 		ArrayList<Pubid> pubide_list = new ArrayList<Pubid>();
-		
 		try {
 			Statement statement = connection.createStatement();
 			ResultSet rs = statement.executeQuery("SELECT DISTINCT asukoht FROM pubid ORDER BY asukoht ASC");
