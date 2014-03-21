@@ -29,16 +29,11 @@
 				VALI LINN
 				<p>
 					<select name="linnad" id="linnad">
-<<<<<<< HEAD
 						<option disabled="disabled" selected="selected">Vali linn</option>
 						<option>linn</option>
 						<option>Vali </option>
 
-=======
-						
->>>>>>> branch 'master' of https://github.com/Mikroplu/Projekt.git
 					</select>
-
 				</p>
 				<button class="menu_button" id="linna_valik">Edasi</button>
 				

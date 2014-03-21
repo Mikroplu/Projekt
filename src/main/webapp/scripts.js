@@ -1,6 +1,5 @@
 
 $(document).ready(function() {
-<<<<<<< HEAD
 			$("#linnad").click(
 					function(event) {
 						
@@ -39,9 +38,8 @@ $(document).ready(function() {
 			
 			
 			
-=======
+
  $.get('pubid', function(responseJson) { var linnad = document.getElementById("linnad"); while (linnad.firstChild) { linnad.removeChild(linnad.firstChild); } if (responseJson != null) { var $combobox = $("#linnad"); $.each(responseJson, function(key, value) { $("#linnad").append( '<option value='+value.asukoht+'>' + value.asukoht + '</option>'); }); } });
->>>>>>> branch 'master' of https://github.com/Mikroplu/Projekt.git
 	
 		
 	$('#Showcontent1').click(function() {
