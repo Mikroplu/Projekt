@@ -20,7 +20,6 @@ $(document).ready (function() {
 	$("#linna_valik").click (function(event) {
 				var linnad = document.getElementById("linnad");
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
-				alert(valitud_linn);
 				
 /*				$("#pubid").append(
 						'<option value='+"Lahekõrts"+'>' + "Lahekõrts"
@@ -28,7 +27,7 @@ $(document).ready (function() {
 				
 				$.get('pubinimed', function(responseJson) {
 
-						alert(responseJson);
+						alert("df");
 						$.each(responseJson, function(key, value) {
 							alert("hakkab appendima");
 							$("#pubid").append(
