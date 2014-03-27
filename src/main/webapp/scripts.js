@@ -33,17 +33,9 @@ $(document).ready(
 							}
 						});
 					});
-		});
+				});
 
-			
-			
-			
 
-$(document).ready(function() {
- $.get('pubid', function(responseJson) { var linnad = document.getElementById("linnad"); while (linnad.firstChild) { linnad.removeChild(linnad.firstChild); } if (responseJson != null) { var $combobox = $("#linnad"); $.each(responseJson, function(key, value) { $("#linnad").append( '<option value='+value.asukoht+'>' + value.asukoht + '</option>'); }); } });
-
-	
-		
 	$('#Showcontent1').click(function() {
 		$('.contents').hide();
 	    $('#content1').show();
@@ -116,5 +108,5 @@ $(document).ready(function() {
         $(this).addClass('menu_button_clicked');
    });
  
-});
+
 
