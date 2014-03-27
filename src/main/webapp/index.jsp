@@ -30,9 +30,6 @@
 				<p>
 					<select name="linnad" id="linnad">
 					</select>
-					
-					<select id="pubid">
-					</select>
 
 				</p>
 				<button class="menu_button" id="linna_valik">Edasi</button>

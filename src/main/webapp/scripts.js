@@ -14,6 +14,7 @@ $(document).ready (function() {
 								+ '</option>');
 			});
 		}
+	});
 
 		
 	$("#linna_valik").click (function(event) {
