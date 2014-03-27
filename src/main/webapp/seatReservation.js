@@ -6,7 +6,7 @@ $(document).ready (function() {
 
 			var settings = {
 				rows : 5,
-				cols : 15,
+				cols : 6,
 				rowCssPrefix : 'row-',
 				colCssPrefix : 'col-',
 				seatWidth : 35,
@@ -45,7 +45,7 @@ $(document).ready (function() {
 			// Case II: If already booked
 			var bookedSeats = [ 5, 10, 25 ];
 			init(bookedSeats);
-
+	});
 			$('.' + settings.seatCss).click(function() {
 				if ($(this).hasClass(settings.selectedSeatCss)) {
 					alert('This seat is already reserved');
@@ -77,4 +77,3 @@ $(document).ready (function() {
 					})
 
 		});
-});
