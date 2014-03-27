@@ -27,8 +27,8 @@
 }
 
 #place .seat {
-	background: url("images/vaba_laud.jpg") no-repeat scroll 0 0
-		transparent;
+	background: url("images/vaba_laud.jpg");
+	background-color:red;
 	height: 33px;
 	width: 33px;
 	display: block;
