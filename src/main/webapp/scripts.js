@@ -27,7 +27,8 @@ $(document).ready(
 					function(event) {
 						var linnad = document.getElementById("linnad");
 						var valitud_linn = linnad.options[linnad.selectedIndex].text;
-						$.get('pubinimed',valitud_linn, function(responseJson) {
+						alert(valitud_linn);
+						$.get('pubinimed', valitud_linn, function(responseJson) {
 							if (responseJson != null) {
 								
 								$.each(responseJson, function(key, value) {
