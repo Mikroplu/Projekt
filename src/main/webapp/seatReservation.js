@@ -41,7 +41,7 @@ $(document).ready (function() {
 			// init();
 
 			// Case II: If already booked
-			var bookedSeats = [ 5, 10, 25 ];
+			var bookedSeats = [ 5, 10, 25, 11, 1];
 			init(bookedSeats);
 
 			$('.' + settings.seatCss).click(function() {
