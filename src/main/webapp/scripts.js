@@ -16,11 +16,11 @@ $(document).ready (function() {
 		}
 	});
 
-		
+	//{valitud_linn : valitud_linn}, 
 	$("#linna_valik").click (function(event) {
 				var linnad = document.getElementById("linnad");
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
-				$.get('pubinimed', {valitud_linn : valitud_linn}, function(responseJson) {
+				$.get('pubinimed', function(responseJson) {
 					if (responseJson != null) {
 						alert("responsis");
 						$.each(responseJson, function(key, value) {

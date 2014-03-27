@@ -59,14 +59,14 @@ public class fetchPubid {
 	}
 	
 	
-public static ArrayList<Pubid> getPubidByLinn(String linn) {
-		
+public static ArrayList<Pubid> getPubidByLinn(String linn2) {
+		String linn = register.lisa_ylakomad(linn2);
 		connection = fetchPubid.getConnection();
 		ArrayList<Pubid> pubide_list = new ArrayList<Pubid>();
 		
 		try {
 			Statement statement = connection.createStatement();
-			ResultSet rs = statement.executeQuery("SELECT * FROM pubid WHERE linn="+linn);
+			ResultSet rs = statement.executeQuery("SELECT * FROM pubid WHERE asukoht="+linn);
 			while (rs.next()) {
 				Pubid pubi = new Pubid();
 				pubi.setNimi(rs.getString("nimi"));
