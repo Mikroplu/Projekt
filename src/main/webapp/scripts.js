@@ -1,5 +1,5 @@
 $(document).ready (function() {
-				
+	function a(){			
 	$.get('linnad', function(responseJson) {
 		var linnad = document.getElementById("linnad");
 		//Kui algse comboboxi sisu pole sama, mis tuleb andmebaasist, siis muudab comboboxi sisu andmebaasi järgi
@@ -15,14 +15,15 @@ $(document).ready (function() {
 			});
 		}
 	});
-
+	}
 			
-			
+	//{valitud_linn : valitud_linn},		
 	$("#linna_valik").click (function(event) {
 				var linnad = document.getElementById("linnad");
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
 				alert(valitud_linn);
-				$.get('pubinimed', {valitud_linn : valitud_linn}, function(responseJson) {
+				a();
+/*				$.get('linnad', function(responseJson) {
 					if (responseJson != null) {
 						$.each(responseJson, function(key, value) {
 							$("#pubid").append(
@@ -31,7 +32,7 @@ $(document).ready (function() {
 					
 						});
 				}
-			});
+			});*/
 	});
 
 
