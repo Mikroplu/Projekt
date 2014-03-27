@@ -1,5 +1,6 @@
 $(document).ready (function() {
-	function a(){			
+	a();
+	function a(){		
 	$.get('linnad', function(responseJson) {
 		var linnad = document.getElementById("linnad");
 		//Kui algse comboboxi sisu pole sama, mis tuleb andmebaasist, siis muudab comboboxi sisu andmebaasi järgi
