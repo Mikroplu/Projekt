@@ -1,6 +1,6 @@
 
 $(document).ready(function() {
-<<<<<<< HEAD
+
  $.get('pubid', function(responseJson) {
 	 var linnad = document.getElementById("linnad");
 	 	while (linnad.firstChild) {
@@ -11,7 +11,7 @@ $(document).ready(function() {
 	 		$.each(responseJson, function(key, value) {
 	 			$("#linnad").append( '<option value='+value.asukoht+'>' + value.asukoht + '</option>');
 	 			}); } });
-=======
+
 			$("#linnad").click(
 					function(event) {
 						
@@ -33,26 +33,20 @@ $(document).ready(function() {
 					});
 			
 			
-			$("#linnad").click(
+			$("#linna_valik").click(
 					function(event) {
 						var linnad = document.getElementById("linnad");
 						var valitud_linn = linnad.options[linnad.selectedIndex].text;
 						$.get('pubinimed',valitud_linn, function(responseJson) {
 							if (responseJson != null) {
-								
 								$.each(responseJson, function(key, value) {
-
 								});
 							}
 						});
 					});
 
-			
-			
-			
-
  $.get('pubid', function(responseJson) { var linnad = document.getElementById("linnad"); while (linnad.firstChild) { linnad.removeChild(linnad.firstChild); } if (responseJson != null) { var $combobox = $("#linnad"); $.each(responseJson, function(key, value) { $("#linnad").append( '<option value='+value.asukoht+'>' + value.asukoht + '</option>'); }); } });
->>>>>>> branch 'master' of https://github.com/Mikroplu/Projekt.git
+
 	
 		
 	$('#Showcontent1').click(function() {
