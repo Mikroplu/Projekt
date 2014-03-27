@@ -26,7 +26,7 @@ $(document).ready (function() {
 								+ '</option>');*/
 				
 				$.get('pubinimed', function(responseJson) {
-
+						
 						alert("df");
 						$.each(responseJson, function(key, value) {
 							alert("hakkab appendima");
