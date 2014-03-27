@@ -25,12 +25,10 @@ $(document).ready(
 					function(event) {
 						var linnad = document.getElementById("linnad");
 						var valitud_linn = linnad.options[linnad.selectedIndex].text;
-						alert(valitud_linn);
-						$.get('pubinimed', valitud_linn, function(responseJson) {
+						$.get('pubinimed', {valitud_linn : valitud_linn}, function(responseJson) {
 							if (responseJson != null) {
-								
 								$.each(responseJson, function(key, value) {
-
+									alert(value);
 								});
 							}
 						});

@@ -25,7 +25,7 @@ public class PopuleeriPubinimed extends HttpServlet {
 	}
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		String valitud_linn=request.getParameter("Tartu");
+		String valitud_linn = request.getParameter("valitud_linn");
 		ArrayList<Pubid> pubid = new ArrayList<Pubid>();
 		pubid = fetchPubid.getPubidByLinn(valitud_linn);
 		Gson gson = new Gson();
