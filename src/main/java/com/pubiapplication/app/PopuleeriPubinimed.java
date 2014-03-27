@@ -28,7 +28,7 @@ public class PopuleeriPubinimed extends HttpServlet {
 		
 		String valitud_linn = request.getParameter("valitud_linn");
 		ArrayList<Pubid> pubid = new ArrayList<Pubid>();
-		pubid = fetchPubid.getPubidByLinn(valitud_linn);
+		pubid = fetchPubid.getAllLinnad();
 		Gson gson = new Gson();
 		
 		JsonElement element = gson.toJsonTree(pubid,
@@ -38,7 +38,7 @@ public class PopuleeriPubinimed extends HttpServlet {
 		JsonArray jsonArray = element.getAsJsonArray();
 		
 		PrintWriter out = response.getWriter();
-		out.println(jsonArray);
+		out.println(valitud_linn);
 		
 		response.setContentType("application/json");
 		response.getWriter().print(jsonArray);
