@@ -20,22 +20,14 @@ $(document).ready (function() {
 	$("#linna_valik").click (function(event) {
 				var linnad = document.getElementById("linnad");
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
-				
-/*				$("#pubid").append(
-						'<option value='+"Lahekõrts"+'>' + "Lahekõrts"
-								+ '</option>');*/
-				
-				$.get('pubinimed', function(responseJson) {
-						
-						alert("df");
+		
+				$.get('pubinimed', {"asukoht" : "Tartu"}, function(responseJson) {
 						$.each(responseJson, function(key, value) {
-							alert("hakkab appendima");
 							$("#pubid").append(
 									'<option value='+value.nimi+'>' + value.nimi
 											+ '</option>');
 					
 						});
-				
 			});
 	});
 
@@ -71,8 +63,8 @@ $(document).ready (function() {
 	
 	// Edasi nupud
 	$('#linna_valik').click(function() {
-		//$('.contents').hide();
-	    //$('#content2').show();
+		$('.contents').hide();
+	    $('#content2').show();
 	});
 	
 	

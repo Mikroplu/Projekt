@@ -25,8 +25,8 @@ public class PopuleeriPubinimed extends HttpServlet {
 	}
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		//request.getParameter("valitud_linn");
-		String valitud_linn = "Tartu";
+		//
+		String valitud_linn = request.getParameter("valitud_linn");
 		ArrayList<Pubid> pubid = new ArrayList<Pubid>();
 		pubid = fetchPubid.getPubidByLinn(valitud_linn);
 		Gson gson = new Gson();
@@ -37,7 +37,8 @@ public class PopuleeriPubinimed extends HttpServlet {
 		
 		JsonArray jsonArray = element.getAsJsonArray();
 		
-		PrintWriter out = response.getWriter();		
+		PrintWriter out = response.getWriter();
+		
 		response.setContentType("application/json");
 		response.getWriter().print(jsonArray);
 	}
