@@ -27,19 +27,21 @@
 }
 
 #place .seat {
-	background: url("images/vaba_laud.jpg");
-	background-color:red;
+/* 	background: url("images/vaba_laud.jpg"); */
+	background-color:green;
 	height: 33px;
 	width: 33px;
 	display: block;
 }
 
 #place .selectedSeat {
-	background-image: url("images/broneeritu_laud.jpg");
+/* 	background-image: url("images/broneeritu_laud.jpg"); */
+	background-color: red;
 }
 
 #place .selectingSeat {
-	background-image: url("images/valitud_laud.jpg");
+/* 	background-image: url("images/valitud_laud.jpg"); */
+	background-color: blue;
 }
 
 #place .row-3,#place .row-4 {

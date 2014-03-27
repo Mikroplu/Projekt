@@ -27,7 +27,7 @@ $(document).ready (function() {
 								&& $.inArray(seatNo, reservedSeat) != -1) {
 							className += ' ' + settings.selectedSeatCss;
 						}
-						str.push('<li class="' + 'seat' + '"'
+						str.push('<li class="' + className + '"'
 								+ 'style="top:'
 								+ (i * settings.seatHeight).toString()
 								+ 'px;left:'
