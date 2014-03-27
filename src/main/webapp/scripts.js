@@ -63,8 +63,8 @@ $(document).ready (function() {
 	
 	// Edasi nupud
 	$('#linna_valik').click(function() {
-		$('.contents').hide();
-	    $('#content2').show();
+		//$('.contents').hide();
+	    //$('#content2').show();
 	});
 	
 	
