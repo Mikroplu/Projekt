@@ -22,14 +22,13 @@ $(document).ready (function() {
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
 				alert(valitud_linn);
 				
-				$("#pubid").append(
+/*				$("#pubid").append(
 						'<option value='+"Lahekõrts"+'>' + "Lahekõrts"
-								+ '</option>');
+								+ '</option>');*/
 				
-				
-/*				$.get('pubinimed', function(responseJson) {
-					if (responseJson != null) {
-						alert("responsis");
+				$.get('pubinimed', function(responseJson) {
+
+						alert(responseJson);
 						$.each(responseJson, function(key, value) {
 							alert("hakkab appendima");
 							$("#pubid").append(
@@ -37,8 +36,8 @@ $(document).ready (function() {
 											+ '</option>');
 					
 						});
-				}
-			});*/
+				
+			});
 	});
 
 
