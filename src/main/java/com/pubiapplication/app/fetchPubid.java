@@ -66,7 +66,7 @@ public static ArrayList<Pubid> getPubidByLinn(String linn2) {
 		
 		try {
 			Statement statement = connection.createStatement();
-			ResultSet rs = statement.executeQuery("SELECT * FROM pubid WHERE asukoht="+linn);
+			ResultSet rs = statement.executeQuery("SELECT * FROM pubid WHERE asukoht="+linn+"ORDER BY asukoht ASC");
 			while (rs.next()) {
 				Pubid pubi = new Pubid();
 				pubi.setNimi(rs.getString("nimi"));
