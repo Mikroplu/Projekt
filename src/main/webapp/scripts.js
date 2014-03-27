@@ -22,7 +22,9 @@ $(document).ready (function() {
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
 				$.get('pubinimed', {valitud_linn : valitud_linn}, function(responseJson) {
 					if (responseJson != null) {
+						alert("responsis");
 						$.each(responseJson, function(key, value) {
+							alert("hakkab appendima");
 							$("#pubid").append(
 									'<option value='+value.nimi+'>' + value.nimi
 											+ '</option>');
