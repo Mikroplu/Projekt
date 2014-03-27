@@ -25,17 +25,21 @@ public class PopuleeriPubinimed extends HttpServlet {
 	}
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
+		
 		String valitud_linn = request.getParameter("valitud_linn");
 		ArrayList<Pubid> pubid = new ArrayList<Pubid>();
 		pubid = fetchPubid.getPubidByLinn(valitud_linn);
 		Gson gson = new Gson();
+		
 		JsonElement element = gson.toJsonTree(pubid,
 				new TypeToken<List<Pubid>>() {
 				}.getType());
+		
 		JsonArray jsonArray = element.getAsJsonArray();
 		response.setContentType("application/json");
 		response.getWriter().print(jsonArray);
 	}
+	
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 	}

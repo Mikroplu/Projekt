@@ -29,7 +29,6 @@
 				VALI LINN
 				<p>
 					<select name="linnad" id="linnad">
-						
 					</select>
 
 				</p>
