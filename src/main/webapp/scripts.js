@@ -23,14 +23,17 @@ $(document).ready (function() {
 				var pubid = document.getElementByID("pubid");
 				
 				$.get('pubinimed', {"asukoht" : valitud_linn}, function(responseJson) {
-					
+					alert("getis");
 					if (pubid != responseJson){
+						alert("ifis");
 						
 						while (pubid.firstChild){
 							pubid.removeChild(pubid.firstChild);
 						}
 						
 						$.each(responseJson, function(key, value) {
+							
+							alert("iitðis");
 							$("#pubid").append(
 									'<option value='+value.nimi+'>' + value.nimi
 											+ '</option>');
