@@ -46,12 +46,10 @@ public class fetchPubid {
 		
 		try {
 			Statement statement = connection.createStatement();
-			ResultSet rs = statement.executeQuery("SELECT * FROM pubid");
+			ResultSet rs = statement.executeQuery("SELECT DISTINCT asukoht FROM pubid ORDER BY asukoht ASC");
 			while (rs.next()) {
 				Pubid pubi = new Pubid();
-				pubi.setNimi(rs.getString("nimi"));
 				pubi.setAsukoht(rs.getString("asukoht"));
-				pubi.setLaudade_arv(rs.getInt("laudade_arv"));
 				pubide_list.add(pubi);
 			}
 		} catch (SQLException e) {
