@@ -22,6 +22,7 @@ $(document).ready (function() {
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
 		
 				$.get('pubinimed', {"asukoht" : "Tartu"}, function(responseJson) {
+					alert("getis");
 						$.each(responseJson, function(key, value) {
 							$("#pubid").append(
 									'<option value='+value.nimi+'>' + value.nimi
