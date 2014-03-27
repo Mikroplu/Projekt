@@ -41,7 +41,8 @@ public class PopuleeriPubinimed extends HttpServlet {
 		out.println(valitud_linn);
 		
 		response.setContentType("application/json");
-		response.getWriter().print(jsonArray);
+		response.getWriter().print("jsonarray");
+		//response.getWriter().print(jsonArray);
 	}
 	
 	protected void doPost(HttpServletRequest request,
