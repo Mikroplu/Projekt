@@ -2,11 +2,9 @@ $(document).ready (function() {
 
 	$("#pubi_valik").click (function(event) {
 
-
-
 			var settings = {
 				rows : 5,
-				cols : 6,
+				cols : 15,
 				rowCssPrefix : 'row-',
 				colCssPrefix : 'col-',
 				seatWidth : 35,
@@ -45,7 +43,7 @@ $(document).ready (function() {
 			// Case II: If already booked
 			var bookedSeats = [ 5, 10, 25 ];
 			init(bookedSeats);
-	});
+
 			$('.' + settings.seatCss).click(function() {
 				if ($(this).hasClass(settings.selectedSeatCss)) {
 					alert('This seat is already reserved');
@@ -54,26 +52,5 @@ $(document).ready (function() {
 				}
 			});
 
-			$('#btnShow').click(
-					function() {
-						var str = [];
-						$.each($('#place li.' + settings.selectedSeatCss
-								+ ' a, #place li.' + settings.selectingSeatCss
-								+ ' a'), function(index, value) {
-							str.push($(this).attr('title'));
-						});
-						alert(str.join(','));
-					})
-
-			$('#btnShowNew').click(
-					function() {
-						var str = [], item;
-						$.each($('#place li.' + settings.selectingSeatCss
-								+ ' a'), function(index, value) {
-							item = $(this).attr('title');
-							str.push(item);
-						});
-						alert(str.join(','));
-					})
-
 		});
+});
