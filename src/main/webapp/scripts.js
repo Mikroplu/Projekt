@@ -16,12 +16,12 @@ $(document).ready (function() {
 		}
 	});
 
-
+	// {"asukoht" : "Tartu"},
 	$("#linna_valik").click (function(event) {
 				var linnad = document.getElementById("linnad");
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
 				alert(valitud_linn);
-				$.get('pubinimed', {"asukoht" : "Tartu"}, function(responseJson) {
+				$.get('pubinimed', function(responseJson) {
 					if (responseJson != null) {
 						alert("responsis");
 						$.each(responseJson, function(key, value) {
