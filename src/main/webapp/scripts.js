@@ -20,15 +20,18 @@ $(document).ready (function() {
 	$("#linna_valik").click (function(event) {
 				var linnad = document.getElementById("linnad");
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
-		
+				var pubid = document.getElementByID("pubid");
+				
 				$.get('pubinimed', {"asukoht" : valitud_linn}, function(responseJson) {
-					alert("getis");
+					
+					if (pubid != responseJson){
 						$.each(responseJson, function(key, value) {
 							$("#pubid").append(
 									'<option value='+value.nimi+'>' + value.nimi
 											+ '</option>');
 					
 						});
+					}
 			});
 	});
 
