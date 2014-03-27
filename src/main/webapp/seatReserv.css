@@ -27,7 +27,7 @@
 }
 
 #place .seat {
-	background: url("images/broneeritud_laud.jpg") no-repeat scroll 0 0
+	background: url("images/vaba_laud.jpg") no-repeat scroll 0 0
 		transparent;
 	height: 33px;
 	width: 33px;
@@ -39,7 +39,7 @@
 }
 
 #place .selectingSeat {
-	background-image: url("images/broneeritud_laud.jpg");
+	background-image: url("images/valitud_laud.jpg");
 }
 
 #place .row-3,#place .row-4 {

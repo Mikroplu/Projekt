@@ -19,6 +19,7 @@ $(document).ready (function() {
 				for (var i = 0; i < settings.rows; i++) {
 					for (var j = 0; j < settings.cols; j++) {
 						seatNo = (i + j * settings.rows + 1);
+						//seat row-0 col-0
 						className = settings.seatCss + ' '
 								+ settings.rowCssPrefix + i.toString() + ' '
 								+ settings.colCssPrefix + j.toString();
@@ -26,7 +27,7 @@ $(document).ready (function() {
 								&& $.inArray(seatNo, reservedSeat) != -1) {
 							className += ' ' + settings.selectedSeatCss;
 						}
-						str.push('<li class="' + className + '"'
+						str.push('<li class="' + 'seat' + '"'
 								+ 'style="top:'
 								+ (i * settings.seatHeight).toString()
 								+ 'px;left:'
