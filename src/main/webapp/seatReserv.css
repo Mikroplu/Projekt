@@ -23,7 +23,7 @@
 }
 
 #place li:hover {
-	background-color: yellow;
+	border: 1px solid black;
 }
 
 #place .seat {
