@@ -25,6 +25,11 @@ $(document).ready (function() {
 				$.get('pubinimed', {"asukoht" : valitud_linn}, function(responseJson) {
 					
 					if (pubid != responseJson){
+						
+						while (pubid.firstChild){
+							pubid.removeChild(pubid.firstChild);
+						}
+						
 						$.each(responseJson, function(key, value) {
 							$("#pubid").append(
 									'<option value='+value.nimi+'>' + value.nimi
