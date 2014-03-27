@@ -90,7 +90,7 @@ public class register extends HttpServlet {
 	
 	}
 
-	public String lisa_ylakomad(String a) {
+	public static String lisa_ylakomad(String a) {
 		return "'" + a + "'";
 	}
 	

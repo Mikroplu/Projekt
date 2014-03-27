@@ -16,13 +16,14 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.reflect.TypeToken;
 
-@WebServlet("/pubid")
-public class PopuleeriPubid extends HttpServlet {
+@WebServlet("/linnad")
+public class PopuleeriLinnad extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
 
-	public PopuleeriPubid() {
+	public PopuleeriLinnad() {
 	}
+	
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 

@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<title>PUBIPUBI</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
-	<script
-		src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
-		type="text/javascript"></script>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="seatReserv.css">
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
+	type="text/javascript"></script>
+	
+	
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
 
@@ -24,15 +27,12 @@
 			<div class="content">
 				VALI LINN
 				<p>
-					<select name="linnad" id="linnad" class="comboBox">
-						<option disabled="disabled" selected="selected">Vali linn</option>
-						<option>linn</option>
-						<option>Vali </option>
-
+					<select name="linnad" id="linnad">
 					</select>
+
 				</p>
 				<button class="menu_button" id="linna_valik">Edasi</button>
-				
+
 			</div>
 
 		</div>
@@ -60,6 +60,19 @@
 		<div class="subcontent">
 			<div class="content">
 				<p>VALI SOBIV LAUD</p>
+
+				<div id="holder">
+					<ul id="place">
+					</ul>
+				</div>
+				<div style="float: left;">
+					<ul id="seatDescription">
+						<li id = "vaba_laud"> Vaba laud </li>
+						<li id = "broneeritd_laud"> Broneeritud laud </li>
+						<li id = "valitud_laud"> Valitud laud </li>
+					</ul>
+				</div>
+
 				<button class="menu_button" id="laua_valik">Edasi</button>
 				<button class="menu_button" id="tagasi_laud">Tagasi</button>
 
@@ -74,16 +87,16 @@
 			<div class="content">
 				Register
 				<p>
-					<form action="register" method="post">
-						Name: <input type="text" name="userName"><br> Email:
-								<input type="text" name="userEmail"><br> Password:
-										<input type="password" name=userPassword><br>
-												<button class=menu_button type="submit" value="Submit"
-													id="register_button2">Register</button>
-													
-													
-					</form>
-					<button class="menu_button" id="tagasi_register">Home</button>
+				<form action="register" method="post">
+					Name: <input type="text" name="userName"><br> Email: 
+					<input type="text" name="userEmail"><br> Password: 
+					<input type="password" name=userPassword><br>
+					<button class=menu_button type="submit" value="Submit"
+						id="register_button2">Register</button>
+
+
+				</form>
+				<button class="menu_button" id="tagasi_register">Home</button>
 				</p>
 			</div>
 		</div>
@@ -94,15 +107,15 @@
 			<div class="content">
 				LOGIN
 				<p>
-					<form action="login" method="get">
+				<form action="login" method="get">
 
 
-						User: <input name="user" /><br> Password: 
-						<input name="password" /><br>
-						<button type="submit" class=menu_button id="login_nupp">Login</button>
-						
-					</form>
-					<button class="menu_button" id="tagasi_login">Home</button>
+					User: <input name="user" /><br> Password: 
+					<input name="password" /><br>
+					<button type="submit" class=menu_button id="login_nupp">Login</button>
+
+				</form>
+				<button class="menu_button" id="tagasi_login">Home</button>
 				</p>
 			</div>
 		</div>
@@ -110,5 +123,6 @@
 
 	<div id="footer">Footer</div>
 	<script type="text/javascript" src="scripts.js"></script>
+	<script type="text/javascript" src="seatReservation.js"></script>
 </body>
 </html>

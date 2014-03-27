@@ -1,47 +1,46 @@
-
-$(document).ready(function() {
-			$("#linnad").click(
-					function(event) {
-						
-						$.get('pubid', function(responseJson) {
-							var linnad = document.getElementById("linnad");
-							while (linnad.firstChild) {
-								linnad.removeChild(linnad.firstChild);
-							}
-							if (responseJson != null) {
-								var $combobox = $("#linnad");
-								$.each(responseJson, function(key, value) {
-									$("#linnad").append(
-											'<option value='+value.asukoht+'>' + value.asukoht
-													+ '</option>');
-
-								});
-							}
-						});
-					});
-			
-			
-			$("#linnad").click(
-					function(event) {
-						var linnad = document.getElementById("linnad");
-						var valitud_linn = linnad.options[linnad.selectedIndex].text;
-						$.get('pubinimed',valitud_linn, function(responseJson) {
-							if (responseJson != null) {
-								
-								$.each(responseJson, function(key, value) {
-
-								});
-							}
-						});
-					});
-
-			
-			
-			
-
- $.get('pubid', function(responseJson) { var linnad = document.getElementById("linnad"); while (linnad.firstChild) { linnad.removeChild(linnad.firstChild); } if (responseJson != null) { var $combobox = $("#linnad"); $.each(responseJson, function(key, value) { $("#linnad").append( '<option value='+value.asukoht+'>' + value.asukoht + '</option>'); }); } });
+$(document).ready (function() {
 	
-		
+	$.get('linnad', function(responseJson) {
+		var linnad = document.getElementById("linnad");
+		//Kui algse comboboxi sisu pole sama, mis tuleb andmebaasist, siis muudab comboboxi sisu andmebaasi järgi
+		if (linnad != responseJson){
+			while (linnad.firstChild) {
+				linnad.removeChild(linnad.firstChild);
+			}
+			
+			$.each(responseJson, function(key, value) {
+				$("#linnad").append(
+						'<option value='+value.asukoht+'>' + value.asukoht
+								+ '</option>');
+			});
+		}
+	});
+
+	// {"asukoht" : "Tartu"},
+	$("#linna_valik").click (function(event) {
+				var pubid = document.getElementById("pubid");
+				var linnad = document.getElementById("linnad");
+				var valitud_linn = linnad.options[linnad.selectedIndex].text;
+
+				$.get('pubinimed', {"asukoht" : valitud_linn}, function(responseJson) {
+					if (pubid != responseJson){
+						
+						while (pubid.firstChild){
+							pubid.removeChild(pubid.firstChild);
+						}
+						
+						$.each(responseJson, function(key, value) {
+							$("#pubid").append(
+									'<option value='+value.nimi+'>' + value.nimi
+											+ '</option>');
+					
+						});
+					}
+			});
+	});
+
+
+
 	$('#Showcontent1').click(function() {
 		$('.contents').hide();
 	    $('#content1').show();
