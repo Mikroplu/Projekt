@@ -21,20 +21,15 @@ $(document).ready (function() {
 				var pubid = document.getElementById("pubid");
 				var linnad = document.getElementById("linnad");
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
-				
-				alert("fgg");
+
 				$.get('pubinimed', {"asukoht" : valitud_linn}, function(responseJson) {
-					alert("getis");
 					if (pubid != responseJson){
-						alert("ifis");
 						
 						while (pubid.firstChild){
 							pubid.removeChild(pubid.firstChild);
 						}
 						
 						$.each(responseJson, function(key, value) {
-							
-							alert("iitðis");
 							$("#pubid").append(
 									'<option value='+value.nimi+'>' + value.nimi
 											+ '</option>');
