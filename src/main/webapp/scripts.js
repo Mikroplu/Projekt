@@ -21,7 +21,13 @@ $(document).ready (function() {
 				var linnad = document.getElementById("linnad");
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
 				alert(valitud_linn);
-				$.get('pubinimed', function(responseJson) {
+				
+				$("#pubid").append(
+						'<option value='+"Lahekõrts"+'>' + "Lahekõrts"
+								+ '</option>');
+				
+				
+/*				$.get('pubinimed', function(responseJson) {
 					if (responseJson != null) {
 						alert("responsis");
 						$.each(responseJson, function(key, value) {
@@ -32,7 +38,7 @@ $(document).ready (function() {
 					
 						});
 				}
-			});
+			});*/
 	});
 
 
