@@ -1,7 +1,5 @@
-$(document).ready(
-		function() {
-			$("#linnad").click(
-					function(event) {
+$(document).ready (function() {
+			$("#linnad").click (function(event) {
 						
 						$.get('pubid', function(responseJson) {
 							var linnad = document.getElementById("linnad");
@@ -21,7 +19,7 @@ $(document).ready(
 					});
 			
 			
-			$("#linnad").click(
+			$("#linna_valik").click(
 					function(event) {
 						var linnad = document.getElementById("linnad");
 						var valitud_linn = linnad.options[linnad.selectedIndex].text;
@@ -33,7 +31,7 @@ $(document).ready(
 							}
 						});
 					});
-				});
+
 
 
 	$('#Showcontent1').click(function() {
@@ -108,5 +106,5 @@ $(document).ready(
         $(this).addClass('menu_button_clicked');
    });
  
-
+});
 
