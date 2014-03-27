@@ -18,10 +18,11 @@ $(document).ready (function() {
 
 	// {"asukoht" : "Tartu"},
 	$("#linna_valik").click (function(event) {
+				var pubid = document.getElementById("pubid");
 				var linnad = document.getElementById("linnad");
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
-				var pubid = document.getElementByID("pubid");
-				alert(pubid);
+				
+				alert("fgg");
 				$.get('pubinimed', {"asukoht" : valitud_linn}, function(responseJson) {
 					alert("getis");
 					if (pubid != responseJson){
