@@ -16,8 +16,8 @@ $(document).ready (function() {
 
 			var init = function(reservedSeat) {
 				var str = [], seatNo, className;
-				for (i = 0; i < settings.rows; i++) {
-					for (j = 0; j < settings.cols; j++) {
+				for (var i = 0; i < settings.rows; i++) {
+					for (var j = 0; j < settings.cols; j++) {
 						seatNo = (i + j * settings.rows + 1);
 						className = settings.seatCss + ' '
 								+ settings.rowCssPrefix + i.toString() + ' '
