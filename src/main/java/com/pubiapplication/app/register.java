@@ -64,8 +64,8 @@ public class register extends HttpServlet {
 				ResultSet rs = stmt.getResultSet();
 				
 				while(rs.next()){
-	                String dbUsername = rs.getString("name");
-	                String dbPassword = rs.getString("password");
+	                String dbUsername = rs.getString("eesnimi");
+	                String dbPassword = rs.getString("parool");
 	                if(dbUsername.equals(name)){
 	                response(response,"Selline kasutajanimi on juba olemas");
 	                }
