@@ -59,7 +59,7 @@ public class register extends HttpServlet {
 				props.setProperty("sslmode", "require");
 				Connection conn = DriverManager.getConnection(url, props);
 				Statement stmt = (Statement) conn.createStatement();
-				String query ="SELECT name, password FROM users";
+				String query ="SELECT eesnimi, parool FROM users";
 				stmt.executeQuery(query);
 				ResultSet rs = stmt.getResultSet();
 				
