@@ -72,7 +72,7 @@ public class register extends HttpServlet {
 	                else{
 	                	try {
 	        				Statement st = conn.createStatement();
-	        				String test = "INSERT INTO users VALUES("+lisa_ylakomad(name)+"," + " 'Peremimi' " + lisa_ylakomad(name) +lisa_ylakomad(password)+","+ "' '" +","+lisa_ylakomad(email)+ "' '" +");";
+	        				String test = "INSERT INTO users VALUES("+lisa_ylakomad(name)+ "," + " 'Peremimi' "+ "," + lisa_ylakomad(name)+ "," + lisa_ylakomad(password) + "," + "' '" +","+lisa_ylakomad(email) + ","+ "' '" +");";
 	        				ResultSet rs2 = st.executeQuery(test);
 	        				
 	        				response(response,"Kasutaja edukalt sisestatud andmebaasi");
