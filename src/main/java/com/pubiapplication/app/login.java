@@ -39,13 +39,13 @@ public class login extends HttpServlet {
 			Connection conn = DriverManager.getConnection(url, props);
 			
 			Statement stmt = (Statement) conn.createStatement();
-			String query ="SELECT name, password FROM users";
+			String query ="SELECT kasutajanimi, parool FROM users";
 			stmt.executeQuery(query);
 			ResultSet rs = stmt.getResultSet();
 			
 			while(rs.next()){
-                String dbUsername = rs.getString("name");
-                String dbPassword = rs.getString("password");
+                String dbUsername = rs.getString("kasutajanimi");
+                String dbPassword = rs.getString("parool");
                 
                 if(dbUsername.equals(user) && dbPassword.equals(pass)){
                     login = true;
