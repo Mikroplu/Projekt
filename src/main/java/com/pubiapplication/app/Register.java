@@ -72,7 +72,7 @@ public class Register extends HttpServlet {
 				} catch (Exception e) {
 					response(response, "Midagi läks pekki");
 				}
-
+				row_count=0;
 			}
 
 		} catch (SQLException e) {
