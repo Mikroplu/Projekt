@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.JsonObject;
 
 @WebServlet(value = "/register")
-public class register extends HttpServlet {
+public class Register extends HttpServlet {
 
 	private static Connection conn = null;
 
@@ -60,7 +60,7 @@ public class register extends HttpServlet {
 			if (row_count == 0) {
 				try {
 					String query2 = "INSERT INTO users VALUES(?,?,?,?,?,?,?)";
-					PreparedStatement prepStmt = conn.prepareStatement(query);
+					PreparedStatement prepStmt = conn.prepareStatement(query2);
 					prepStmt.setString(1, name);
 					prepStmt.setString(2, surname);
 					prepStmt.setString(3, username);

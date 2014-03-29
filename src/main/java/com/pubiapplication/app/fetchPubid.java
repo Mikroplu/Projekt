@@ -34,7 +34,7 @@ public class fetchPubid {
 	
 	
 public static ArrayList<Pubid> getPubidByLinn(String linn2) {
-		String linn = register.lisa_ylakomad(linn2);
+		String linn = Register.lisa_ylakomad(linn2);
 		connection = DatabaseConnection.getConnection();
 		ArrayList<Pubid> pubide_list = new ArrayList<Pubid>();
 		try {
