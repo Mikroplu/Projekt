@@ -28,18 +28,16 @@ public class Login extends HttpServlet {
 		String user = req.getParameter("user");
 		String pass = req.getParameter("password");
 		try {
-			Statement stmt = (Statement) conn.createStatement();
 			String query ="SELECT * FROM users WHERE kasutajanimi=? AND parool=?";
 			PreparedStatement prepStmt = conn.prepareStatement(query);
 			prepStmt.setString(1,user);
 			prepStmt.setString(2,pass);
 			ResultSet rs= prepStmt.executeQuery();
-			stmt.executeQuery(query);
 			if(rs.next()){
 				response(resp, "Olete sisselogitud");
 			}
 			else{
-				response(resp,"sellist kasutajat ei eksisteeri");
+				response(resp,"Sellist kasutajat ei eksisteeri");
 			}
 		} catch (SQLException e) {
 			response(resp, "SQL EXCEPTION");
