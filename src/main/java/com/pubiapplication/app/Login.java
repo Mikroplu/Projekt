@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -28,14 +29,18 @@ public class Login extends HttpServlet {
 		String pass = req.getParameter("password");
 		try {
 			Statement stmt = (Statement) conn.createStatement();
-			String query ="SELECT * FROM users WHERE kasutajanimi="+lisa_ylakomad(user)+" AND parool="+lisa_ylakomad(pass);
+			String query ="SELECT * FROM users WHERE kasutajanimi=? AND parool=?";
+			PreparedStatement prepStmt = conn.prepareStatement(query);
+			prepStmt.setString(1,user);
+			prepStmt.setString(2,pass);
+			ResultSet rs= prepStmt.executeQuery();
 			stmt.executeQuery(query);
-			ResultSet rs = stmt.getResultSet();
-			
-			int row_count=0;
-			while(rs.next()) row_count+=1;
-			if(row_count==0) response(resp,"Wrong username and or password");
-			if(row_count==1) response(resp,"Success");
+			if(rs.next()){
+				response(resp, "Olete sisselogitud");
+			}
+			else{
+				response(resp,"sellist kasutajat ei eksisteeri");
+			}
 		} catch (SQLException e) {
 			response(resp, "SQL EXCEPTION");
 		} catch (Exception e) {
