@@ -35,35 +35,32 @@ public class login extends HttpServlet {
 			props.setProperty("password", "T6JbGvxZfTtZviY37Cdc1O4mfJ");
 			props.setProperty("ssl", "true");
 			props.setProperty("sslmode", "require");
-			
 			Connection conn = DriverManager.getConnection(url, props);
-			
 			Statement stmt = (Statement) conn.createStatement();
-			String query ="SELECT kasutajanimi, parool FROM users";
+			String query ="SELECT * FROM users WHERE kasutajanimi="+lisa_ylakomad(user)+" AND parool="+lisa_ylakomad(pass);
 			stmt.executeQuery(query);
 			ResultSet rs = stmt.getResultSet();
+			int row_count=0;
+			while(rs.next()) row_count+=1;
+            
 			
-			while(rs.next()){
-                String dbUsername = rs.getString("kasutajanimi");
-                String dbPassword = rs.getString("parool");
-                
-                if(dbUsername.equals(user) && dbPassword.equals(pass)){
-                    login = true;
-                    response(resp,"Selline kasutaja ja parool on andmebaasis");
-                }
-            }
+			if(row_count==0) response(resp,"Wrong username and or password");
+			
+			
+			if(row_count==1) response(resp,"Success");
+			
 			
 		} catch (SQLException e) {
-
+			response(resp, "SQL EXCEPTION");
 		} catch (Exception e) {
+			response(resp, "EXCEPTION");
 		}
 	}
 	
 	
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		
-			
+	
 	}
 
 	private void response(HttpServletResponse resp, String msg)
@@ -74,5 +71,8 @@ public class login extends HttpServlet {
 		out.println("<t1>" + msg + "</t1>");
 		out.println("</body>");
 		out.println("</html>");
+	}
+	public static String lisa_ylakomad(String a) {
+		return "'" + a + "'";
 	}
 }
