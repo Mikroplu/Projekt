@@ -23,7 +23,7 @@ import com.google.gson.JsonObject;
 
 @WebServlet(value = "/register")
 public class Register extends HttpServlet {
-
+	int row_count=0;
 	private static Connection conn = null;
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -47,10 +47,9 @@ public class Register extends HttpServlet {
 		try {
 			Statement stmt = (Statement) conn.createStatement();
 			String query = "SELECT * FROM users WHERE kasutajanimi="
-					+ lisa_ylakomad(name);
+					+ lisa_ylakomad(username);
 			stmt.executeQuery(query);
 			ResultSet rs = stmt.getResultSet();
-			int row_count = 0;
 			while (rs.next())
 				row_count += 1;
 
