@@ -108,12 +108,9 @@
 				LOGIN
 				<p>
 				<form action="login" method="get">
-
-
-					User: <input name="user" /><br> Password: 
-					<input name="password" /><br>
+					User: <input name="user" type="text"/><br> Password: 
+					<input name="password" type="password" /><br>
 					<button type="submit" class=menu_button id="login_nupp">Login</button>
-
 				</form>
 				<button class="menu_button" id="tagasi_login">Home</button>
 				</p>

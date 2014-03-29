@@ -18,38 +18,24 @@ import javax.servlet.http.HttpSession;
 
 
 @WebServlet(value = "/login")
-public class login extends HttpServlet {
-	
+public class Login extends HttpServlet {
+	private static Connection conn = null;
     boolean login = false;
-    
-    
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
+		conn = DatabaseConnection.getConnection();
 		String user = req.getParameter("user");
 		String pass = req.getParameter("password");
 		try {
-			Class.forName("org.postgresql.Driver");
-			String url = "jdbc:postgresql://ec2-184-73-251-115.compute-1.amazonaws.com:5432/dfh8pe9gkitn22";
-			Properties props = new Properties();
-			props.setProperty("user", "vryoynyziocgrs");
-			props.setProperty("password", "T6JbGvxZfTtZviY37Cdc1O4mfJ");
-			props.setProperty("ssl", "true");
-			props.setProperty("sslmode", "require");
-			Connection conn = DriverManager.getConnection(url, props);
 			Statement stmt = (Statement) conn.createStatement();
 			String query ="SELECT * FROM users WHERE kasutajanimi="+lisa_ylakomad(user)+" AND parool="+lisa_ylakomad(pass);
 			stmt.executeQuery(query);
 			ResultSet rs = stmt.getResultSet();
+			
 			int row_count=0;
 			while(rs.next()) row_count+=1;
-            
-			
 			if(row_count==0) response(resp,"Wrong username and or password");
-			
-			
 			if(row_count==1) response(resp,"Success");
-			
-			
 		} catch (SQLException e) {
 			response(resp, "SQL EXCEPTION");
 		} catch (Exception e) {
