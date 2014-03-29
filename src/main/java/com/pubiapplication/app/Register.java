@@ -51,7 +51,7 @@ public class Register extends HttpServlet {
 			stmt.executeQuery(query);
 			ResultSet rs = stmt.getResultSet();
 			while (rs.next())
-				row_count += 1;
+				row_count =row_count+1;
 
 			if (row_count >= 1)
 				response(response, "Selline kasutaja on juba olemas");
@@ -69,10 +69,11 @@ public class Register extends HttpServlet {
 					prepStmt.setString(7, number);
 					prepStmt.executeUpdate();
 					response(response, "Kasutaja edukalt sisestatud andmebaasi");
+					row_count=0;
 				} catch (Exception e) {
 					response(response, "Midagi läks pekki");
 				}
-				row_count=0;
+				
 			}
 
 		} catch (SQLException e) {
