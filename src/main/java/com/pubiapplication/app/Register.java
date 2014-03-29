@@ -68,7 +68,7 @@ public class Register extends HttpServlet {
 					prepStmt.setString(5, city);
 					prepStmt.setString(6, email);
 					prepStmt.setString(7, number);
-					ResultSet rs2 = prepStmt.executeQuery();
+					prepStmt.executeUpdate();
 					response(response, "Kasutaja edukalt sisestatud andmebaasi");
 				} catch (Exception e) {
 					response(response, "Midagi läks pekki");
