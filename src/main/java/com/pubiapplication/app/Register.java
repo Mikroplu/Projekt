@@ -45,18 +45,15 @@ public class Register extends HttpServlet {
 		String surname = "Pikkpea";
 
 		try {
-			Statement stmt = (Statement) conn.createStatement();
-			String query = "SELECT * FROM users WHERE kasutajanimi="
-					+ lisa_ylakomad(username);
-			stmt.executeQuery(query);
-			ResultSet rs = stmt.getResultSet();
-			while (rs.next())
-				row_count =row_count+1;
-
-			if (row_count >= 1)
+			String query = "SELECT * FROM users WHERE kasutajanimi=?";
+			PreparedStatement prepStmt2 = conn.prepareStatement(query);
+			prepStmt2.setString(1,username);
+			ResultSet rs= prepStmt2.executeQuery();
+			
+			if(rs.next()){
 				response(response, "Selline kasutaja on juba olemas");
-
-			if (row_count == 0) {
+			}
+			else{
 				try {
 					String query2 = "INSERT INTO users VALUES(?,?,?,?,?,?,?)";
 					PreparedStatement prepStmt = conn.prepareStatement(query2);
