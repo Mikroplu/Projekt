@@ -1,18 +1,18 @@
 package com.pubiapplication.app;
 
-public class Pubid {
+public class Pubi {
 
 	private String nimi;
 	private String asukoht;
 	private int laudade_arv;
 
-	public Pubid(String nimi, String asukoht, int laudade_arv) {
+	public Pubi(String nimi, String asukoht, int laudade_arv) {
 		this.setNimi(nimi);
 		this.setAsukoht(asukoht);
 		this.setLaudade_arv(laudade_arv);
 	}
 
-	public Pubid() {
+	public Pubi() {
 
 	}
 

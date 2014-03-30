@@ -7,7 +7,6 @@ $(document).ready (function() {
 			while (linnad.firstChild) {
 				linnad.removeChild(linnad.firstChild);
 			}
-			
 			$.each(responseJson, function(key, value) {
 				$("#linnad").append(
 						'<option value='+value.asukoht+'>' + value.asukoht
@@ -21,25 +20,30 @@ $(document).ready (function() {
 				var pubid = document.getElementById("pubid");
 				var linnad = document.getElementById("linnad");
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
-				
 				$.get('pubinimed', {"asukoht" : valitud_linn}, function(responseJson) {
 					if (pubid != responseJson){
-						
 						while (pubid.firstChild){
 							pubid.removeChild(pubid.firstChild);
 						}
-						
 						$.each(responseJson, function(key, value) {
 							$("#pubid").append(
 									'<option value='+value.nimi+'>' + value.nimi
 											+ '</option>');
-					
 						});
 					}
 			});
 	});
-
-
+	
+	$("#pubi_valik").click (function(event) {
+		var pubid = document.getElementById("pubid");
+		var pubi_nimi = pubid.options[pubid.selectedIndex].text;
+		$.get('lauad', {"pubi_nimi" : pubi_nimi}, function(responseJson) {
+				$.each(responseJson, function(key, value) {
+					var dimensions=value.laudade_arv;
+					alert(dimensions);
+				});
+	});
+});
 
 	$('#Showcontent1').click(function() {
 		$('.contents').hide();

@@ -27,11 +27,11 @@ public class PopuleeriLinnad extends HttpServlet {
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 
-		ArrayList<Pubid> pubid = new ArrayList<Pubid>();
+		ArrayList<Pubi> pubid = new ArrayList<Pubi>();
 		pubid = fetchPubid.getAllLinnad();
 		Gson gson = new Gson();
 		JsonElement element = gson.toJsonTree(pubid,
-				new TypeToken<List<Pubid>>() {
+				new TypeToken<List<Pubi>>() {
 				}.getType());
 		JsonArray jsonArray = element.getAsJsonArray();
 		response.setContentType("application/json");
