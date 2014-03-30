@@ -2,7 +2,7 @@ $(document).ready (function() {
 	
 	$.get('linnad', function(responseJson) {
 		var linnad = document.getElementById("linnad");
-		//Kui algse comboboxi sisu pole sama, mis tuleb andmebaasist, siis muudab comboboxi sisu andmebaasi järgi
+		//Kui algse comboboxi sisu pole sama, mis tuleb andmebaasist, siis muudab comboboxi sisu andmebaasi jï¿½rgi
 		if (linnad != responseJson){
 			while (linnad.firstChild) {
 				linnad.removeChild(linnad.firstChild);
@@ -21,7 +21,7 @@ $(document).ready (function() {
 				var pubid = document.getElementById("pubid");
 				var linnad = document.getElementById("linnad");
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
-
+				
 				$.get('pubinimed', {"asukoht" : valitud_linn}, function(responseJson) {
 					if (pubid != responseJson){
 						

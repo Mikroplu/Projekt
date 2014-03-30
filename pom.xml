@@ -29,6 +29,9 @@
 	</dependencies>
   
 	<build>
+	<filters>
+	
+	</filters>
   
 	<plugins>
 		<plugin>

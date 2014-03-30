@@ -1,7 +1,5 @@
 $(document).ready (function() {
-
 	$("#pubi_valik").click (function(event) {
-
 			var settings = {
 				rows : 5,
 				cols : 15,
@@ -13,7 +11,6 @@ $(document).ready (function() {
 				selectedSeatCss : 'selectedSeat',
 				selectingSeatCss : 'selectingSeat'
 			};
-
 			var init = function(reservedSeat) {
 				var str = [], seatNo, className;
 				for (var i = 0; i < settings.rows; i++) {
@@ -42,7 +39,7 @@ $(document).ready (function() {
 			// init();
 
 			// Case II: If already booked
-			var bookedSeats = [ 5, 10, 25, 11, 1];
+			var bookedSeats = [ ];
 			init(bookedSeats);
 
 			$('.' + settings.seatCss).click(function() {

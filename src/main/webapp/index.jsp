@@ -7,8 +7,8 @@
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
 	type="text/javascript"></script>
-	
-	
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
@@ -65,13 +65,9 @@
 					<ul id="place">
 					</ul>
 				</div>
-				<div style="float: left;">
-					<ul id="seatDescription">
-						<li id = "vaba_laud"> Vaba laud </li>
-						<li id = "broneeritd_laud"> Broneeritud laud </li>
-						<li id = "valitud_laud"> Valitud laud </li>
-					</ul>
-				</div>
+
+
+			
 
 				<button class="menu_button" id="laua_valik">Edasi</button>
 				<button class="menu_button" id="tagasi_laud">Tagasi</button>
@@ -88,9 +84,9 @@
 				Register
 				<p>
 				<form action="register" method="post">
-					Name: <input type="text" name="userName"><br> Email: 
-					<input type="text" name="userEmail"><br> Password: 
-					<input type="password" name=userPassword><br>
+					Name: <input type="text" name="userName"><br> Email: <input
+						type="text" name="userEmail"><br> Password: <input
+						type="password" name=userPassword><br>
 					<button class=menu_button type="submit" value="Submit"
 						id="register_button2">Register</button>
 
@@ -108,8 +104,8 @@
 				LOGIN
 				<p>
 				<form action="login" method="get">
-					User: <input name="user" type="text"/><br> Password: 
-					<input name="password" type="password" /><br>
+					User: <input name="user" type="text" /><br> Password: <input
+						name="password" type="password" /><br>
 					<button type="submit" class=menu_button id="login_nupp">Login</button>
 				</form>
 				<button class="menu_button" id="tagasi_login">Home</button>
