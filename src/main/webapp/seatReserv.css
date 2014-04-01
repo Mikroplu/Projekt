@@ -4,13 +4,12 @@
 	height: 200px;
 	width: 550px;
 	background-color: #F5F5F5;
-	border: 1px solid #A4A4A4;
-	margin-left: 10px;
+	margin:0 auto;
 }
 
 #place {
 	position: relative;
-	margin: 7px;
+	maring:0 auto;
 }
 
 #place a {
@@ -18,19 +17,19 @@
 }
 
 #place li {
-	list-style: none outside none;
 	position: absolute;
 }
 
 #place li:hover {
-	border: 1px solid black;
+	background-color:green;
 }
 
 #place .seat {
 /* 	background: url("images/vaba_laud.jpg"); */
-	background-color:green;
-	height: 33px;
-	width: 33px;
+	background-color:#625D5D;
+	height: 34px;
+	width: 34px;
+	border:1px solid black;
 	display: block;
 }
 
@@ -44,26 +43,4 @@
 	background-color: blue;
 }
 
-#place .row-3,#place .row-4 {
-	margin-top: 10px;
-}
 
-#seatDescription li {
-	verticle-align: middle;
-	list-style: none outside none;
-	padding-left: 35px;
-	height: 35px;
-	float: left;
-}
-
-#vaba_laud {
-	background: url('images/vaba_laud.jpg') no-repeat scroll 0 0 transparent;
-}
-
-#broneeritud_laud {
-	background: url('images/broneeritu_laud.jpg') no-repeat scroll 0 0 transparent;
-}
-
-#valitud_laud {
-	background: url('images/valitud_laud.jpg') no-repeat scroll 0 0 transparent;
-}

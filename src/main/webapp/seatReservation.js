@@ -1,10 +1,22 @@
 $(document).ready (function() {
+	var dimensions=0;
+	
 
 	$("#pubi_valik").click (function(event) {
-
+		var pubid = document.getElementById("pubid");
+		var pubi_nimi = pubid.options[pubid.selectedIndex].text;
+		
+		
+		$.get('lauad', {"pubi_nimi" : pubi_nimi}, function(responseJson) {
+				$.each(responseJson, function(key, value) {
+					dimensions=parseInt(value.laudade_arv);
+				});
+	});
+		
+		
 			var settings = {
-				rows : 5,
-				cols : 15,
+				rows : Math.sqrt(dimensions),
+				cols : Math.sqrt(dimensions),
 				rowCssPrefix : 'row-',
 				colCssPrefix : 'col-',
 				seatWidth : 35,
@@ -13,7 +25,6 @@ $(document).ready (function() {
 				selectedSeatCss : 'selectedSeat',
 				selectingSeatCss : 'selectingSeat'
 			};
-
 			var init = function(reservedSeat) {
 				var str = [], seatNo, className;
 				for (var i = 0; i < settings.rows; i++) {
@@ -42,7 +53,7 @@ $(document).ready (function() {
 			// init();
 
 			// Case II: If already booked
-			var bookedSeats = [ 5, 10, 25, 11, 1];
+			var bookedSeats = [ ];
 			init(bookedSeats);
 
 			$('.' + settings.seatCss).click(function() {
