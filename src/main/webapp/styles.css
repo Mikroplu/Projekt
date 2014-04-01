@@ -156,6 +156,13 @@ body, html{
 	display:none;
 	
 }
+#content6{
+	width:100%;
+	height:80%;
+	background-color: #EAF5FF;
+	display:none;
+	
+}
 
 #login_button{
 	float:right;

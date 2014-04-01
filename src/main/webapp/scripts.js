@@ -61,6 +61,10 @@ $(document).ready (function() {
 		$('.contents').hide();
 	    $('#content4').show();
 	});
+	$('#Showcontent6').click(function() {
+		$('.contents').hide();
+	    $('#content6').show();
+	});
 	
 	$('#login_button').click(function() {
 		$('.contents').hide();
@@ -78,9 +82,6 @@ $(document).ready (function() {
 		$('.contents').hide();
 	    $('#content2').show();
 	});
-	
-	
-	
 	$('#pubi_valik').click(function() {
 		$('.contents').hide();
 	    $('#content3').show();
@@ -88,7 +89,7 @@ $(document).ready (function() {
 	
 	$('#laua_valik').click(function() {
 		$('.contents').hide();
-	    $('#content3').show();
+	    $('#content6').show();
 	});
 	
 	// Tagasi nupud

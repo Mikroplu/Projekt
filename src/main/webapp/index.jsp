@@ -113,6 +113,26 @@
 			</div>
 		</div>
 	</div>
+	
+	<div id="content6" class="contents">
+		<div class="subcontent">
+			<div class="content">
+				LISA PUBI
+				<p>
+				<form action="addpub" method="post">
+					Nimi: <input type="text" name="pubiNimi"><br> Asukoht: <input
+						type="text" name="pubiAsukoht"><br> Laudade arv: <input
+						type="text" name="laudadeArv"><br>
+					<button class=menu_button type="submit" value="Submit"
+						id="lisa_pubi">Lisa pubi</button>
+
+
+				</form>
+				<button class="menu_button" id="tagasi_register">Home</button>
+				</p>
+			</div>
+		</div>
+	</div>
 
 	<div id="footer">Footer</div>
 	<script type="text/javascript" src="scripts.js"></script>
