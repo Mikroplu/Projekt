@@ -171,6 +171,9 @@ body, html{
 #register_button{
 	float:right;
 }
+#addpub_button{
+	float:right;
+}
 
 .menu_button{
 	float:left;

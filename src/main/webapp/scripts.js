@@ -1,5 +1,4 @@
 $(document).ready (function() {
-	
 	$.get('linnad', function(responseJson) {
 		var linnad = document.getElementById("linnad");
 		//Kui algse comboboxi sisu pole sama, mis tuleb andmebaasist, siis muudab comboboxi sisu andmebaasi j�rgi
@@ -14,7 +13,6 @@ $(document).ready (function() {
 			});
 		}
 	});
-
 	// {"asukoht" : "Tartu"},
 	$("#linna_valik").click (function(event) {
 				var pubid = document.getElementById("pubid");
@@ -40,32 +38,10 @@ $(document).ready (function() {
 		$.get('lauad', {"pubi_nimi" : pubi_nimi}, function(responseJson) {
 				$.each(responseJson, function(key, value) {
 					var dimensions=value.laudade_arv;
-					alert(dimensions);
 				});
 	});
 });
 
-	$('#Showcontent1').click(function() {
-		$('.contents').hide();
-	    $('#content1').show();
-	});
-	$('#Showcontent2').click(function() {
-		$('.contents').hide();
-	    $('#content2').show();
-	});
-	$('#Showcontent3').click(function() {
-		$('.contents').hide();
-	    $('#content3').show();
-	});
-	$('#Showcontent4').click(function() {
-		$('.contents').hide();
-	    $('#content4').show();
-	});
-	$('#Showcontent6').click(function() {
-		$('.contents').hide();
-	    $('#content6').show();
-	});
-	
 	$('#login_button').click(function() {
 		$('.contents').hide();
 	    $('#content5').show();
@@ -74,6 +50,10 @@ $(document).ready (function() {
 	$('#register_button').click(function() {
 		$('.contents').hide();
 	    $('#content4').show();
+	});
+	$('#addpub_button').click(function() {
+		$('.contents').hide();
+	    $('#content6').show();
 	});
 	
 	

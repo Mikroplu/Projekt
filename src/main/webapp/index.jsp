@@ -18,6 +18,7 @@
 		<div id="buttons_menu">
 			<button class="menu_button" id="register_button">Register</button>
 			<button class="menu_button" id="login_button">Login</button>
+			<button class="menu_button" id="addpub_button">Add pub</button>
 		</div>
 	</div>
 
@@ -29,10 +30,8 @@
 				<p>
 					<select name="linnad" id="linnad">
 					</select>
-
 				</p>
 				<button class="menu_button" id="linna_valik">Edasi</button>
-
 			</div>
 
 		</div>
@@ -65,13 +64,8 @@
 					<ul id="place">
 					</ul>
 				</div>
-
-
-			
-
 				<button class="menu_button" id="laua_valik">Edasi</button>
 				<button class="menu_button" id="tagasi_laud">Tagasi</button>
-
 			</div>
 		</div>
 	</div>
@@ -82,7 +76,6 @@
 		<div class="subcontent">
 			<div class="content">
 				Register
-				<p>
 				<form action="register" method="post">
 					Name: <input type="text" name="userName"><br> Email: <input
 						type="text" name="userEmail"><br> Password: <input
@@ -93,7 +86,7 @@
 
 				</form>
 				<button class="menu_button" id="tagasi_register">Home</button>
-				</p>
+
 			</div>
 		</div>
 	</div>
@@ -102,34 +95,33 @@
 		<div class="subcontent">
 			<div class="content">
 				LOGIN
-				<p>
+				
 				<form action="login" method="get">
 					User: <input name="user" type="text" /><br> Password: <input
 						name="password" type="password" /><br>
 					<button type="submit" class=menu_button id="login_nupp">Login</button>
 				</form>
 				<button class="menu_button" id="tagasi_login">Home</button>
-				</p>
+				
 			</div>
 		</div>
 	</div>
-	
+
 	<div id="content6" class="contents">
 		<div class="subcontent">
 			<div class="content">
 				LISA PUBI
-				<p>
+				
 				<form action="addpub" method="post">
-					Nimi: <input type="text" name="pubiNimi"><br> Asukoht: <input
-						type="text" name="pubiAsukoht"><br> Laudade arv: <input
-						type="text" name="laudadeArv"><br>
+					Nimi: <input type="text" name="pubiNimi"><br> Asukoht:
+					<input type="text" name="pubiAsukoht"><br> Laudade
+					arv: <input type="text" name="laudadeArv"><br>
 					<button class=menu_button type="submit" value="Submit"
 						id="lisa_pubi">Lisa pubi</button>
 
-
 				</form>
 				<button class="menu_button" id="tagasi_register">Home</button>
-				</p>
+				
 			</div>
 		</div>
 	</div>
