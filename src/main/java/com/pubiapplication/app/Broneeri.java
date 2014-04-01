@@ -44,8 +44,8 @@ public class Broneeri extends HttpServlet {
 			String query = "SELECT * FROM "+pubi_nimi+" WHERE laua_number=?";
 			PreparedStatement prepStmt2 = conn.prepareStatement(query);
 			prepStmt2.setString(1,laua_number);
-			ResultSet rs= prepStmt2.executeQuery();
-			if(rs.next()){
+			int i=prepStmt2.executeUpdate();
+			if(i!=0){
 				response(response, "Selline laud on juba broneeritud");
 			}
 			else{
