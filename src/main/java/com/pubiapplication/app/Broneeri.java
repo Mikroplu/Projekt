@@ -41,7 +41,7 @@ public class Broneeri extends HttpServlet {
 		String kastuajanimi="Indrek";
 		String kohtade_arv="4";
 		try {
-			String query = "SELECT * FROM ? WHERE laua_number=? AND broneeritud='true' ";
+			String query = "SELECT * FROM ? WHERE laua_number=? AND broneeritud=true ";
 			PreparedStatement prepStmt2 = conn.prepareStatement(query);
 			prepStmt2.setString(1,pubi_nimi);
 			prepStmt2.setString(2,laua_number);
