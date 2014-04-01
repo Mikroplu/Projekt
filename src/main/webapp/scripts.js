@@ -33,12 +33,12 @@ $(document).ready (function() {
 	});
 	
 	
-	$("#llisa_pubi").click (function(event) {
+	$("#broneeri").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var linnad = document.getElementById("linnad");
 		var valitud_pubi = pubid.options[pubid.selectedIndex].text;
 		var valitud_linn = linnad.options[linnad.selectedIndex].text;
-		$.post('Broneeri', {"asukoht" : valitud_linn, "pubinimi" : valitud_pubi}, function(responseJson) {
+		$.post('broneeri', {"asukoht" : valitud_linn, "pubinimi" : valitud_pubi}, function(responseJson) {
 			
 	});
 });
@@ -80,7 +80,7 @@ $(document).ready (function() {
 	
 	$('#laua_valik').click(function() {
 		$('.contents').hide();
-	    $('#content3').show();
+	    $('#content7').show();
 	});
 	
 	// Tagasi nupud
