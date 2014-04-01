@@ -51,7 +51,11 @@ public class Addpub extends HttpServlet {
 			}
 			else{
 				try {
+					
+					
 					String query3 = "CREATE TABLE "+nimi+" (laua_number varchar(40),nimi varchar(40),broneeritud varchar(10),kasutajanimi varchar(40),kohtade_arv varchar(20));";
+					PreparedStatement prepstate = conn.prepareStatement(query3);
+					prepstate.executeQuery();
 					String query2 = "INSERT INTO pubid VALUES(?,?,?)";
 					PreparedStatement prepStmt = conn.prepareStatement(query2);
 					prepStmt.setString(1, nimi);
