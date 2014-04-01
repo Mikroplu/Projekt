@@ -50,7 +50,7 @@ public class Broneeri extends HttpServlet {
 			}
 			else{
 				try {
-					String query2 = "INSERT INTO "+ pubi_nimi +" VALUES(?,?,?,?,?)";
+					String query2 = "INSERT INTO "+pubi_nimi+" VALUES(?,?,?,?,?)";
 					PreparedStatement prepStmt = conn.prepareStatement(query2);
 					prepStmt.setString(1, laua_number);
 					prepStmt.setString(2, pubi_nimi);
