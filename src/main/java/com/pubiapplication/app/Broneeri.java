@@ -35,8 +35,7 @@ public class Broneeri extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		conn = DatabaseConnection.getConnection();
 		response.setContentType("text/html");
-		//String laua_number= request.getParameter("lauaNumber");
-		String laua_number="56";
+		String laua_number= request.getParameter("lauaNumber");
 		String pubi_nimi = request.getParameter("pubinimi");
 		String broneeritud = "true";
 		String kastuajanimi="Indrek";
