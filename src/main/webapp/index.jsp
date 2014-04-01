@@ -125,6 +125,19 @@
 			</div>
 		</div>
 	</div>
+	
+	<div id="content7" class="contents">
+		<div class="subcontent">
+			<div class="content">
+				BRONEERI
+				<form action="broneeri" method="post">
+					Laua number: <input type="text" name="lauaNumber"><br>
+				</form>
+				<button class="menu_button" id="tagasi_broneeri">Home</button>
+				
+			</div>
+		</div>
+	</div>
 
 	<div id="footer">Footer</div>
 	<script type="text/javascript" src="scripts.js"></script>

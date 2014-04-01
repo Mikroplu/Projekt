@@ -32,6 +32,17 @@ $(document).ready (function() {
 			});
 	});
 	
+	
+	$("#llisa_pubi").click (function(event) {
+		var pubid = document.getElementById("pubid");
+		var linnad = document.getElementById("linnad");
+		var valitud_pubi = pubid.options[pubid.selectedIndex].text;
+		var valitud_linn = linnad.options[linnad.selectedIndex].text;
+		$.post('Broneeri', {"asukoht" : valitud_linn, "pubinimi" : valitud_pubi}, function(responseJson) {
+			
+	});
+});
+	
 	$("#pubi_valik").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var pubi_nimi = pubid.options[pubid.selectedIndex].text;
