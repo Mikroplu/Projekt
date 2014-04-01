@@ -120,7 +120,7 @@
 						id="lisa_pubi">Lisa pubi</button>
 
 				</form>
-				<button class="menu_button" id="tagasi_register">Home</button>
+				<button class="menu_button" id="tagasi_addpub">Home</button>
 				
 			</div>
 		</div>

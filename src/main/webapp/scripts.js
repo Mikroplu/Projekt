@@ -77,6 +77,10 @@ $(document).ready (function() {
 		$('.contents').hide();
 	    $('#content1').show();
 	});
+	$('#tagasi_addpub').click(function() {
+		$('.contents').hide();
+	    $('#content1').show();
+	});
 	
 	$('#tagasi_laud').click(function() {
 		$('.contents').hide();
