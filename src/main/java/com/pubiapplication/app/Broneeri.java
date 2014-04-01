@@ -35,7 +35,8 @@ public class Broneeri extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		conn = DatabaseConnection.getConnection();
 		response.setContentType("text/html");
-		String laua_number= request.getParameter("lauaNumber");
+		//String laua_number= request.getParameter("lauaNumber");
+		String laua_number="56";
 		String pubi_nimi = request.getParameter("pubinimi");
 		String broneeritud = "true";
 		String kastuajanimi="Indrek";
@@ -44,8 +45,8 @@ public class Broneeri extends HttpServlet {
 			String query = "SELECT * FROM "+pubi_nimi+" WHERE laua_number=?";
 			PreparedStatement prepStmt2 = conn.prepareStatement(query);
 			prepStmt2.setString(1,laua_number);
-			int i=prepStmt2.executeUpdate();
-			if(i!=0){
+			ResultSet i=prepStmt2.executeQuery();
+			if(i.next()){
 				response(response, "Selline laud on juba broneeritud");
 			}
 			else{
