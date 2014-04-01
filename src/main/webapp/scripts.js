@@ -69,7 +69,7 @@ $(document).ready (function() {
 	
 	$('#laua_valik').click(function() {
 		$('.contents').hide();
-	    $('#content6').show();
+	    $('#content3').show();
 	});
 	
 	// Tagasi nupud
