@@ -41,7 +41,7 @@ public class Broneeri extends HttpServlet {
 		String kastuajanimi="Indrek";
 		String kohtade_arv="4";
 		try {
-			String query = "SELECT * FROM Illegard WHERE laua_number=?";
+			String query = "SELECT * FROM "+pubi_nimi+" WHERE laua_number=?";
 			PreparedStatement prepStmt2 = conn.prepareStatement(query);
 			//prepStmt2.setString(1,pubi_nimi);
 			prepStmt2.setString(1,laua_number);
@@ -51,7 +51,7 @@ public class Broneeri extends HttpServlet {
 			}
 			else{
 				try {
-					String query2 = "INSERT INTO Illegard VALUES(?,?,?,?,?)";
+					String query2 = "INSERT INTO "+ pubi_nimi +" VALUES(?,?,?,?,?)";
 					PreparedStatement prepStmt = conn.prepareStatement(query2);
 					prepStmt.setString(1, laua_number);
 					prepStmt.setString(2, pubi_nimi);
