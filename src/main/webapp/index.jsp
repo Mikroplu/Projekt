@@ -130,7 +130,7 @@
 		<div class="subcontent">
 			<div class="content">
 				BRONEERI
-				<form action="broneeri" method="post">
+				<form>
 					Laua number: <input type="text" name="lauaNumber" id="laua_number"><br>
 					<button class=menu_button type="submit" value="Submit"
 						id="broneeri">Broneeri</button>
