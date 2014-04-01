@@ -36,9 +36,10 @@ $(document).ready (function() {
 	$("#broneeri").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var linnad = document.getElementById("linnad");
+		var laua_number = $("#laua_number").value;
 		var valitud_pubi = pubid.options[pubid.selectedIndex].text;
 		var valitud_linn = linnad.options[linnad.selectedIndex].text;
-		$.post('broneeri', {"asukoht" : valitud_linn, "pubinimi" : valitud_pubi}, function(responseJson) {
+		$.post('broneeri', {"asukoht" : valitud_linn, "pubinimi" : valitud_pubi,"laua_number" : laua_number}, function(responseJson) {
 			
 	});
 });
