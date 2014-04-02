@@ -2,6 +2,8 @@ package com.pubiapplication.app;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -26,7 +28,13 @@ public class Login extends HttpServlet {
 			throws ServletException, IOException {
 		conn = DatabaseConnection.getConnection();
 		String user = req.getParameter("user");
-		String pass = req.getParameter("password");
+		String pass="";
+		try {
+			pass = stringToHash(req.getParameter("password"));
+		} catch (NoSuchAlgorithmException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		try {
 			String query ="SELECT * FROM users WHERE kasutajanimi=? AND parool=?";
 			PreparedStatement prepStmt = conn.prepareStatement(query);
@@ -63,5 +71,17 @@ public class Login extends HttpServlet {
 	}
 	public static String lisa_ylakomad(String a) {
 		return "'" + a + "'";
+	}
+	public static String stringToHash(String password)
+			throws NoSuchAlgorithmException {
+		MessageDigest md = MessageDigest.getInstance("SHA-256");
+		md.update(password.getBytes());
+		byte byteData[] = md.digest();
+		StringBuffer sb = new StringBuffer();
+		for (int i = 0; i < byteData.length; i++) {
+			sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16)
+					.substring(1));
+		}
+		return sb.toString();
 	}
 }
