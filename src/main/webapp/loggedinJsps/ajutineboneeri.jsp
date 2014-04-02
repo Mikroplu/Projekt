@@ -6,10 +6,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
 <body>
-	<% String stringstring = (String) session.getAttribute("user");%> 
+
 	
 	<div id="content7" class="contents">
-	<%=stringstring%>
+	<%=userName%>
 		<div class="subcontent">
 			<div class="content">
 				BRONEERI
