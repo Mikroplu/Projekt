@@ -36,7 +36,7 @@ public class Broneeri extends HttpServlet {
 		conn = DatabaseConnection.getConnection();
 		response.setContentType("text/html");
 		String laua_number = request.getParameter("lauaNumber");
-		String pubi_nimi = "PUBINAHH";
+		String pubi_nimi = "Illegard";
 		String broneeritud = "true";
 		String kastuajanimi = "Indrek";
 		String kohtade_arv = "4";
