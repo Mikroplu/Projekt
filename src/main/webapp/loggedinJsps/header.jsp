@@ -27,7 +27,7 @@
 		<div id="buttons_menu">
 			<button class="menu_button" id="register_button">Register</button>
 			<button class="menu_button" id="addpub_button">Add pub</button>
-			<form action="<%=response.encodeURL("LogoutServlet")%>"
+			<form action="<%=response.encodeURL("logout")%>"
 				method="post">
 				<input type="submit" value="Logout">
 			</form>
