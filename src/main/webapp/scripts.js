@@ -36,10 +36,10 @@ $(document).ready (function() {
 	$("#broneeri").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var linnad = document.getElementById("linnad");
-		var laua_number = $("#laua_number").text;
 		var valitud_pubi = pubid.options[pubid.selectedIndex].text;
 		var valitud_linn = linnad.options[linnad.selectedIndex].text;
-		$.post('broneeri', {"asukoht" : valitud_linn, "pubinimi" : valitud_pubi,"laua_number" : laua_number}, function(responseJson) {
+		$.post('broneeri', {"pubinimi" : valitud_pubi}, function(responseJson) {
+			return false;
 			
 	});
 });
@@ -47,6 +47,7 @@ $(document).ready (function() {
 	$("#pubi_valik").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var pubi_nimi = pubid.options[pubid.selectedIndex].text;
+		
 		$.get('lauad', {"pubi_nimi" : pubi_nimi}, function(responseJson) {
 				$.each(responseJson, function(key, value) {
 					var dimensions=value.laudade_arv;
@@ -104,6 +105,10 @@ $(document).ready (function() {
 	    $('#content1').show();
 	});
 	$('#tagasi_login').click(function() {
+		$('.contents').hide();
+	    $('#content1').show();
+	});
+	$('#tagasi_broneeri').click(function() {
 		$('.contents').hide();
 	    $('#content1').show();
 	});

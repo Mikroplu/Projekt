@@ -77,11 +77,14 @@
 			<div class="content">
 				Register
 				<form action="register" method="post">
-					Name: <input type="text" name="userName"><br> Email: <input
-						type="text" name="userEmail"><br> Password: <input
-						type="password" name=userPassword><br>
-					<button class=menu_button type="submit" value="Submit"
-						id="register_button2">Register</button>
+					Name: <input type="text" name=name><br>
+					Surname: <input type="text" name=surname><br>
+					Telephone number: <input type="text" name=number><br>
+					Location: <input type="text" name=location><br>
+					Username: <input type="text" name="userName"><br>
+					Password: <input type="password" name=userPassword><br>
+					Email: <input type="text" name="userEmail"><br> 
+					<button class=menu_button type="submit" value="Submit" id="register_button2">Register</button>
 
 
 				</form>
@@ -96,7 +99,7 @@
 			<div class="content">
 				LOGIN
 				
-				<form action="login" method="get">
+				<form action="login" method="post">
 					User: <input name="user" type="text" /><br> Password: <input
 						name="password" type="password" /><br>
 					<button type="submit" class=menu_button id="login_nupp">Login</button>
@@ -130,7 +133,7 @@
 		<div class="subcontent">
 			<div class="content">
 				BRONEERI
-				<form>
+				<form action="broneeri" method="post">
 					Laua number: <input type="text" name="lauaNumber" id="laua_number"><br>
 					<button class=menu_button type="submit" value="Submit"
 						id="broneeri">Broneeri</button>
