@@ -60,7 +60,7 @@ public class Login extends HttpServlet {
 	
 	}
 
-	private void response(HttpServletResponse resp, String msg)
+	public static void response(HttpServletResponse resp, String msg)
 			throws IOException {
 		PrintWriter out = resp.getWriter();
 		out.println("<html>");
