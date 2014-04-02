@@ -26,7 +26,7 @@
 
 	</div>
 
-	<div id="footer">Footer</div>
+	<div id="footer"></div>
 	<script type="text/javascript" src="scripts.js"></script>
 	<script type="text/javascript" src="seatReservation.js"></script>
 </body>

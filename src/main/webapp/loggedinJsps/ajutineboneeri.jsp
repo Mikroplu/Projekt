@@ -9,7 +9,6 @@
 
 	
 	<div id="content7" class="contents">
-	<%=userName%>
 		<div class="subcontent">
 			<div class="content">
 				BRONEERI
