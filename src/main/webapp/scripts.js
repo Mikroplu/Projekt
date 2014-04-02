@@ -73,11 +73,13 @@ $(document).ready (function() {
 	// Edasi nupud
 	$('#linna_valik').click(function() {
 		$('.contents').hide();
-	    $('#content2').show();
+		$('#content2').show();
+	    $('#sisu').load('jsps/pubivalik.jsp');
 	});
 	$('#pubi_valik').click(function() {
 		$('.contents').hide();
-	    $('#content3').show();
+		$('#content3').show();
+	    $('#sisu').load('jsps/broneerilaud.jsp');
 	});
 	
 	$('#laua_valik').click(function() {

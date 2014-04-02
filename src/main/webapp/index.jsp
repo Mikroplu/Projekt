@@ -14,16 +14,16 @@
 
 
 <body>
-	<div id="header">
+<!-- 	<div id="header">
 		<div id="buttons_menu">
 			<button class="menu_button" id="register_button">Register</button>
 			<button class="menu_button" id="login_button">Login</button>
 			<button class="menu_button" id="addpub_button">Add pub</button>
 		</div>
-	</div>
+	</div> -->
 
 
-	<div id="content1" class="contents">
+<!-- 	<div id="content1" class="contents">
 		<div class="subcontent">
 			<div class="content">
 				VALI LINN
@@ -35,11 +35,11 @@
 			</div>
 
 		</div>
-	</div>
+	</div> -->
 
 
 
-	<div id="content2" class="contents">
+<!-- 	<div id="content2" class="contents">
 		<div class="subcontent">
 			<div class="content">
 				PUBI VALIK
@@ -51,11 +51,11 @@
 				<button class="menu_button" id="tagasi_pubi">Tagasi</button>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 
 
-	<div id="content3" class="contents">
+<!-- 	<div id="content3" class="contents">
 		<div class="subcontent">
 			<div class="content">
 				<p>VALI SOBIV LAUD</p>
@@ -68,9 +68,17 @@
 				<button class="menu_button" id="tagasi_laud">Tagasi</button>
 			</div>
 		</div>
+	</div> -->
+
+
+	<%@ include file="jsps/header.jsp" %>
+	<%@ include file="jsps/linnavalik.jsp" %>
+	<%@ include file="jsps/pubivalik.jsp" %>
+	<%@ include file="jsps/broneerilaud.jsp" %>
+	
+	<div id="sisu" class="contents">
+
 	</div>
-
-
 
 	<div id="content4" class="contents">
 		<div class="subcontent">
