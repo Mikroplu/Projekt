@@ -22,7 +22,6 @@
 	<%@ include file="jsps/registreeri.jsp" %>
 	<%@ include file="jsps/login.jsp" %>
 	<%@ include file="jsps/lisapubi.jsp" %>
-	
 	<div id="sisu" class="contents">
 
 	</div>
