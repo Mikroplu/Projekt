@@ -14,63 +14,6 @@
 
 
 <body>
-<!-- 	<div id="header">
-		<div id="buttons_menu">
-			<button class="menu_button" id="register_button">Register</button>
-			<button class="menu_button" id="login_button">Login</button>
-			<button class="menu_button" id="addpub_button">Add pub</button>
-		</div>
-	</div> -->
-
-
-<!-- 	<div id="content1" class="contents">
-		<div class="subcontent">
-			<div class="content">
-				VALI LINN
-				<p>
-					<select name="linnad" id="linnad">
-					</select>
-				</p>
-				<button class="menu_button" id="linna_valik">Edasi</button>
-			</div>
-
-		</div>
-	</div> -->
-
-
-
-<!-- 	<div id="content2" class="contents">
-		<div class="subcontent">
-			<div class="content">
-				PUBI VALIK
-				<p>
-					<select id="pubid">
-					</select>
-				</p>
-				<button class="menu_button" id="pubi_valik">Edasi</button>
-				<button class="menu_button" id="tagasi_pubi">Tagasi</button>
-			</div>
-		</div>
-	</div> -->
-
-
-
-<!-- 	<div id="content3" class="contents">
-		<div class="subcontent">
-			<div class="content">
-				<p>VALI SOBIV LAUD</p>
-
-				<div id="holder">
-					<ul id="place">
-					</ul>
-				</div>
-				<button class="menu_button" id="laua_valik">Edasi</button>
-				<button class="menu_button" id="tagasi_laud">Tagasi</button>
-			</div>
-		</div>
-	</div> -->
-
-
 	<%@ include file="jsps/header.jsp" %>
 	<%@ include file="jsps/linnavalik.jsp" %>
 	<%@ include file="jsps/pubivalik.jsp" %>
@@ -80,7 +23,7 @@
 
 	</div>
 
-	<div id="content4" class="contents">
+<!-- 	<div id="content4" class="contents">
 		<div class="subcontent">
 			<div class="content">
 				Register
@@ -100,9 +43,9 @@
 
 			</div>
 		</div>
-	</div>
+	</div> -->
 
-	<div id="content5" class="contents">
+<!-- 	<div id="content5" class="contents">
 		<div class="subcontent">
 			<div class="content">
 				LOGIN
@@ -116,9 +59,9 @@
 				
 			</div>
 		</div>
-	</div>
+	</div> -->
 
-	<div id="content6" class="contents">
+<!-- 	<div id="content6" class="contents">
 		<div class="subcontent">
 			<div class="content">
 				LISA PUBI
@@ -135,9 +78,9 @@
 				
 			</div>
 		</div>
-	</div>
+	</div> -->
 	
-	<div id="content7" class="contents">
+<!-- 	<div id="content7" class="contents">
 		<div class="subcontent">
 			<div class="content">
 				BRONEERI
@@ -150,7 +93,7 @@
 				
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<div id="footer">Footer</div>
 	<script type="text/javascript" src="scripts.js"></script>

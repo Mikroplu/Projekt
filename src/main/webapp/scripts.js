@@ -58,15 +58,18 @@ $(document).ready (function() {
 	$('#login_button').click(function() {
 		$('.contents').hide();
 	    $('#content5').show();
+	    $('#sisu').load('jsps/login.jsp');
 	});
 	
 	$('#register_button').click(function() {
 		$('.contents').hide();
 	    $('#content4').show();
+	    $('#sisu').load('jsps/registreeri.jsp');
 	});
 	$('#addpub_button').click(function() {
 		$('.contents').hide();
-	    $('#content6').show();
+		$('#content6').show();
+	    $('#sisu').load('jsps/lisapubi.jsp');
 	});
 	
 	
@@ -84,7 +87,8 @@ $(document).ready (function() {
 	
 	$('#laua_valik').click(function() {
 		$('.contents').hide();
-	    $('#content7').show();
+		$('#content7').show();
+	    $('#sisu').load('jsps/ajutineboneeri.jsp');
 	});
 	
 	// Tagasi nupud
