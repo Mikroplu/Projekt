@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="styles.css">
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
 <body>
@@ -25,7 +24,5 @@
 			</div>
 		</div>
 	</div>
-
-	<script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
