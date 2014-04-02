@@ -76,9 +76,12 @@ $(document).ready (function() {
 	// Edasi nupud
 	$('#linna_valik').click(function() {
 		$('.contents').hide();
+		
+	    
+		$('#sisu').load('jsps/pubivalik.jsp');
 		$('#content2').show();
-	    //$('#sisu').load('jsps/pubivalik.jsp');
 	});
+	
 	$('#pubi_valik').click(function() {
 		$('.contents').hide();
 		$('#content3').show();
