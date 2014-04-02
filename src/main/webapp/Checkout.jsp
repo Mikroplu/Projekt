@@ -8,29 +8,21 @@
 </head>
 <body>
 <%
-//allow access only if session exists
-String user = null;
-if(session.getAttribute("user") == null){
-    response.sendRedirect("index.jsp");
-}else user = (String) session.getAttribute("user");
 String userName = null;
+//allow access only if session exists
+if(session.getAttribute("user") == null){
+    response.sendRedirect("login.html");
+}else userName = (String) session.getAttribute("user");
 String sessionID = null;
 Cookie[] cookies = request.getCookies();
 if(cookies !=null){
 for(Cookie cookie : cookies){
     if(cookie.getName().equals("user")) userName = cookie.getValue();
-    if(cookie.getName().equals("JSESSIONID")) sessionID = cookie.getValue();
 }
-}else{
-    sessionID = session.getId();
 }
 %>
-<h3>Hi <%=userName %>, Login successful. Your Session ID=<%=sessionID %></h3>
+<h3>Hi <%=userName %>, do the checkout.</h3>
 <br>
-User=<%=user %>
-<br>
-<!-- need to encode all the URLs where we want session information to be passed -->
-<a href="<%=response.encodeURL("Checkout.jsp") %>">Checkout Page</a>
 <form action="<%=response.encodeURL("LogoutServlet") %>" method="post">
 <input type="submit" value="Logout" >
 </form>
