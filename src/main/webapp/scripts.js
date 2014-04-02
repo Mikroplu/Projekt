@@ -111,6 +111,10 @@ $(document).ready (function() {
 		$('.contents').hide();
 	    $('#content1').show();
 	});
+	$('#tagasi_broneeri').click(function() {
+		$('.contents').hide();
+	    $('#content1').show();
+	});
 	
 	// Muudab nuppude klassid
     $('button').click(function(){
