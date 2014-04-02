@@ -1,14 +1,19 @@
 $(document).ready (function() {
 	var dimensions=0;
+	
+
 	$("#pubi_valik").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var pubi_nimi = pubid.options[pubid.selectedIndex].text;
+		
+		
 		$.get('lauad', {"pubi_nimi" : pubi_nimi}, function(responseJson) {
 				$.each(responseJson, function(key, value) {
 					dimensions=parseInt(value.laudade_arv);
-					alert(dimensions);
 				});
 	});
+		
+		
 			var settings = {
 				rows : Math.sqrt(dimensions),
 				cols : Math.sqrt(dimensions),
