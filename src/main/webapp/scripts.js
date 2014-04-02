@@ -38,7 +38,7 @@ $(document).ready (function() {
 		var linnad = document.getElementById("linnad");
 		
 		//Võimalik, et ainult firefoxis töötab
-		var laua_number = $("#laua_number").textContent;
+		var laua_number = document.getElementById('laua_number');
 		var valitud_pubi = pubid.options[pubid.selectedIndex].text;
 		var valitud_linn = linnad.options[linnad.selectedIndex].text;
 		alert(valitud_linn);
