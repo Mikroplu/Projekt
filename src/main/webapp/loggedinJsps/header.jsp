@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+	pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,7 +27,10 @@
 		<div id="buttons_menu">
 			<button class="menu_button" id="register_button">Register</button>
 			<button class="menu_button" id="addpub_button">Add pub</button>
-			<button class="menu_button" id="logout">Logout</button>
+			<form action="<%=response.encodeURL("LogoutServlet")%>"
+				method="post">
+				<input type="submit" value="Logout">
+			</form>
 		</div>
 	</div>
 </body>

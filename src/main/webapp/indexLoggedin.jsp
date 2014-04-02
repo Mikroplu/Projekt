@@ -19,7 +19,6 @@
 	<%@ include file="loggedinJsps/ajutineboneeri.jsp"%>
 	<%@ include file="jsps/registreeri.jsp"%>
 	<%@ include file="jsps/lisapubi.jsp"%>
-	
 	<div id="sisu" class="contents"></div>
 
 	<div id="footerLoggedin"></div>
