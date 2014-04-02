@@ -45,7 +45,7 @@ $(document).ready (function() {
 		alert(valitud_pubi);
 		alert(laua_number);
 		
-		$.post('broneeri', {"asukoht" : valitud_linn, "pubinimi" : valitud_pubi,"laua_number" : laua_number}, function(responseJson) {
+		$.post('broneeri', {"asukoht" : valitud_linn, "pubinimi" : valitud_pubi, "laua_number" : laua_number}, function(responseJson) {
 			
 	});
 });

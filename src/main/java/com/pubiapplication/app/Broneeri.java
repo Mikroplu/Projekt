@@ -23,7 +23,7 @@ import com.google.gson.JsonObject;
 
 @WebServlet(value = "/broneeri")
 public class Broneeri extends HttpServlet {
-	int row_count=0;
+	int row_count = 0;
 	private static Connection conn = null;
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -35,44 +35,30 @@ public class Broneeri extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		conn = DatabaseConnection.getConnection();
 		response.setContentType("text/html");
-		String laua_number= request.getParameter("laua_number");
+		String laua_number = request.getParameter("laua_number");
 		String pubi_nimi = request.getParameter("valitud_pubi");
 		String broneeritud = "true";
-		String kastuajanimi="Indrek";
-		String kohtade_arv="4";
+		String kastuajanimi = "Indrek";
+		String kohtade_arv = "4";
+
 		try {
-			String query = "SELECT * FROM "+pubi_nimi+" WHERE laua_number=?";
-			PreparedStatement prepStmt2 = conn.prepareStatement(query);
-			prepStmt2.setString(1,laua_number);
-			ResultSet i=prepStmt2.executeQuery();
-			if(i.next()){
-				response(response, "Selline laud on juba broneeritud");
-			}
-			else{
-				try {
-					String query2 = "INSERT INTO "+pubi_nimi+" VALUES(?,?,?,?,?)";
-					PreparedStatement prepStmt = conn.prepareStatement(query2);
-					prepStmt.setString(1, laua_number);
-					prepStmt.setString(2, pubi_nimi);
-					prepStmt.setString(3, broneeritud);
-					prepStmt.setString(4, kastuajanimi);
-					prepStmt.setString(5, kohtade_arv);
-					prepStmt.executeUpdate();
-					response(response, "Laud "+laua_number+" edukalt lisatud, kasutaja "+kastuajanimi+ " poolt, pubisse "+pubi_nimi);
-				} catch (Exception e) {
-					response(response, "Midagi läks pekki");
-				}
-				
-			}
-
-		} catch (SQLException e) {
-			response(response, "SQL EXCEPTION");
-
+			String query2 = "INSERT INTO " + pubi_nimi + " VALUES(?,?,?,?,?)";
+			PreparedStatement prepStmt = conn.prepareStatement(query2);
+			prepStmt.setString(1, laua_number);
+			prepStmt.setString(2, pubi_nimi);
+			prepStmt.setString(3, broneeritud);
+			prepStmt.setString(4, kastuajanimi);
+			prepStmt.setString(5, kohtade_arv);
+			prepStmt.executeUpdate();
+			response(response, "Laud " + laua_number
+					+ " edukalt lisatud, kasutaja " + kastuajanimi
+					+ " poolt, pubisse " + pubi_nimi);
 		} catch (Exception e) {
 			response(response, "Midagi läks pekki");
 		}
 
 	}
+
 	private void response(HttpServletResponse resp, String msg)
 			throws IOException {
 		PrintWriter out = resp.getWriter();
