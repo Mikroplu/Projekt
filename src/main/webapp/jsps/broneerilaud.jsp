@@ -15,7 +15,7 @@
 					<ul id="place">
 					</ul>
 				</div>
-				<button class="menu_button" id="laua_valik">Edasi</button>
+				<button class="menu_button" id="laua_valik_loggedout">Edasi</button>
 				<button class="menu_button" id="tagasi_laud">Tagasi</button>
 			</div>
 		</div>

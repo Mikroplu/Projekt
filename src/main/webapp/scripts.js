@@ -38,8 +38,7 @@ $(document).ready (function() {
 		var linnad = document.getElementById("linnad");
 		var valitud_pubi = pubid.options[pubid.selectedIndex].text;
 		var valitud_linn = linnad.options[linnad.selectedIndex].text;
-		$.post('broneeri', {"pubinimi" : valitud_pubi}, function(responseJson) {
-			return false;
+		$.post('redirect', function(responseJson) {
 			
 	});
 });
@@ -90,6 +89,9 @@ $(document).ready (function() {
 	$('#laua_valik').click(function() {
 		$('.contents').hide();
 		$('#content7').show();
+	});
+	$('#laua_valik_loggedout').click(function() {
+		
 	});
 	
 	// Tagasi nupud
