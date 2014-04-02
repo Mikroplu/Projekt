@@ -77,11 +77,14 @@
 			<div class="content">
 				Register
 				<form action="register" method="post">
-					Name: <input type="text" name="userName"><br> Email: <input
-						type="text" name="userEmail"><br> Password: <input
-						type="password" name=userPassword><br>
-					<button class=menu_button type="submit" value="Submit"
-						id="register_button2">Register</button>
+					Name: <input type="text" name=name><br>
+					Surname: <input type="password" name=surname><br>
+					Telephone number: <input type="text" name=number><br>
+					Location: <input type="text" name=location><br>
+					Username: <input type="text" name="userName"><br>
+					Password: <input type="password" name=userPassword><br>
+					Email: <input type="text" name="userEmail"><br> 
+					<button class=menu_button type="submit" value="Submit" id="register_button2">Register</button>
 
 
 				</form>

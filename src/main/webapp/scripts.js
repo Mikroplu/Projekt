@@ -38,7 +38,7 @@ $(document).ready (function() {
 		var linnad = document.getElementById("linnad");
 		var valitud_pubi = pubid.options[pubid.selectedIndex].text;
 		var valitud_linn = linnad.options[linnad.selectedIndex].text;
-		$.post('broneeri', {"asukoht" : valitud_linn, "pubinimi" : valitud_pubi}, function(responseJson) {
+		$.post('broneeri', {"pubinimi" : valitud_pubi}, function(responseJson) {
 			return false;
 			
 	});

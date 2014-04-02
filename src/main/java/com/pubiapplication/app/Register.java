@@ -35,14 +35,17 @@ public class Register extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		conn = DatabaseConnection.getConnection();
 		response.setContentType("text/html");
-
+		String name = request.getParameter("name");
+		String surname = request.getParameter("location");
+		String number = request.getParameter("number");
 		String username = request.getParameter("userName");
-		String email = request.getParameter("userEmail");
 		String password = request.getParameter("userPassword");
-		String name = "Jaanus";
-		String number = "55555558";
-		String city = "Tartu";
-		String surname = "Pikkpea";
+		String email = request.getParameter("userEmail");
+		String city = request.getParameter("location");
+		
+		
+
+		
 
 		try {
 			String query = "SELECT * FROM users WHERE kasutajanimi=?";
