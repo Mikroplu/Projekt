@@ -22,11 +22,10 @@
 			}
 		}
 	%>
-	<div id="header">
+	<div id="headerLoggedin">
 		<%=userName%>
 		<div id="buttons_menu">
 			<button class="menu_button" id="register_button">Register</button>
-			<button class="menu_button" id="login_button">Login</button>
 			<button class="menu_button" id="addpub_button">Add pub</button>
 		</div>
 	</div>
