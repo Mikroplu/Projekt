@@ -77,7 +77,7 @@ $(document).ready (function() {
 	$('#linna_valik').click(function() {
 		$('.contents').hide();
 		$('#content2').show();
-	    $('#sisu').load('jsps/pubivalik.jsp');
+	    //$('#sisu').load('jsps/pubivalik.jsp');
 	});
 	$('#pubi_valik').click(function() {
 		$('.contents').hide();
