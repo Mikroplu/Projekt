@@ -16,7 +16,7 @@
 <body>
 	<%@ include file="jsps/header.jsp" %>
 	<%@ include file="jsps/linnavalik.jsp" %>
-	<%-- <%@ include file="jsps/pubivalik.jsp" %> --%>
+	<%@ include file="jsps/pubivalik.jsp" %>
 	<%@ include file="jsps/broneerilaud.jsp" %>
 	<%@ include file="jsps/ajutineboneeri.jsp" %>
 	<%@ include file="jsps/registreeri.jsp" %>
