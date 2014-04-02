@@ -12,13 +12,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<%@ include file="loggedinJsps/header.jsp"%>
+	
 	<%@ include file="jsps/linnavalik.jsp"%>
 	<%@ include file="jsps/pubivalik.jsp"%>
 	<%@ include file="loggedinJsps/broneerilaud.jsp"%>
 	<%@ include file="loggedinJsps/ajutineboneeri.jsp"%>
 	<%@ include file="jsps/registreeri.jsp"%>
 	<%@ include file="jsps/lisapubi.jsp"%>
+	<%@ include file="loggedinJsps/header.jsp"%>
 	<div id="sisu" class="contents"></div>
 
 	<div id="footerLoggedin"></div>
