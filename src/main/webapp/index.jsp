@@ -18,6 +18,10 @@
 	<%@ include file="jsps/linnavalik.jsp" %>
 	<%@ include file="jsps/pubivalik.jsp" %>
 	<%@ include file="jsps/broneerilaud.jsp" %>
+	<%@ include file="jsps/ajutineboneeri.jsp" %>
+	<%@ include file="jsps/registreeri.jsp" %>
+	<%@ include file="jsps/login.jsp" %>
+	<%@ include file="jsps/lisapubi.jsp" %>
 	
 	<div id="sisu" class="contents">
 
