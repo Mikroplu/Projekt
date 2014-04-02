@@ -54,7 +54,7 @@ public class Broneeri extends HttpServlet {
 					+ " edukalt lisatud, kasutaja " + kastuajanimi
 					+ " poolt, pubisse " + pubi_nimi);
 		} catch (Exception e) {
-			e.printStackTrace();
+			response(response,e.getMessage());
 		}
 
 	}
