@@ -99,7 +99,7 @@
 			<div class="content">
 				LOGIN
 				
-				<form action="login.jsp" method="post">
+				<form action="login" method="post">
 					User: <input name="user" type="text" /><br> Password: <input
 						name="password" type="password" /><br>
 					<button type="submit" class=menu_button id="login_nupp">Login</button>

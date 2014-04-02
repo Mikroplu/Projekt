@@ -13,7 +13,9 @@ import java.sql.Statement;
 import java.util.Properties;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -42,7 +44,15 @@ public class Login extends HttpServlet {
 			prepStmt.setString(2,pass);
 			ResultSet rs= prepStmt.executeQuery();
 			if(rs.next()){
-				response(resp, "Olete sisselogitud");
+				HttpSession session = req.getSession();
+	            session.setAttribute("user", user);
+	            //setting session to expiry in 30 mins
+	            session.setMaxInactiveInterval(30*60);
+	            Cookie userName = new Cookie("user", user);
+	            resp.addCookie(userName);
+	            //Get the encoded URL string
+	            String encodedURL = resp.encodeRedirectURL("LoginSuccess.jsp");
+	            resp.sendRedirect(encodedURL);
 			}
 			else{
 				response(resp,"Sellist kasutajat ei eksisteeri");
