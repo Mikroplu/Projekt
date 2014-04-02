@@ -70,6 +70,7 @@ public class Register extends HttpServlet {
 					prepStmt.setString(6, email);
 					prepStmt.setString(7, number);
 					prepStmt.executeUpdate();
+					
 					response(response, "Kasutaja edukalt sisestatud andmebaasi");
 					row_count = 0;
 				} catch (Exception e) {

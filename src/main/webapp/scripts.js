@@ -66,23 +66,24 @@ $(document).ready (function() {
 	});
 	$('#addpub_button').click(function() {
 		$('.contents').hide();
-	    $('#content6').show();
+		$('#content6').show();
 	});
 	
 	
 	// Edasi nupud
 	$('#linna_valik').click(function() {
 		$('.contents').hide();
-	    $('#content2').show();
+		$('#content2').show();
 	});
+	
 	$('#pubi_valik').click(function() {
 		$('.contents').hide();
-	    $('#content3').show();
+		$('#content3').show();
 	});
 	
 	$('#laua_valik').click(function() {
 		$('.contents').hide();
-	    $('#content7').show();
+		$('#content7').show();
 	});
 	
 	// Tagasi nupud

@@ -37,6 +37,8 @@ public class Login extends HttpServlet {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		
+		
 		try {
 			String query ="SELECT * FROM users WHERE kasutajanimi=? AND parool=?";
 			PreparedStatement prepStmt = conn.prepareStatement(query);
@@ -44,8 +46,23 @@ public class Login extends HttpServlet {
 			prepStmt.setString(2,pass);
 			ResultSet rs= prepStmt.executeQuery();
 			if(rs.next()){
+				
+				String eesnimi=rs.getString("eesnimi");
+				String perenimi=rs.getString("perenimi");
+				String elukoht=rs.getString("elukoht");
+				String email=rs.getString("email");
+				String telefon= rs.getString("telefon");
+				
+				
+				
 				HttpSession session = req.getSession();
 	            session.setAttribute("user", user);
+	            session.setAttribute("password", pass);
+	            session.setAttribute("eesnimi", eesnimi);
+	            session.setAttribute("perenimi", user);
+	            session.setAttribute("elukoht", elukoht);
+	            session.setAttribute("email", email);
+	            session.setAttribute("telefon", telefon);
 	            //setting session to expiry in 30 mins
 	            session.setMaxInactiveInterval(30*60);
 	            Cookie userName = new Cookie("user", user);
