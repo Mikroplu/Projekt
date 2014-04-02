@@ -36,7 +36,7 @@ $(document).ready (function() {
 	$("#broneeri").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var linnad = document.getElementById("linnad");
-		var laua_number = $("#laua_number").text;
+		var laua_number = $("#laua_number").value;
 		var valitud_pubi = pubid.options[pubid.selectedIndex].text;
 		var valitud_linn = linnad.options[linnad.selectedIndex].text;
 		alert(valitud_linn);
