@@ -2,6 +2,8 @@
 <%@ page import ="com.pubiapplication.app.*" %>
 <%@ page import ="java.security.NoSuchAlgorithmException"%>
 <%@ page import ="org.*"%>
+
+
 <%
 
 	String user = request.getParameter("user");
