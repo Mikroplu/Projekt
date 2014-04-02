@@ -36,16 +36,10 @@ $(document).ready (function() {
 	$("#broneeri").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var linnad = document.getElementById("linnad");
-		
-		//Võimalik, et ainult firefoxis töötab
-		var laua_number = document.getElementById("laua_number").value;
 		var valitud_pubi = pubid.options[pubid.selectedIndex].text;
 		var valitud_linn = linnad.options[linnad.selectedIndex].text;
-		alert(valitud_linn);
-		alert(valitud_pubi);
-		alert(laua_number);
-		
-		$.post('broneeri', {"asukoht" : valitud_linn, "pubinimi" : valitud_pubi, "laua_number" : laua_number}, function(responseJson) {
+		$.post('broneeri', {"asukoht" : valitud_linn, "pubinimi" : valitud_pubi}, function(responseJson) {
+			return false;
 			
 	});
 });
