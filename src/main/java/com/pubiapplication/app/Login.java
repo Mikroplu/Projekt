@@ -24,7 +24,7 @@ import javax.servlet.http.HttpSession;
 public class Login extends HttpServlet {
 	private static Connection conn = null;
     boolean login = false;
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		conn = DatabaseConnection.getConnection();
 		String user = req.getParameter("user");
@@ -55,7 +55,7 @@ public class Login extends HttpServlet {
 	}
 	
 	
-	protected void doPost(HttpServletRequest request,
+	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 	
 	}
