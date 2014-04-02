@@ -51,7 +51,7 @@ public class Addpub extends HttpServlet {
 			}
 			else{
 				try {
-					String query2 = "INSERT INTO PUB VALUES(default, ?,?,?)" ;
+					String query2 = "INSERT INTO pub VALUES(default, ?,?,?)" ;
 					PreparedStatement prepStmt = conn.prepareStatement(query2);
 					prepStmt.setString(1, nimi);
 					prepStmt.setString(2, asukoht);

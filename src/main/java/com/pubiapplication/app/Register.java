@@ -60,7 +60,7 @@ public class Register extends HttpServlet {
 				response(response, "Selline kasutaja on juba olemas");
 			} else {
 				try {
-					String query2 = "INSERT INTO users VALUES(?,?,?,?,?,?,?)";
+					String query2 = "INSERT INTO kasutajad VALUES(default, ?,?,?,?,?,?,?)";
 					PreparedStatement prepStmt = conn.prepareStatement(query2);
 					prepStmt.setString(1, name);
 					prepStmt.setString(2, surname);

@@ -35,24 +35,24 @@ public class Broneeri extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		conn = DatabaseConnection.getConnection();
 		response.setContentType("text/html");
-		String laua_number = request.getParameter("lauaNumber");
+		int laua_number = Integer.parseInt(request.getParameter("lauaNumber"));
 		String pubi_nimi = request.getParameter("pubinimi");
 		//need andmed on vaja kätte saada sisselogitud kasutajalt
-		String broneeritud = "true";
-		String kastuajanimi = "Indrek";
-		String kohtade_arv = "4";
+		Boolean broneeritud = true;
+		int kastuajaID = 1;
+		int kohtade_arv = 4;
 
 		try {
-			String query2 = "INSERT INTO " + pubi_nimi + " VALUES(?,?,?,?,?)";
+			String query2 = "INSERT INTO lauad VALUES(default,?,?,?,?,?)";
 			PreparedStatement prepStmt = conn.prepareStatement(query2);
-			prepStmt.setString(1, laua_number);
+			prepStmt.setInt(1, laua_number);
 			prepStmt.setString(2, pubi_nimi);
-			prepStmt.setString(3, broneeritud);
-			prepStmt.setString(4, kastuajanimi);
-			prepStmt.setString(5, kohtade_arv);
+			prepStmt.setBoolean(3, broneeritud);
+			prepStmt.setInt(4, kastuajaID);
+			prepStmt.setInt(5, kohtade_arv);
 			prepStmt.executeUpdate();
 			response(response, "Laud " + laua_number
-					+ " edukalt lisatud, kasutaja " + kastuajanimi
+					+ " edukalt lisatud, kasutaja " + kastuajaID
 					+ " poolt, pubisse " + pubi_nimi);
 		} catch (Exception e) {
 			response(response,e.getMessage());
