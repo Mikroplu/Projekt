@@ -36,7 +36,9 @@ $(document).ready (function() {
 	$("#broneeri").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var linnad = document.getElementById("linnad");
-		var laua_number = $("#laua_number").value;
+		
+		//Võimalik, et ainult firefoxis töötab
+		var laua_number = $("#laua_number").textContent;
 		var valitud_pubi = pubid.options[pubid.selectedIndex].text;
 		var valitud_linn = linnad.options[linnad.selectedIndex].text;
 		alert(valitud_linn);
@@ -51,6 +53,7 @@ $(document).ready (function() {
 	$("#pubi_valik").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var pubi_nimi = pubid.options[pubid.selectedIndex].text;
+		
 		$.get('lauad', {"pubi_nimi" : pubi_nimi}, function(responseJson) {
 				$.each(responseJson, function(key, value) {
 					var dimensions=value.laudade_arv;
