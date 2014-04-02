@@ -40,13 +40,13 @@ public class Login extends HttpServlet {
 		
 		
 		try {
-			String query ="SELECT * FROM kasutajad WHERE kasutajanimi=? AND parool=?";
+			String query ="SELECT * FROM users WHERE kasutajanimi=? AND parool=?";
 			PreparedStatement prepStmt = conn.prepareStatement(query);
 			prepStmt.setString(1,user);
 			prepStmt.setString(2,pass);
 			ResultSet rs= prepStmt.executeQuery();
 			if(rs.next()){
-				int id=rs.getInt("id");
+				
 				String eesnimi=rs.getString("eesnimi");
 				String perenimi=rs.getString("perenimi");
 				String elukoht=rs.getString("elukoht");
@@ -56,7 +56,6 @@ public class Login extends HttpServlet {
 				
 				
 				HttpSession session = req.getSession();
-				session.setAttribute("id", id);
 	            session.setAttribute("user", user);
 	            session.setAttribute("password", pass);
 	            session.setAttribute("eesnimi", eesnimi);
@@ -69,7 +68,7 @@ public class Login extends HttpServlet {
 	            Cookie userName = new Cookie("user", user);
 	            resp.addCookie(userName);
 	            //Get the encoded URL string
-	            String encodedURL = resp.encodeRedirectURL("loginSuccess.jsp");
+	            String encodedURL = resp.encodeRedirectURL("indexLoggedin.jsp");
 	            resp.sendRedirect(encodedURL);
 			}
 			else{

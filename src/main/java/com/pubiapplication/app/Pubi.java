@@ -2,13 +2,11 @@ package com.pubiapplication.app;
 
 public class Pubi {
 
-	private int id;
 	private String nimi;
 	private String asukoht;
 	private int laudade_arv;
 
-	public Pubi(int id, String nimi, String asukoht, int laudade_arv) {
-		this.setId(id);
+	public Pubi(String nimi, String asukoht, int laudade_arv) {
 		this.setNimi(nimi);
 		this.setAsukoht(asukoht);
 		this.setLaudade_arv(laudade_arv);
@@ -28,14 +26,6 @@ public class Pubi {
 		this.laudade_arv = laudade_arv;
 	}
 
-	public void setId(int id){
-		this.id = id;
-	}
-
-	public int getId() {
-		return id;
-	}
-	
 	public String getNimi() {
 		return nimi;
 	}

@@ -8,10 +8,15 @@ body, html{
 }
 
 #header{
-
 	width:100%;
 	height:10%;
 	background-color: #1C538A ;
+}
+
+#headerLoggedin{
+	width:100%;
+	height:10%;
+	background-color: red ;
 }
 
 #footer{
@@ -19,7 +24,11 @@ body, html{
 	height:10%;
 	background-color: #143D66;
 }
-
+#footerLoggedin{
+	width:100%;
+	height:10%;
+	background-color:red;
+}
 .content{
 	padding: 3%;	
 }

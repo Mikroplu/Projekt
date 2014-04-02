@@ -6,17 +6,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 </head>
 <body>
-	<div id="content3" class="contents">
+	<div id="content1" class="contents">
 		<div class="subcontent">
 			<div class="content">
-				<p>HETKESEIS PUBIS:</p>
-
-				<div id="holder">
-					<ul id="place">
-					</ul>
-				</div>
-				<button class="menu_button" id="tagasi_laud">Tagasi</button>
+				VALI LINN
+				<p>
+					<select name="linnad" id="linnad">
+					</select>
+				</p>
+				<button class="menu_button" id="linna_valik">Edasi</button>
 			</div>
+
 		</div>
 	</div>
 </body>

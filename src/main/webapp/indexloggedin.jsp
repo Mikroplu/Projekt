@@ -18,6 +18,7 @@
 	<%
 		//allow access only if session exists
 		String user = null;
+	
 		if (session.getAttribute("user") == null) {
 			response.sendRedirect("index.jsp");
 		} else
@@ -167,7 +168,7 @@
 		</div>
 	</div>
 
-	<div id="footer"></div>
+	<div id="footer">Footer</div>
 	<script type="text/javascript" src="scripts.js"></script>
 	<script type="text/javascript" src="seatReservation.js"></script>
 </body>

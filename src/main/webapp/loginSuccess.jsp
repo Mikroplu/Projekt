@@ -34,7 +34,7 @@
 	<br> Kasutajanimi=<%=user%>
 	<br>
 	<!-- need to encode all the URLs where we want session information to be passed -->
-	<a href="<%=response.encodeURL("indexloggedin.jsp")%>">Checkout Page</a>
+	<a href="<%=response.encodeURL("indexLoggedin.jsp")%>">Checkout Page</a>
 	<form action="<%=response.encodeURL("LogoutServlet")%>" method="post">
 		<input type="submit" value="Logi välja">
 	</form>
