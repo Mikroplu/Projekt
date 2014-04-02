@@ -8,18 +8,21 @@ body, html{
 }
 
 #header{
-
 	width:100%;
 	height:10%;
 	background-color: #1C538A ;
 }
 
-#headerLoggedin
+#headerLoggedin{
+	width:100%;
+	height:10%;
+	background-color: red ;
+}
 
 #footer{
 	width:100%;
 	height:10%;
-	background-color: red;
+	background-color: #143D66;
 }
 
 .content{
