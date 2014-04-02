@@ -27,6 +27,7 @@
 		<div id="buttons_menu">
 			<button class="menu_button" id="register_button">Register</button>
 			<button class="menu_button" id="addpub_button">Add pub</button>
+			<button class="menu_button" id="logout">Logout</button>
 		</div>
 	</div>
 </body>

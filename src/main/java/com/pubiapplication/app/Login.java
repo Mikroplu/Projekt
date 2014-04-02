@@ -68,7 +68,7 @@ public class Login extends HttpServlet {
 	            Cookie userName = new Cookie("user", user);
 	            resp.addCookie(userName);
 	            //Get the encoded URL string
-	            String encodedURL = resp.encodeRedirectURL("loginSuccess.jsp");
+	            String encodedURL = resp.encodeRedirectURL("indexLoggedin.jsp");
 	            resp.sendRedirect(encodedURL);
 			}
 			else{
