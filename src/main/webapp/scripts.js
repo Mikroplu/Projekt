@@ -74,11 +74,23 @@ $(document).ready (function() {
 	$('#linna_valik').click(function() {
 		$('.contents').hide();
 		$('#content2').show();
+		
+	    pageurl="pubivalik";
+	    
+        if(pageurl!=window.location){
+            window.history.pushState({path:pageurl},'',pageurl);
+        }
 	});
 	
 	$('#pubi_valik').click(function() {
 		$('.contents').hide();
 		$('#content3').show();
+		
+	    pageurl="pubivalik";
+	    
+        if(pageurl!=window.location){
+            window.history.pushState({path:pageurl},'',pageurl);
+        }
 	});
 	
 	$('#laua_valik').click(function() {
