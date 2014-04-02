@@ -78,7 +78,7 @@
 				Register
 				<form action="register" method="post">
 					Name: <input type="text" name=name><br>
-					Surname: <input type="password" name=surname><br>
+					Surname: <input type="text" name=surname><br>
 					Telephone number: <input type="text" name=number><br>
 					Location: <input type="text" name=location><br>
 					Username: <input type="text" name="userName"><br>

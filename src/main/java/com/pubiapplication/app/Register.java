@@ -3,6 +3,8 @@ package com.pubiapplication.app;
 import javax.servlet.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -23,7 +25,7 @@ import com.google.gson.JsonObject;
 
 @WebServlet(value = "/register")
 public class Register extends HttpServlet {
-	int row_count=0;
+	int row_count = 0;
 	private static Connection conn = null;
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -39,24 +41,24 @@ public class Register extends HttpServlet {
 		String surname = request.getParameter("location");
 		String number = request.getParameter("number");
 		String username = request.getParameter("userName");
-		String password = request.getParameter("userPassword");
+		String password ="";
+		try {
+			password = stringToHash(request.getParameter("userPassword"));
+		} catch (NoSuchAlgorithmException e1) {
+			e1.printStackTrace();
+		}
 		String email = request.getParameter("userEmail");
 		String city = request.getParameter("location");
-		
-		
-
-		
 
 		try {
 			String query = "SELECT * FROM users WHERE kasutajanimi=?";
 			PreparedStatement prepStmt2 = conn.prepareStatement(query);
-			prepStmt2.setString(1,username);
-			ResultSet rs= prepStmt2.executeQuery();
-			
-			if(rs.next()){
+			prepStmt2.setString(1, username);
+			ResultSet rs = prepStmt2.executeQuery();
+
+			if (rs.next()) {
 				response(response, "Selline kasutaja on juba olemas");
-			}
-			else{
+			} else {
 				try {
 					String query2 = "INSERT INTO users VALUES(?,?,?,?,?,?,?)";
 					PreparedStatement prepStmt = conn.prepareStatement(query2);
@@ -69,11 +71,11 @@ public class Register extends HttpServlet {
 					prepStmt.setString(7, number);
 					prepStmt.executeUpdate();
 					response(response, "Kasutaja edukalt sisestatud andmebaasi");
-					row_count=0;
+					row_count = 0;
 				} catch (Exception e) {
 					response(response, "Midagi läks pekki");
 				}
-				
+
 			}
 
 		} catch (SQLException e) {
@@ -97,5 +99,18 @@ public class Register extends HttpServlet {
 		out.println("<t1>" + msg + "</t1>");
 		out.println("</body>");
 		out.println("</html>");
+	}
+
+	public static String stringToHash(String password)
+			throws NoSuchAlgorithmException {
+		MessageDigest md = MessageDigest.getInstance("SHA-256");
+		md.update(password.getBytes());
+		byte byteData[] = md.digest();
+		StringBuffer sb = new StringBuffer();
+		for (int i = 0; i < byteData.length; i++) {
+			sb.append(Integer.toString((byteData[i] & 0xff) + 0x100, 16)
+					.substring(1));
+		}
+		return sb.toString();
 	}
 }
