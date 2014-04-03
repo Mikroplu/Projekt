@@ -65,11 +65,12 @@ public class Addpub extends HttpServlet {
 				}
 				
 				try {
-				for (int i=1;i<laudade_arv+1;i++){
+				for (int i=1;i<(laudade_arv+1);i++){
 					String query3 = "INSERT INTO lauad VALUES(default, ?,default,null,4,(SELECT ID FROM pub where nimi="+nimi+"))" ;
 					PreparedStatement prepStmt3 = conn.prepareStatement(query3);
 					prepStmt3.setInt(1, i);
 					prepStmt3.executeUpdate();
+					response(response, "Laud "+i+" on lisatud");
 				}
 				response(response, "Pubi "+nimi+" edukalt lisatud");
 			} catch (Exception e) {
