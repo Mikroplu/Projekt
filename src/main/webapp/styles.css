@@ -72,9 +72,13 @@ button::-moz-focus-inner {
 	width:600px;
 	height:300px;
 	background-color:green;
+	clear:  both;
 	
 }
-
+.content input{
+	width:100%;
+	clear: both;
+}
 #linna_valik{
 	position:absolute;
 	top:40%;
