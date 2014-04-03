@@ -70,7 +70,7 @@ button::-moz-focus-inner {
 	-webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 	width:600px;
-	height:300px;
+	height:500px;
 	background-color:green;
 	clear:  both;
 	
@@ -78,6 +78,9 @@ button::-moz-focus-inner {
 .content input{
 	width:100%;
 	clear: both;
+}
+.content label{
+	float:left;
 }
 #linna_valik{
 	position:absolute;

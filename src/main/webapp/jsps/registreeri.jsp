@@ -15,7 +15,7 @@
 				<label>Username</label>
 				<input type="text" name="userName"><br> 
 				<label>Password</label>
-				<inputtype="password" name=userPassword><br> 
+				<input type="password" name=userPassword><br> 
 				<label>Email</label>
 				<input type="text" name="userEmail"><br>
 				<button class=menu_button type="submit" value="Submit"
