@@ -7,7 +7,7 @@
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
 	type="text/javascript"></script>
-<script src="//connect.facebook.net/en_US/all.js"></script>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
@@ -41,5 +41,6 @@
 	<script type="text/javascript" src="scripts.js"></script>
 	<script type="text/javascript" src="seatReservation.js"></script>
 	<script type="text/javascript" src="facebooklogin.js"></script>
+	<script src="//connect.facebook.net/en_US/all.js"></script>
 </body>
 </html>
