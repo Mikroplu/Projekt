@@ -56,17 +56,17 @@ public class Register extends HttpServlet {
 				response(response, "Selline kasutaja on juba olemas");
 			} else {
 				try {
-					/*int id=0;
+					int id=0;
 					String query3 = "SELECT * FROM kasutajad";
 					PreparedStatement prepStmt3 = conn.prepareStatement(query3);
 					ResultSet rs2 = prepStmt3.executeQuery();
 					
 					while (rs2.next()) {
 						id=id+1;
-					}*/
+					}
 					String query2 = "INSERT INTO kasutajad VALUES(?,?,?,?,?,?,?,?,?)";
 					PreparedStatement prepStmt = conn.prepareStatement(query2);
-					prepStmt.setInt(1, 3);
+					prepStmt.setInt(1, id+1);
 					prepStmt.setString(2, name);
 					prepStmt.setString(3, surname);
 					prepStmt.setString(4, username);
