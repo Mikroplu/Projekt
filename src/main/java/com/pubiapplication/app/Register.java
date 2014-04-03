@@ -64,7 +64,7 @@ public class Register extends HttpServlet {
 					while (rs2.next()) {
 						id=id+1;
 					}*/
-					String query2 = "INSERT INTO kasutajad VALUES(?,?,?,?,?,?,?)";
+					String query2 = "INSERT INTO kasutajad VALUES(?,?,?,?,?,?,?,?,?)";
 					PreparedStatement prepStmt = conn.prepareStatement(query2);
 					prepStmt.setInt(1, 3);
 					prepStmt.setString(2, name);
