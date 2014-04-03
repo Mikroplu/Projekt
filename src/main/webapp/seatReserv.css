@@ -4,8 +4,7 @@
 	height: 200px;
 	background-color: #F5F5F5;
 	margin:0 auto;
-	-webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    transform: translate(0%, 0%);
 }
 
 #place {

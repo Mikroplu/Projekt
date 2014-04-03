@@ -3,11 +3,15 @@
 	<div class="subcontent">
 		<div class="content">
 			LISA PUBI
-
 			<form action="addpub" method="post">
-				Nimi: <input type="text" name="pubiNimi"><br> Asukoht:
-				<input type="text" name="pubiAsukoht"><br> Laudade arv:
+			
+				<label>Name</label>
+				<input type="text" name="pubiNimi"><br>
+				<label>Location</label>
+				<input type="text" name="pubiAsukoht"><br> 
+				<label>Laudade arv</label>
 				<input type="text" name="laudadeArv"><br>
+				
 				<button class=menu_button type="submit" value="Submit"
 					id="lisa_pubi">Lisa pubi</button>
 
