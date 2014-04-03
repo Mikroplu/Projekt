@@ -42,13 +42,14 @@ public static ArrayList<Pubi> getPubidByLinn(String linn2) {
 		connection = DatabaseConnection.getConnection();
 		ArrayList<Pubi> pubide_list = new ArrayList<Pubi>();
 		try {
-			Statement statement = connection.createStatement();
-			ResultSet rs = statement.executeQuery("SELECT * FROM pubid WHERE asukoht="+linn+"ORDER BY asukoht ASC");
+			
+			String query="SELECT nimi FROM pub WHERE asukoht=? ORDER BY asukoht ASC";
+			PreparedStatement prepStmt = connection.prepareStatement(query);
+			prepStmt.setString(1,linn2);
+			ResultSet rs= prepStmt.executeQuery();
 			while (rs.next()) {
 				Pubi pubi = new Pubi();
 				pubi.setNimi(rs.getString("nimi"));
-				pubi.setAsukoht(rs.getString("asukoht"));
-				pubi.setLaudade_arv(rs.getInt("laudade_arv"));
 				pubide_list.add(pubi);
 			}
 		} catch (SQLException e) {
@@ -57,11 +58,11 @@ public static ArrayList<Pubi> getPubidByLinn(String linn2) {
 		return pubide_list;
 	}
 
-public static ArrayList<Pubi> getNrOfSeatsByPubi(String pubi_nimi) {
+public static ArrayList<Pubi> getNrOfTablesByPubi(String pubi_nimi) {
 	connection = DatabaseConnection.getConnection();
 	ArrayList<Pubi> yks_pubi = new ArrayList<Pubi>();
 	try {
-		String query ="SELECT * FROM pubid WHERE nimi=?";
+		String query ="SELECT laudade_arv FROM pub WHERE nimi=?";
 		PreparedStatement prepStmt = connection.prepareStatement(query);
 		prepStmt.setString(1,pubi_nimi);
 		ResultSet rs= prepStmt.executeQuery();

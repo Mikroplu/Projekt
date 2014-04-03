@@ -28,7 +28,7 @@ public class PopuleeriLauad extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		String valitud_pubi = request.getParameter("pubi_nimi");
 		ArrayList<Pubi> yks_pubi = new ArrayList<Pubi>();
-		yks_pubi = fetchPubid.getNrOfSeatsByPubi(valitud_pubi);
+		yks_pubi = fetchPubid.getNrOfTablesByPubi(valitud_pubi);
 		Gson gson = new Gson();
 		JsonElement element = gson.toJsonTree(yks_pubi,
 				new TypeToken<List<Pubi>>() {
