@@ -59,11 +59,13 @@ public class Addpub extends HttpServlet {
 					prepStmt.setString(2, asukoht);
 					prepStmt.setInt(3, laudade_arv);
 					prepStmt.executeUpdate();
-					int i=3;
-					
-						String query3 = "INSERT INTO lauad VALUES(default, ?,default,null,4,(SELECT ID FROM pub where nimi="+nimi+"))" ;
+					String query4="SELECT ID FROM pub where nimi="+nimi;
+					PreparedStatement prepStmt4 = conn.prepareStatement(query4);
+					ResultSet rs2= prepStmt4.executeQuery();
+						String query3 = "INSERT INTO lauad VALUES(default, ?,default,null,4,?)" ;
 						PreparedStatement prepStmt3 = conn.prepareStatement(query3);
-						prepStmt3.setInt(1, i);
+						prepStmt3.setInt(1, 3);
+						prepStmt3.setInt(2, rs2.getInt("id"));
 						prepStmt3.executeUpdate();
 
 					response(response, "Pubi "+nimi+" edukalt lisatud");
