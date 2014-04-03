@@ -69,7 +69,7 @@ button::-moz-focus-inner {
 	left:50%;
 	-webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-	width:600px;
+	width:450px;
 	height:500px;
 	background-color:green;
 	clear:  both;
@@ -121,8 +121,9 @@ button::-moz-focus-inner {
 }
 #tagasi_register{
 	position:absolute;
-	top:70%;
+	bottom:10%;
 	left:50%;
+	float:left;
 	-webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
@@ -145,7 +146,8 @@ button::-moz-focus-inner {
 }
 #register_button2{
 	position:absolute;
-	top:50%;
+	bottom:30%;
+	float:right;
 	left:50%;
 	-webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
