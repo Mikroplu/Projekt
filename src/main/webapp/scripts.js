@@ -129,7 +129,7 @@ $(document).ready (function() {
    });
     
     
-    $('header').click(function(){
+    $('#header').click(function(){
     	 var eventSource = new EventSource("datapush");
     	 eventSource.onmessage = function(event) {
     	    	document.getElementById('header').innerHTML = event.data;
