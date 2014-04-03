@@ -24,10 +24,10 @@ public class fetchPubid {
 			ResultSet rs = statement.executeQuery("SELECT DISTINCT asukoht FROM pub ORDER BY asukoht ASC");
 			while (rs.next()) {
 				Pubi pubi = new Pubi();
+				//pubi.setID(rs.getInt("id"));
 				pubi.setAsukoht(rs.getString("asukoht"));
-				pubi.setID(rs.getInt("id"));
-				pubi.setNimi(rs.getString("nimi"));
-				pubi.setLaudade_arv(rs.getInt("laudade_arv"));
+				//pubi.setNimi(rs.getString("nimi"));
+				//pubi.setLaudade_arv(rs.getInt("laudade_arv"));
 				pubide_list.add(pubi);
 			}
 		} catch (SQLException e) {
