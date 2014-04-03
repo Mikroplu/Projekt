@@ -58,8 +58,8 @@ public class Register extends HttpServlet {
 				try {
 					int id=0;
 					String query3 = "SELECT * FROM kasutajad";
-					PreparedStatement prepStmt3 = conn.prepareStatement(query);
-					ResultSet rs2 = prepStmt2.executeQuery();
+					PreparedStatement prepStmt3 = conn.prepareStatement(query3);
+					ResultSet rs2 = prepStmt3.executeQuery();
 					
 					while (rs2.next()) {
 						id=id+1;
