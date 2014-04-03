@@ -18,6 +18,7 @@
 	<%
 		//allow access only if session exists
 		String user = null;
+	
 		if (session.getAttribute("user") == null) {
 			response.sendRedirect("index.jsp");
 		} else
@@ -40,7 +41,7 @@
 		<div id="buttons_menu">
 			<%=userName%>
 			<button class="menu_button" id="register_button">Register</button>
-			<button class="menu_button" id="login_button">Login</button>
+			
 			<button class="menu_button" id="addpub_button">Add pub</button>
 		</div>
 	</div>
