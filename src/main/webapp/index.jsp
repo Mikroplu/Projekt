@@ -7,6 +7,7 @@
 <script
 	src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
 	type="text/javascript"></script>
+<script src="//connect.facebook.net/en_US/all.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
@@ -23,9 +24,22 @@
 
 	<div id="sisu" class="contents"></div>
 
-	<div id="footer"></div>
+	<div id="footer">
+	
+	<div id="fb-root"></div>
+		<div id="status">
+			Click on Below Image to start the demo: <br /> <img
+				src="http://hayageek.com/examples/oauth/facebook/oauth-javascript/LoginWithFacebook.png"
+				style="cursor: pointer;" onclick="Login()" />
+		</div>
+
+		<div id="message">
+			Logs:<br />
+		</div>
+
+	</div>
 	<script type="text/javascript" src="scripts.js"></script>
 	<script type="text/javascript" src="seatReservation.js"></script>
-	<script type="text/javascript" src="facebook.js"></script>
+	<script type="text/javascript" src="facebooklogin.js"></script>
 </body>
 </html>
