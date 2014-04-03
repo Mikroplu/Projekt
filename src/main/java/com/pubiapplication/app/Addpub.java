@@ -66,6 +66,8 @@ public class Addpub extends HttpServlet {
 						PreparedStatement prepStmt3 = conn.prepareStatement(query3);
 						prepStmt3.setInt(1, 3);
 						prepStmt3.setInt(2, rs2.getInt("id"));
+
+						response(response, "Enne laua lisamist");
 						prepStmt3.executeUpdate();
 
 					response(response, "Pubi "+nimi+" edukalt lisatud");
