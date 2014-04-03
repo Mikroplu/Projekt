@@ -1,10 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-
 <div id="content5" class="contents">
 	<div class="subcontent">
 		<div class="content">
 			LOGIN
-
 			<form action="login" method="post">
 				User: <input name="user" type="text" /><br> Password: <input
 					name="password" type="password" /><br>

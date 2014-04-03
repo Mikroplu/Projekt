@@ -22,6 +22,9 @@ button::-moz-focus-inner {
 	height:10%;
 	background-color: red ;
 }
+#headeri_kasutaja_info{
+	float:left;
+}
 
 #footer{
 	width:100%;

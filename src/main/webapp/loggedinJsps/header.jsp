@@ -16,8 +16,9 @@
 	}
 %>
 <div id="headerLoggedin">
-	Olete sisse logitud kasutajana:
-	<%=userName%>
+	<p id="headeri_kasutaja_info">
+		Olete sisse logitud kasutajana: <%=userName%>
+	</p>
 	<div id="buttons_menu">
 		<button class="menu_button" id="register_button">Register</button>
 		<button class="menu_button" id="addpub_button">Add pub</button>
