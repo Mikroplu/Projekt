@@ -22,6 +22,9 @@ button::-moz-focus-inner {
 	height:10%;
 	background-color: red ;
 }
+#headeri_kasutaja_info{
+	float:left;
+}
 
 #footer{
 	width:100%;
@@ -61,86 +64,24 @@ button::-moz-focus-inner {
 }
 
 .content{
-	position:absolute;
+	position:relative;
 	top:50%;
 	left:50%;
 	-webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-	width:600px;
-	height:300px;
+	width:450px;
+	height:400px;
 	background-color:green;
+	clear:  both;
 	
 }
-
-#linna_valik{
-	position:absolute;
-	top:40%;
-	left:50%;
-	-webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+.content input{
+	width:100%;
+	clear: both;
 }
-#pubi_valik{
-	position:absolute;
-	top:40%;
-	left:50%;
-	-webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+.content label{
+	float:left;
 }
-
-#tagasi_pubi{
-	position:absolute;
-	top:60%;
-	left:50%;
-	-webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-#tagasi_laud{
-	position:absolute;
-	top:60%;
-	left:50%;
-	-webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-#tagasi_login{
-	position:absolute;
-	top:70%;
-	left:50%;
-	-webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-#tagasi_register{
-	position:absolute;
-	top:70%;
-	left:50%;
-	-webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-
-#login_nupp{
-	position:absolute;
-	top:50%;
-	left:50%;
-	-webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-#laua_valik{
-	position:absolute;
-	top:40%;
-	left:50%;
-	-webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-#register_button2{
-	position:absolute;
-	top:50%;
-	left:50%;
-	-webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
 #content2{
 	width:100%;
 	height:80%;
@@ -239,6 +180,18 @@ button::-moz-focus-inner {
 	padding-left: 5%;
 	width:90%;	
 }
+.allparemal{
+	position:absolute;
+	right:0;
+	bottom:0;
+}
+
+.allvasakul{
+	position:absolute;
+	left:0;
+	bottom:0;
+}
+
 
 
 

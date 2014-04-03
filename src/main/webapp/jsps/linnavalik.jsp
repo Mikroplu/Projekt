@@ -7,7 +7,7 @@
 				<select name="linnad" id="linnad">
 				</select>
 			</p>
-			<button class="menu_button" id="linna_valik">Edasi</button>
+			<button class="menu_button allparemal" id="linna_valik">Edasi</button>
 		</div>
 
 	</div>
