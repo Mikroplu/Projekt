@@ -40,7 +40,7 @@ public class Addpub extends HttpServlet {
 
 		String nimi= request.getParameter("pubiNimi");
 		String asukoht = request.getParameter("pubiAsukoht");
-		String laudade_arv = request.getParameter("laudadeArv");
+		int laudade_arv = Integer.parseInt(request.getParameter("laudadeArv"));
 
 		try {
 			String query = "SELECT * FROM pub WHERE nimi=?";
@@ -57,7 +57,7 @@ public class Addpub extends HttpServlet {
 					PreparedStatement prepStmt = conn.prepareStatement(query2);
 					prepStmt.setString(1, nimi);
 					prepStmt.setString(2, asukoht);
-					prepStmt.setString(3, laudade_arv);
+					prepStmt.setInt(3, laudade_arv);
 					prepStmt.executeUpdate();
 					response(response, "Pubi "+nimi+" edukalt lisatud");
 				} catch (Exception e) {
