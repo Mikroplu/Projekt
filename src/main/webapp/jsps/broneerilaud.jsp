@@ -8,7 +8,7 @@
 				<ul id="place">
 				</ul>
 			</div>
-			<button class="menu_button" id="tagasi_laud">Tagasi</button>
+			<button class="menu_button allvasakul" id="tagasi_laud">Tagasi</button>
 		</div>
 	</div>
 </div>

@@ -1,15 +1,14 @@
-@CHARSET "UTF-8";
 
 #holder {
 	height: 200px;
-	width: 550px;
 	background-color: #F5F5F5;
 	margin:0 auto;
+    transform: translate(0%, 0%);
 }
 
 #place {
 	position: relative;
-	maring:0 auto;
+	margin:0 auto;
 }
 
 #place a {

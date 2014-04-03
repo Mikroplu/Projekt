@@ -8,8 +8,8 @@
 				<select id="pubid">
 				</select>
 			</p>
-			<button class="menu_button" id="pubi_valik">Edasi</button>
-			<button class="menu_button" id="tagasi_pubi">Tagasi</button>
+			<button class="menu_button allparemal" id="pubi_valik">Edasi</button>
+			<button class="menu_button allvasakul" id="tagasi_pubi">Tagasi</button>
 		</div>
 	</div>
 </div>
