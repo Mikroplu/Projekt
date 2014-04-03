@@ -64,17 +64,16 @@ public class Register extends HttpServlet {
 					while (rs2.next()) {
 						id=id+1;
 					}
-					String query2 = "INSERT INTO kasutajad VALUES(?,?,?,?,?,?,?,?,?)";
+					String query2 = "INSERT INTO kasutajad VALUES(default,?,?,?,?,?,?,?,?)";
 					PreparedStatement prepStmt = conn.prepareStatement(query2);
-					prepStmt.setInt(1, id+1);
-					prepStmt.setString(2, name);
-					prepStmt.setString(3, surname);
-					prepStmt.setString(4, username);
-					prepStmt.setString(5, password);
-					prepStmt.setString(6, city);
-					prepStmt.setString(7, email);
-					prepStmt.setString(8, number);
-					prepStmt.setBoolean(9, true);
+					prepStmt.setString(1, name);
+					prepStmt.setString(2, surname);
+					prepStmt.setString(3, username);
+					prepStmt.setString(4, password);
+					prepStmt.setString(5, city);
+					prepStmt.setString(6, email);
+					prepStmt.setString(7, number);
+					prepStmt.setBoolean(8, true);
 					prepStmt.executeUpdate();
 					response(response, "Kasutaja edukalt sisestatud andmebaasi");
 				} catch (Exception e) {
