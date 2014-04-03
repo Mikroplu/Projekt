@@ -18,7 +18,6 @@ import com.google.gson.reflect.TypeToken;
 
 @WebServlet("/pubinimed")
 public class PopuleeriPubinimed extends HttpServlet {
-	private String linn;
 	private static final long serialVersionUID = 1L;
 
 	public PopuleeriPubinimed() {
