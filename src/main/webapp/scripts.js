@@ -44,16 +44,13 @@ $(document).ready (function() {
 });
 	
 	$("#pubi_valik").click (function(event) {
-		alert("vajutus");
 		var pubid = document.getElementById("pubid");
 		var pubi_nimi = pubid.options[pubid.selectedIndex].text;
 		var linnad = document.getElementById("linnad");
 		var valitud_linn = linnad.options[linnad.selectedIndex].text;
 		$.get('lauad', {"pubi_nimi" : pubi_nimi,"valitud_linn" : valitud_linn}, function(responseJson) {
-				alert("doGet");
 				$.each(responseJson, function(key, value) {
-					var dimensions=value.laudade_arv;
-					alert("yoyoy");
+					alert(value.laudade_arv);
 				});
 	});
 });

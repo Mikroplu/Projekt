@@ -61,7 +61,7 @@ public static ArrayList<Pubi> getNrOfTablesByPubi(String pubi_nimi,String valitu
 	connection = DatabaseConnection.getConnection();
 	ArrayList<Pubi> yks_pubi = new ArrayList<Pubi>();
 	try {
-		String query ="SELECT laudade_arv FROM pub WHERE nimi=? AND WHERE asukoht=?";
+		String query ="SELECT laudade_arv FROM pub WHERE nimi=? AND asukoht=?";
 		PreparedStatement prepStmt = connection.prepareStatement(query);
 		prepStmt.setString(1,pubi_nimi);
 		prepStmt.setString(2,valitud_linn);

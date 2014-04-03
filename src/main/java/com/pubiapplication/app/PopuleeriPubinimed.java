@@ -19,25 +19,18 @@ import com.google.gson.reflect.TypeToken;
 @WebServlet("/pubinimed")
 public class PopuleeriPubinimed extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
 	public PopuleeriPubinimed() {
 	}
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
-		//
 		String valitud_linn = request.getParameter("asukoht");
 		ArrayList<Pubi> pubid = new ArrayList<Pubi>();
 		pubid = fetchPubid.getPubidByLinn(valitud_linn);
 		Gson gson = new Gson();
-		
 		JsonElement element = gson.toJsonTree(pubid,
 				new TypeToken<List<Pubi>>() {
 				}.getType());
-		
-		JsonArray jsonArray = element.getAsJsonArray();
-		
-		PrintWriter out = response.getWriter();
-		
+		JsonArray jsonArray = element.getAsJsonArray();		
 		response.setContentType("application/json");
 		response.getWriter().print(jsonArray);
 	}

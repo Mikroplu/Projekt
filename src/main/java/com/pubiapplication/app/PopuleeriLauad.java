@@ -18,12 +18,9 @@ import com.google.gson.reflect.TypeToken;
 
 @WebServlet("/lauad")
 public class PopuleeriLauad extends HttpServlet {
-
 	private static final long serialVersionUID = 1L;
-
 	public PopuleeriLauad() {
 	}
-	
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		String valitud_pubi = request.getParameter("pubi_nimi");
