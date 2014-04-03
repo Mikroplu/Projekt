@@ -129,13 +129,13 @@ $(document).ready (function() {
    });
     
     
-    var eventSource = new EventSource("Datapush");
-    
-    eventSource.onmessage = function(event) {
-     
-        document.getElementById('header').innerHTML = event.data;
-     
-    };
+    $('header').click(function(){
+    	 var eventSource = new EventSource("datapush");
+    	 eventSource.onmessage = function(event) {
+    	    	document.getElementById('header').innerHTML = event.data;
+    	    };
+   });
+   
  
 });
 
