@@ -51,7 +51,7 @@ $(document).ready (function() {
 		$.get('lauad', {"pubi_nimi" : pubi_nimi,"valitud_linn" : valitud_linn}, function(responseJson) {
 				$.each(responseJson, function(key, value) {
 					var dimensions=value.laudade_arv;
-					alert(dimensions);
+					alert("yoyoy");
 				});
 	});
 });
