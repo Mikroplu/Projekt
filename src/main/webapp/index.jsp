@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
 <title>PUBIPUBI</title>
 <link rel="stylesheet" type="text/css" href="styles.css">
@@ -38,5 +38,6 @@
 	<script type="text/javascript" src="seatReservation.js"></script>
 	<script type="text/javascript" src="facebooklogin.js"></script>
 	<script src="//connect.facebook.net/en_US/all.js"></script>
+	<script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript"></script>
 </body>
 </html>

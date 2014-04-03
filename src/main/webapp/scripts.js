@@ -129,6 +129,10 @@ $(document).ready (function() {
         $(this).addClass('menu_button_clicked');
    });
     
+    function facebooklogin(){
+    	  FB.Connect.ifUserConnected("SomeServletOrStrutsActionOrJsp?back="+window.location,null);
+    	}
+    
     
   /*  $('#header').click(function(){
     	 var eventSource = new EventSource("datapush");

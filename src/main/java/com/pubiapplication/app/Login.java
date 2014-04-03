@@ -21,6 +21,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.facebook.api.FacebookJsonRestClient;
+
 
 @WebServlet(value = "/login")
 public class Login extends HttpServlet {
@@ -52,8 +54,6 @@ public class Login extends HttpServlet {
 				String elukoht=rs.getString("ELUKOHT");
 				String email=rs.getString("EMAIL");
 				String telefon= rs.getString("TELEFON");
-				
-				
 				HttpSession session = req.getSession();
 	            session.setAttribute("user", user);
 	            session.setAttribute("password", pass);
@@ -63,12 +63,8 @@ public class Login extends HttpServlet {
 	            session.setAttribute("email", email);
 	            session.setAttribute("telefon", telefon);
 	            session.setMaxInactiveInterval(30*60);
-	            
-	            
 	            Cookie userName = new Cookie("user", user);
 	            resp.addCookie(userName);
-	            
-	            
 	            String encodedURL = resp.encodeRedirectURL("indexLoggedin.jsp");
 	            resp.sendRedirect(encodedURL);
 			}

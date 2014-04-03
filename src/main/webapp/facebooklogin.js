@@ -1,12 +1,10 @@
 window.fbAsyncInit = function() {
 	FB.init({
-		appId : '1492728744281952', // Set YOUR APP ID
-		channelUrl : 'http://pubipubi.herokuapp.com', // Channel File
-		status : true, // check login status
-		cookie : true, // enable cookies to allow the server to access the
-						// session
+		appId : '1492728744281952', 
+		channelUrl : 'http://pubipubi.herokuapp.com', 
+		status : true,
+		cookie : true,
 		xfbml : true
-	// parse XFBML
 	});
 
 	FB.Event
@@ -15,23 +13,17 @@ window.fbAsyncInit = function() {
 					function(response) {
 						if (response.status === 'connected') {
 							document.getElementById("message").innerHTML += "<br>Connected to Facebook";
-							// SUCCESS
 
 						} else if (response.status === 'not_authorized') {
 							document.getElementById("message").innerHTML += "<br>Failed to Connect";
-
-							// FAILED
 						} else {
 							document.getElementById("message").innerHTML += "<br>Logged Out";
-
-							// UNKNOWN ERROR
 						}
 					});
 
 };
 
 function Login() {
-
 	FB.login(function(response) {
 		if (response.authResponse) {
 			getUserInfo();
@@ -53,7 +45,6 @@ function getUserInfo() {
 						str += "<b>Username:</b> " + response.username + "<br>";
 						str += "<b>id: </b>" + response.id + "<br>";
 						document.getElementById("status").innerHTML = str;
-
 					});
 }
 function getPhoto() {
@@ -61,17 +52,13 @@ function getPhoto() {
 
 		var str = "<br/><b>Pic</b> : <img src='" + response.data.url + "'/>";
 		document.getElementById("status").innerHTML += str;
-
 	});
-
 }
 function Logout() {
 	FB.logout(function() {
 		document.location.reload();
 	});
 }
-
-// Load the SDK asynchronously
 (function(d) {
 	var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
 	if (d.getElementById(id)) {
