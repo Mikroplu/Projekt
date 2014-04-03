@@ -73,7 +73,7 @@ public class Login extends HttpServlet {
 	            resp.sendRedirect(encodedURL);
 			}
 			else{
-				response(resp,"Sellist kasutajat ei eksisteeri");
+				resp.sendRedirect(resp.encodeRedirectURL("index.jsp"));
 			}
 		} catch (SQLException e) {
 			response(resp, "SQL EXCEPTION");
