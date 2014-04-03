@@ -15,7 +15,6 @@
 					id="register_button2">Register</button>
 			</form>
 			<button class="menu_button" id="tagasi_register">Home</button>
-
 		</div>
 	</div>
 </div>
