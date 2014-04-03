@@ -46,10 +46,12 @@ $(document).ready (function() {
 	$("#pubi_valik").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var pubi_nimi = pubid.options[pubid.selectedIndex].text;
-		
-		$.get('lauad', {"pubi_nimi" : pubi_nimi}, function(responseJson) {
+		var linnad = document.getElementById("linnad");
+		var valitud_linn = linnad.options[linnad.selectedIndex].text;
+		$.get('lauad', {"pubi_nimi" : pubi_nimi,"valitud_linn" : valitud_linn}, function(responseJson) {
 				$.each(responseJson, function(key, value) {
 					var dimensions=value.laudade_arv;
+					alert(dimensions);
 				});
 	});
 });

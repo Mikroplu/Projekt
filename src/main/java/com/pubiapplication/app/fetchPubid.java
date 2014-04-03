@@ -38,7 +38,6 @@ public class fetchPubid {
 	
 	
 public static ArrayList<Pubi> getPubidByLinn(String linn2) {
-		String linn = Register.lisa_ylakomad(linn2);
 		connection = DatabaseConnection.getConnection();
 		ArrayList<Pubi> pubide_list = new ArrayList<Pubi>();
 		try {
@@ -58,18 +57,17 @@ public static ArrayList<Pubi> getPubidByLinn(String linn2) {
 		return pubide_list;
 	}
 
-public static ArrayList<Pubi> getNrOfTablesByPubi(String pubi_nimi) {
+public static ArrayList<Pubi> getNrOfTablesByPubi(String pubi_nimi,String valitud_linn) {
 	connection = DatabaseConnection.getConnection();
 	ArrayList<Pubi> yks_pubi = new ArrayList<Pubi>();
 	try {
-		String query ="SELECT laudade_arv FROM pub WHERE nimi=?";
+		String query ="SELECT laudade_arv FROM pub WHERE nimi=? AND WHERE asukoht=?";
 		PreparedStatement prepStmt = connection.prepareStatement(query);
 		prepStmt.setString(1,pubi_nimi);
+		prepStmt.setString(2,valitud_linn);
 		ResultSet rs= prepStmt.executeQuery();
 		while (rs.next()) {
 			Pubi pubi = new Pubi();
-			pubi.setNimi(rs.getString("nimi"));
-			pubi.setAsukoht(rs.getString("asukoht"));
 			pubi.setLaudade_arv(rs.getInt("laudade_arv"));
 			yks_pubi.add(pubi);
 		}
