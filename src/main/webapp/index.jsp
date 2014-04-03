@@ -28,11 +28,7 @@
 	
 	<div id="fb-root"></div>
 		<div id="status">
-			Click on Below Image to start the demo: <br /> <img
-				src="http://hayageek.com/examples/oauth/facebook/oauth-javascript/LoginWithFacebook.png"
-				style="cursor: pointer;" onclick="Login()" />
 		</div>
-
 		<div id="message">
 			Logs:<br />
 		</div>
