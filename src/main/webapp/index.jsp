@@ -26,5 +26,6 @@
 	<div id="footer"></div>
 	<script type="text/javascript" src="scripts.js"></script>
 	<script type="text/javascript" src="seatReservation.js"></script>
+	<script type="text/javascript" src="facebook.js"></script>
 </body>
 </html>
