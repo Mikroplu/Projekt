@@ -16,7 +16,7 @@
 					id="lisa_pubi">Lisa pubi</button>
 
 			</form>
-			<button class="menu_button" id="tagasi_addpub">Home</button>
+			<button class="menu_button allvasakul" id="tagasi_addpub">Home</button>
 
 		</div>
 	</div>

@@ -21,7 +21,7 @@
 				<button class=menu_button type="submit" value="Submit"
 					id="register_button2">Register</button>
 			</form>
-			<button class="menu_button" id="tagasi_register">Home</button>
+			<button class="menu_button allvasakul" id="tagasi_register">Home</button>
 		</div>
 	</div>
 </div>

@@ -180,21 +180,18 @@ button::-moz-focus-inner {
 	padding-left: 5%;
 	width:90%;	
 }
-#linna_valik{
+.allparemal{
 	position:absolute;
 	right:0;
 	bottom:0;
 }
-#pubi_valik{
-	position:absolute;
-	right:0;
-	bottom:0;
-}
-#tagasi_pubi{
+
+.allvasakul{
 	position:absolute;
 	left:0;
 	bottom:0;
 }
+
 
 
 
