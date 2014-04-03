@@ -28,8 +28,9 @@ public class Datapush extends HttpServlet {
         PrintWriter writer = response.getWriter();
  
         for(int i=0; i<pubid.size(); i++) {
-        	
-            writer.write("data: "+ (pubid.get(i)).getAsukoht() +"\n\n");
+        	String data=(pubid.get(0)).getAsukoht();
+        	String data2=(pubid.get(1)).getAsukoht();
+            writer.write("data:"+data+"\n\n"+" data:"+data2+"\n\n");
  
             try {
                 Thread.sleep(1000);
