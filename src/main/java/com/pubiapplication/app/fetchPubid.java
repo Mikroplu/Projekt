@@ -21,10 +21,13 @@ public class fetchPubid {
 		ArrayList<Pubi> pubide_list = new ArrayList<Pubi>();
 		try {
 			Statement statement = connection.createStatement();
-			ResultSet rs = statement.executeQuery("SELECT DISTINCT asukoht FROM pubid ORDER BY asukoht ASC");
+			ResultSet rs = statement.executeQuery("SELECT DISTINCT ausukoht FROM pub ORDER BY asukoht ASC");
 			while (rs.next()) {
 				Pubi pubi = new Pubi();
 				pubi.setAsukoht(rs.getString("asukoht"));
+				pubi.setID(rs.getInt("id"));
+				pubi.setNimi(rs.getString("nimi"));
+				pubi.setLaudade_arv(rs.getInt("laudade_arv"));
 				pubide_list.add(pubi);
 			}
 		} catch (SQLException e) {

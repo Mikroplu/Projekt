@@ -17,21 +17,15 @@ public class Datapush extends HttpServlet {
 
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
 		ArrayList<Pubi> pubid = new ArrayList<Pubi>();
 		pubid = fetchPubid.getAllLinnad();
 
-		// content type must be set to text/event-stream
 		response.setContentType("text/event-stream");
-
 		// encoding must be set to UTF-8
 		response.setCharacterEncoding("UTF-8");
-
 		PrintWriter writer = response.getWriter();
-
 		String data = (pubid.get(0)).getAsukoht();
 		writer.write("data:" + data + "\n\n");
-
 		try {
 			Thread.sleep(10000);
 		} catch (InterruptedException e) {
@@ -39,8 +33,6 @@ public class Datapush extends HttpServlet {
 		}
 		data=(pubid.get(1)).getAsukoht();
 		writer.write("data:" + data + "\n\n");
-		
-
 		writer.close();
 	}
 }
