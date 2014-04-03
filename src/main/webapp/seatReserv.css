@@ -1,4 +1,3 @@
-@CHARSET "UTF-8";
 
 #holder {
 	height: 200px;
@@ -9,7 +8,7 @@
 
 #place {
 	position: relative;
-	maring:0 auto;
+	marging:0 auto;
 }
 
 #place a {
