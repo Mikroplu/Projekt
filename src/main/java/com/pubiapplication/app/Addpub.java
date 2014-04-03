@@ -1,6 +1,7 @@
 package com.pubiapplication.app;
 
 import javax.servlet.*;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -11,6 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 import java.util.logging.Logger;
+
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -41,7 +43,7 @@ public class Addpub extends HttpServlet {
 		String laudade_arv = request.getParameter("laudadeArv");
 
 		try {
-			String query = "SELECT * FROM pubid WHERE nimi=?";
+			String query = "SELECT * FROM pub WHERE nimi=?";
 			PreparedStatement prepStmt2 = conn.prepareStatement(query);
 			prepStmt2.setString(1,nimi);
 			ResultSet rs= prepStmt2.executeQuery();
@@ -51,10 +53,7 @@ public class Addpub extends HttpServlet {
 			}
 			else{
 				try {
-					String query3 = "CREATE TABLE "+nimi+"(laua_number varchar(40),nimi varchar(40),broneeritud varchar(10),kasutajanimi varchar(40),kohtade_arv varchar(20));";
-					PreparedStatement prepstate = conn.prepareStatement(query3);
-					prepstate.executeUpdate();
-					String query2 = "INSERT INTO pubid VALUES(?,?,?)";
+					String query2 = "INSERT INTO pub VALUES(default, ?,?,?)" ;
 					PreparedStatement prepStmt = conn.prepareStatement(query2);
 					prepStmt.setString(1, nimi);
 					prepStmt.setString(2, asukoht);
