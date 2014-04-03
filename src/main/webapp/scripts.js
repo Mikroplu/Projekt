@@ -127,6 +127,15 @@ $(document).ready (function() {
     	$('.menu_button').removeClass('menu_button_clicked');
         $(this).addClass('menu_button_clicked');
    });
+    
+    
+    var eventSource = new EventSource("Datapush");
+    
+    eventSource.onmessage = function(event) {
+     
+        document.getElementById('header').innerHTML = event.data;
+     
+    };
  
 });
 
