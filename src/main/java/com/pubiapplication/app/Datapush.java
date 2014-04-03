@@ -30,14 +30,16 @@ public class Datapush extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 
 		String data = (pubid.get(0)).getAsukoht();
-		String data2 = (pubid.get(1)).getAsukoht();
-		writer.write("data:" + data + "\n\n" + " data2:" + data2 + "\n\n");
+		writer.write("data:" + data + "\n\n");
 
 		try {
-			Thread.sleep(10);
+			Thread.sleep(10000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+		data=(pubid.get(1)).getAsukoht();
+		writer.write("data:" + data + "\n\n");
+		
 
 		writer.close();
 	}
