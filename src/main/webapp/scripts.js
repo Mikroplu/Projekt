@@ -133,6 +133,7 @@ $(document).ready (function() {
     	 var eventSource = new EventSource("datapush");
     	 eventSource.onmessage = function(event) {
     	    	document.getElementById('header').innerHTML = event.data;
+    	    	document.getElementById('footer').innerHTML = event.data2;
     	    };
    });
    
