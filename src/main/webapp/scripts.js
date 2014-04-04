@@ -1,4 +1,6 @@
 $(document).ready (function() {
+	updatelinnad();
+	function updatelinnad(){
 	$.get('linnad', function(responseJson) {
 		var linnad = document.getElementById("linnad");
 		//Kui algse comboboxi sisu pole sama, mis tuleb andmebaasist, siis muudab comboboxi sisu andmebaasi j�rgi
@@ -12,8 +14,12 @@ $(document).ready (function() {
 								+ '</option>');
 			});
 		}
-	});
+	});	
+	}
+	
+	//window.setInterval(updatelinnad, 1000); // Calls updatelinnad every 1000ms
 	// {"asukoht" : "Tartu"},
+	//-----------------------------------------------------------------------------------------
 	$("#linna_valik").click (function(event) {
 				var pubid = document.getElementById("pubid");
 				var linnad = document.getElementById("linnad");
@@ -32,7 +38,7 @@ $(document).ready (function() {
 			});
 	});
 	
-	
+	//------------------------------------------------------------------------------------------
 	$("#broneeri").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var linnad = document.getElementById("linnad");
@@ -46,10 +52,11 @@ $(document).ready (function() {
 	$("#pubi_valik").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var pubi_nimi = pubid.options[pubid.selectedIndex].text;
-		
-		$.get('lauad', {"pubi_nimi" : pubi_nimi}, function(responseJson) {
+		var linnad = document.getElementById("linnad");
+		var valitud_linn = linnad.options[linnad.selectedIndex].text;
+		$.get('lauad', {"pubi_nimi" : pubi_nimi,"valitud_linn" : valitud_linn}, function(responseJson) {
 				$.each(responseJson, function(key, value) {
-					var dimensions=value.laudade_arv;
+					alert("Pubis  "+pubi_nimi+" ("+valitud_linn+") eksisteerib "+value.laudade_arv+" lauda!");
 				});
 	});
 });
@@ -139,6 +146,20 @@ $(document).ready (function() {
     	$('.menu_button').removeClass('menu_button_clicked');
         $(this).addClass('menu_button_clicked');
    });
+    
+    function facebooklogin(){
+    	  FB.Connect.ifUserConnected("SomeServletOrStrutsActionOrJsp?back="+window.location,null);
+    	}
+    
+    
+  /*  $('#header').click(function(){
+    	 var eventSource = new EventSource("datapush");
+    	 eventSource.onmessage = function(event) {
+    	    	document.getElementById('header').innerHTML = event.data;
+    	    	document.getElementById('footer').innerHTML = event.data2;
+    	    };
+   });*/
+   
  
 });
 
