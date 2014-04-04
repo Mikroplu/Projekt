@@ -38,4 +38,13 @@ insert into kasutajad values(2,'Mihkel','Tartu','mihu','76b0efe1ad062e56a39e71f2
 
 select * from lauad where pubi=(select ID from pub where nimi='Pahad Poisid')
 
+SELECT lauad.laua_nr, lauad.broneeritud, lauad.kohti as Broneeritud_kohti, kasutajad.kasutajanimi as Broneerija_nimi, pub.nimi as Pubi_nimi from lauad
+inner join pub
+on lauad.pubi=pub.id
+left join kasutajad
+on lauad.kasutaja=kasutajad.id
+where pub.nimi='Virma pubi'
 
+
+select count(*) as laudade_arv  from (SELECT lauad.laua_nr, lauad.broneeritud, lauad.kohti as Broneeritud_kohti, kasutajad.kasutajanimi as Broneerija_nimi, pub.nimi as Pubi_nimi from lauad inner join pub	on lauad.pubi=pub.id left join kasutajad on lauad.kasutaja=kasutajad.id) as foo	where pubi_nimi='Virma pubi'	group by pubi_nimi;
+	    

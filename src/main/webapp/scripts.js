@@ -46,10 +46,11 @@ $(document).ready (function() {
 	$("#pubi_valik").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var pubi_nimi = pubid.options[pubid.selectedIndex].text;
-		
-		$.get('lauad', {"pubi_nimi" : pubi_nimi}, function(responseJson) {
+		var linnad = document.getElementById("linnad");
+		var valitud_linn = linnad.options[linnad.selectedIndex].text;
+		$.get('lauad', {"pubi_nimi" : pubi_nimi,"valitud_linn" : valitud_linn}, function(responseJson) {
 				$.each(responseJson, function(key, value) {
-					var dimensions=value.laudade_arv;
+					alert(value.laudade_arv);
 				});
 	});
 });
@@ -127,6 +128,20 @@ $(document).ready (function() {
     	$('.menu_button').removeClass('menu_button_clicked');
         $(this).addClass('menu_button_clicked');
    });
+    
+    function facebooklogin(){
+    	  FB.Connect.ifUserConnected("SomeServletOrStrutsActionOrJsp?back="+window.location,null);
+    	}
+    
+    
+  /*  $('#header').click(function(){
+    	 var eventSource = new EventSource("datapush");
+    	 eventSource.onmessage = function(event) {
+    	    	document.getElementById('header').innerHTML = event.data;
+    	    	document.getElementById('footer').innerHTML = event.data2;
+    	    };
+   });*/
+   
  
 });
 
