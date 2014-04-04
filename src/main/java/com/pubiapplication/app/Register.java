@@ -25,14 +25,10 @@ import com.google.gson.JsonObject;
 
 @WebServlet(value = "/register")
 public class Register extends HttpServlet {
-	int row_count = 0;
 	private static Connection conn = null;
-
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-
 	}
-
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		conn = DatabaseConnection.getConnection();
@@ -51,7 +47,7 @@ public class Register extends HttpServlet {
 		String city = request.getParameter("location");
 
 		try {
-			String query = "SELECT * FROM users WHERE kasutajanimi=?";
+			String query = "SELECT * FROM kasutajad WHERE kasutajanimi=?";
 			PreparedStatement prepStmt2 = conn.prepareStatement(query);
 			prepStmt2.setString(1, username);
 			ResultSet rs = prepStmt2.executeQuery();
@@ -60,7 +56,15 @@ public class Register extends HttpServlet {
 				response(response, "Selline kasutaja on juba olemas");
 			} else {
 				try {
-					String query2 = "INSERT INTO users VALUES(?,?,?,?,?,?,?)";
+					int id=0;
+					String query3 = "SELECT * FROM kasutajad";
+					PreparedStatement prepStmt3 = conn.prepareStatement(query3);
+					ResultSet rs2 = prepStmt3.executeQuery();
+					
+					while (rs2.next()) {
+						id=id+1;
+					}
+					String query2 = "INSERT INTO kasutajad VALUES(default,?,?,?,?,?,?,?,?)";
 					PreparedStatement prepStmt = conn.prepareStatement(query2);
 					prepStmt.setString(1, name);
 					prepStmt.setString(2, surname);
@@ -69,14 +73,12 @@ public class Register extends HttpServlet {
 					prepStmt.setString(5, city);
 					prepStmt.setString(6, email);
 					prepStmt.setString(7, number);
+					prepStmt.setBoolean(8, true);
 					prepStmt.executeUpdate();
-					
 					response(response, "Kasutaja edukalt sisestatud andmebaasi");
-					row_count = 0;
 				} catch (Exception e) {
 					response(response, "Midagi läks pekki");
 				}
-
 			}
 
 		} catch (SQLException e) {

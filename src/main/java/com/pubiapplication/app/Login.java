@@ -21,6 +21,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.facebook.api.FacebookJsonRestClient;
+
 
 @WebServlet(value = "/login")
 public class Login extends HttpServlet {
@@ -40,21 +42,18 @@ public class Login extends HttpServlet {
 		
 		
 		try {
-			String query ="SELECT * FROM users WHERE kasutajanimi=? AND parool=?";
+			String query ="SELECT * FROM kasutajad WHERE KASUTAJANIMI=? AND PAROOL=?";
 			PreparedStatement prepStmt = conn.prepareStatement(query);
 			prepStmt.setString(1,user);
 			prepStmt.setString(2,pass);
 			ResultSet rs= prepStmt.executeQuery();
 			if(rs.next()){
-				
-				String eesnimi=rs.getString("eesnimi");
-				String perenimi=rs.getString("perenimi");
-				String elukoht=rs.getString("elukoht");
-				String email=rs.getString("email");
-				String telefon= rs.getString("telefon");
-				
-				
-				
+				int ID=rs.getInt("ID");
+				String eesnimi=rs.getString("EESNIMI");
+				String perenimi=rs.getString("PERENIMI");
+				String elukoht=rs.getString("ELUKOHT");
+				String email=rs.getString("EMAIL");
+				String telefon= rs.getString("TELEFON");
 				HttpSession session = req.getSession();
 	            session.setAttribute("user", user);
 	            session.setAttribute("password", pass);
@@ -63,16 +62,14 @@ public class Login extends HttpServlet {
 	            session.setAttribute("elukoht", elukoht);
 	            session.setAttribute("email", email);
 	            session.setAttribute("telefon", telefon);
-	            //setting session to expiry in 30 mins
 	            session.setMaxInactiveInterval(30*60);
 	            Cookie userName = new Cookie("user", user);
 	            resp.addCookie(userName);
-	            //Get the encoded URL string
 	            String encodedURL = resp.encodeRedirectURL("indexLoggedin.jsp");
 	            resp.sendRedirect(encodedURL);
 			}
 			else{
-				response(resp,"Sellist kasutajat ei eksisteeri");
+				resp.sendRedirect(resp.encodeRedirectURL("index.jsp"));
 			}
 		} catch (SQLException e) {
 			response(resp, "SQL EXCEPTION");

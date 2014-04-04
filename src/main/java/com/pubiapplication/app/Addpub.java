@@ -1,6 +1,7 @@
 package com.pubiapplication.app;
 
 import javax.servlet.*;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -11,6 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 import java.util.logging.Logger;
+
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
@@ -38,10 +40,10 @@ public class Addpub extends HttpServlet {
 
 		String nimi= request.getParameter("pubiNimi");
 		String asukoht = request.getParameter("pubiAsukoht");
-		String laudade_arv = request.getParameter("laudadeArv");
+		int laudade_arv = Integer.parseInt(request.getParameter("laudadeArv"));
 
 		try {
-			String query = "SELECT * FROM pubid WHERE nimi=?";
+			String query = "SELECT * FROM pub WHERE nimi=?";
 			PreparedStatement prepStmt2 = conn.prepareStatement(query);
 			prepStmt2.setString(1,nimi);
 			ResultSet rs= prepStmt2.executeQuery();
@@ -51,15 +53,19 @@ public class Addpub extends HttpServlet {
 			}
 			else{
 				try {
-					String query3 = "CREATE TABLE "+nimi+"(laua_number varchar(40),nimi varchar(40),broneeritud varchar(10),kasutajanimi varchar(40),kohtade_arv varchar(20));";
-					PreparedStatement prepstate = conn.prepareStatement(query3);
-					prepstate.executeUpdate();
-					String query2 = "INSERT INTO pubid VALUES(?,?,?)";
+					String query2 = "INSERT INTO pub VALUES(default, ?,?,?)" ;
 					PreparedStatement prepStmt = conn.prepareStatement(query2);
 					prepStmt.setString(1, nimi);
 					prepStmt.setString(2, asukoht);
-					prepStmt.setString(3, laudade_arv);
+					prepStmt.setInt(3, laudade_arv);
 					prepStmt.executeUpdate();
+					/*not working yet
+					 * for (int i=1;i<laudade_arv+1;i++){
+						String query3 = "INSERT INTO lauad VALUES(default, ?,default,null,4,(SELECT ID FROM pub where nimi="+nimi+"))" ;
+						PreparedStatement prepStmt3 = conn.prepareStatement(query3);
+						prepStmt3.setInt(1, i);
+						prepStmt3.executeUpdate();
+					}*/
 					response(response, "Pubi "+nimi+" edukalt lisatud");
 				} catch (Exception e) {
 					response(response, "Midagi läks pekki");
