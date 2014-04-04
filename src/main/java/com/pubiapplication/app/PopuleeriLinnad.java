@@ -23,7 +23,6 @@ public class PopuleeriLinnad extends HttpServlet {
 
 	public PopuleeriLinnad() {
 	}
-	
 	protected void doGet(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 

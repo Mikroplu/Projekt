@@ -1,4 +1,6 @@
 $(document).ready (function() {
+	
+	function updatelinnad(){
 	$.get('linnad', function(responseJson) {
 		var linnad = document.getElementById("linnad");
 		//Kui algse comboboxi sisu pole sama, mis tuleb andmebaasist, siis muudab comboboxi sisu andmebaasi j�rgi
@@ -12,8 +14,12 @@ $(document).ready (function() {
 								+ '</option>');
 			});
 		}
-	});
+	});	
+	}
+	
+	window.setInterval(updatelinnad, 1000); // Calls refreshImages every 1000ms
 	// {"asukoht" : "Tartu"},
+	//-----------------------------------------------------------------------------------------
 	$("#linna_valik").click (function(event) {
 				var pubid = document.getElementById("pubid");
 				var linnad = document.getElementById("linnad");
@@ -32,7 +38,7 @@ $(document).ready (function() {
 			});
 	});
 	
-	
+	//------------------------------------------------------------------------------------------
 	$("#broneeri").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var linnad = document.getElementById("linnad");
