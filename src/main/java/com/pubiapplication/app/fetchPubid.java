@@ -62,9 +62,9 @@ public static ArrayList<Pubi> getNrOfTablesByPubi(String pubi_nimi,String valitu
 	ArrayList<Pubi> yks_pubi = new ArrayList<Pubi>();
 	try {
 		//Lause mis võttis pub tabelist laudade arvu. tegin lause mis kasutab joini asemele
-		//String query ="SELECT laudade_arv FROM pub WHERE nimi=? AND asukoht=?";
+		String query ="SELECT laudade_arv FROM pub WHERE nimi=? AND asukoht=?";
 		
-		String query ="select pubi_nimi, count(*) as laudu  from (SELECT lauad.laua_nr, lauad.broneeritud, lauad.kohti as Broneeritud_kohti, kasutajad.kasutajanimi as Broneerija_nimi, pub.nimi as Pubi_nimi from lauad inner join pub	on lauad.pubi=pub.id left join kasutajad on lauad.kasutaja=kasutajad.id) as foo	where pubi_nimi=?	group by pubi_nimi";
+	//	String query ="select pubi_nimi, count(*) as laudu  from (SELECT lauad.laua_nr, lauad.broneeritud, lauad.kohti as Broneeritud_kohti, kasutajad.kasutajanimi as Broneerija_nimi, pub.nimi as Pubi_nimi from lauad inner join pub	on lauad.pubi=pub.id left join kasutajad on lauad.kasutaja=kasutajad.id) as foo	where pubi_nimi=?	group by pubi_nimi";
 
 		
 		
@@ -73,7 +73,7 @@ public static ArrayList<Pubi> getNrOfTablesByPubi(String pubi_nimi,String valitu
 		ResultSet rs= prepStmt.executeQuery();
 		while (rs.next()) {
 			Pubi pubi = new Pubi();
-			pubi.setLaudade_arv(rs.getInt("lauad"));
+			pubi.setLaudade_arv(rs.getInt("laudade_arv"));
 			yks_pubi.add(pubi);
 		}
 	} catch (SQLException e) {
