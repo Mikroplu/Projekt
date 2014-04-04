@@ -41,7 +41,7 @@ public class Broneeri extends HttpServlet {
 		String pubi_nimi = request.getParameter("pubinimi");
 		//need andmed on vaja kätte saada sisselogitud kasutajalt
 		String broneeritud = "true";
-		String kastuajanimi = "Indrek";
+		int kastuajaid = 1;
 		String kohtade_arv = "4";
 
 		try {
@@ -50,11 +50,11 @@ public class Broneeri extends HttpServlet {
 			prepStmt.setInt(1, laua_number);
 			prepStmt.setString(2, pubi_nimi);
 			prepStmt.setString(3, broneeritud);
-			prepStmt.setString(4, kastuajanimi);
+			prepStmt.setInt(4, kastuajaid);
 			prepStmt.setString(5, kohtade_arv);
 			prepStmt.executeUpdate();
 			response(response, "Laud " + laua_number
-					+ " edukalt lisatud, kasutaja " + kastuajanimi
+					+ " edukalt lisatud, kasutaja " + kastuajaid
 					+ " poolt, pubisse " + pubi_nimi);
 		} catch (Exception e) {
 			response(response,e.getMessage());

@@ -62,11 +62,13 @@ public static ArrayList<Pubi> getNrOfTablesByPubi(String pubi_nimi,String valitu
 	ArrayList<Pubi> yks_pubi = new ArrayList<Pubi>();
 	try {
 		//Lause mis võttis pub tabelist laudade arvu. tegin lause mis kasutab joini asemele
-		String query ="SELECT laudade_arv FROM pub WHERE nimi=? AND asukoht=?";
+		//***Vana lihtne ja ilus lause****
+		//String query ="SELECT laudade_arv FROM pub WHERE nimi=? AND asukoht=?";
 		
-	//	String query ="select pubi_nimi, count(*) as laudu  from (SELECT lauad.laua_nr, lauad.broneeritud, lauad.kohti as Broneeritud_kohti, kasutajad.kasutajanimi as Broneerija_nimi, pub.nimi as Pubi_nimi from lauad inner join pub	on lauad.pubi=pub.id left join kasutajad on lauad.kasutaja=kasutajad.id) as foo	where pubi_nimi=?	group by pubi_nimi";
-
-		
+		//See annab tulemuse lauad tabelist lugedes ja on tehtud join lause näiteks. 
+		//***TEGU ON VÄGA KOLEDA JA MÕTTETU VIISIGA***
+	    String query ="select count(*) as laudade_arv  from (SELECT lauad.laua_nr, lauad.broneeritud, lauad.kohti as Broneeritud_kohti, kasutajad.kasutajanimi as Broneerija_nimi, pub.nimi as Pubi_nimi from lauad inner join pub	on lauad.pubi=pub.id left join kasutajad on lauad.kasutaja=kasutajad.id) as foo	where pubi_nimi=?	group by pubi_nimi";
+	    //Kui tahad vana viisi tagasi kommenteeri see välja ja võta vanalt kommentaarid ära	
 		
 		PreparedStatement prepStmt = connection.prepareStatement(query);
 		prepStmt.setString(1,pubi_nimi);
