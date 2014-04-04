@@ -56,7 +56,7 @@ $(document).ready (function() {
 		var valitud_linn = linnad.options[linnad.selectedIndex].text;
 		$.get('lauad', {"pubi_nimi" : pubi_nimi,"valitud_linn" : valitud_linn}, function(responseJson) {
 				$.each(responseJson, function(key, value) {
-					alert(value.laudade_arv);
+					alert("Pubis  "+pubi_nimi+" ("+valitud_linn+") eksisteerib "+value.laudade_arv+" lauda!");
 				});
 	});
 });
