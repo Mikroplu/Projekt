@@ -26,17 +26,21 @@
 
 	<div id="footer">
 	
-	<div id="fb-root"></div>
+<!-- 	<div id="fb-root"></div>
 		<div id="status">
 		</div>
 		<div id="message">
 			Logs:<br />
-		</div>
+		</div> -->
+		
+	<div id="fb-root">
+		<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true">Log in</div>
+	</div>
 
 	</div>
 	<script type="text/javascript" src="scripts.js"></script>
 	<script type="text/javascript" src="seatReservation.js"></script>
-	<script type="text/javascript" src="facebooklogin.js"></script>
+	<script type="text/javascript" src="fb.js"></script>
 	<script src="//connect.facebook.net/en_US/all.js"></script>
 	<script src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php" type="text/javascript"></script>
 </body>
