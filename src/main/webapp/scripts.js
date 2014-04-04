@@ -1,5 +1,5 @@
 $(document).ready (function() {
-	
+	updatelinnad();
 	function updatelinnad(){
 	$.get('linnad', function(responseJson) {
 		var linnad = document.getElementById("linnad");
@@ -17,7 +17,7 @@ $(document).ready (function() {
 	});	
 	}
 	
-	window.setInterval(updatelinnad, 1000); // Calls refreshImages every 1000ms
+	//window.setInterval(updatelinnad, 1000); // Calls updatelinnad every 1000ms
 	// {"asukoht" : "Tartu"},
 	//-----------------------------------------------------------------------------------------
 	$("#linna_valik").click (function(event) {
