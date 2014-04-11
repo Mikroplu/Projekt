@@ -71,7 +71,7 @@ button::-moz-focus-inner {
     transform: translate(-50%, -50%);
 	width:450px;
 	height:400px;
-	background-color:green;
+	background-color:white;
 	clear:  both;
 	
 }

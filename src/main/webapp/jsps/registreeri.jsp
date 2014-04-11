@@ -8,7 +8,7 @@
 				<input type="text" name=name><br>
 				<label>Surname</label>
 				<input type="text" name=surname><br>
-				<label>Telephon number</label>
+				<label>Telephone number</label>
 				<input type="text" name=number><br>
 				<label>Location</label>
 				<input type="text" name=location><br>
