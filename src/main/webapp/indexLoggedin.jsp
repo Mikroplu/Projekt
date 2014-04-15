@@ -17,9 +17,12 @@
 	<%@ include file="jsps/pubivalik.jsp"%>
 	<%@ include file="loggedinJsps/broneerilaud.jsp"%>
 	<%@ include file="loggedinJsps/ajutineboneeri.jsp"%>
+	<%@ include file="loggedinJsps/userdetails.jsp"%>
 	<%@ include file="jsps/registreeri.jsp"%>
 	<%@ include file="jsps/lisapubi.jsp"%>
 	<div id="sisu" class="contents"></div>
+
+
 
 	<div id="footerLoggedin"></div>
 	<script type="text/javascript" src="scripts.js"></script>

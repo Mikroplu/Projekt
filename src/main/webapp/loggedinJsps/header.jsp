@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%
-	String userName = null;
-	String userNimi=null;
-	String userLocation=null;
-	String userSurname=null;
+String userName = null;
+String userNimi=null;
+String userLocation=null;
+String userSurname=null;
 	//allow access only if session exists
 	if (session.getAttribute("user") == null) {
 		response.sendRedirect("index.jsp");
