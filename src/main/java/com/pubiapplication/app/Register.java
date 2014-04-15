@@ -34,17 +34,18 @@ public class Register extends HttpServlet {
 		conn = DatabaseConnection.getConnection();
 		response.setContentType("text/html");
 		String name = request.getParameter("name");
-		String surname = request.getParameter("location");
+		String surname = request.getParameter("surname");
 		String number = request.getParameter("number");
 		String username = request.getParameter("userName");
+		String email = request.getParameter("userEmail");
+		String city = request.getParameter("location");
 		String password ="";
 		try {
 			password = stringToHash(request.getParameter("userPassword"));
 		} catch (NoSuchAlgorithmException e1) {
 			e1.printStackTrace();
 		}
-		String email = request.getParameter("userEmail");
-		String city = request.getParameter("location");
+
 
 		try {
 			String query = "SELECT * FROM kasutajad WHERE kasutajanimi=?";
