@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%
 	String userName = null;
+	String userNimi=null;
+	String userLocation=null;
+	String userSurname=null;
 	//allow access only if session exists
 	if (session.getAttribute("user") == null) {
 		response.sendRedirect("index.jsp");
@@ -12,12 +15,21 @@
 		for (Cookie cookie : cookies) {
 			if (cookie.getName().equals("user"))
 				userName = cookie.getValue();
+			
+			if (cookie.getName().equals("name"))
+				userNimi = cookie.getValue();
+			
+			if (cookie.getName().equals("surname"))
+				userSurname = cookie.getValue();
+			
+			if (cookie.getName().equals("location"))
+				userLocation = cookie.getValue();
 		}
 	}
 %>
 <div id="headerLoggedin">
 	<p id="headeri_kasutaja_info">
-		Olete sisse logitud kasutajana: <%=userName%>
+		Olete sisse logitud kasutajana: <%=userName%>, <%=userNimi%>, <%=userSurname%>, <%=userLocation%>
 	</p>
 	<div id="buttons_menu">
 		<button class="menu_button" id="register_button">Register</button>

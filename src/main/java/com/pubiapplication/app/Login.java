@@ -64,7 +64,13 @@ public class Login extends HttpServlet {
 	            session.setAttribute("telefon", telefon);
 	            session.setMaxInactiveInterval(30*60);
 	            Cookie userName = new Cookie("user", user);
+	            Cookie userNimi = new Cookie("name", eesnimi);
+	            Cookie userSurname = new Cookie("surname", perenimi);
+	            Cookie userLocation = new Cookie("location", elukoht);
 	            resp.addCookie(userName);
+	            resp.addCookie(userNimi);
+	            resp.addCookie(userSurname);
+	            resp.addCookie(userLocation);
 	            String encodedURL = resp.encodeRedirectURL("indexLoggedin.jsp");
 	            resp.sendRedirect(encodedURL);
 			}
