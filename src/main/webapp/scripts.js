@@ -80,6 +80,10 @@ $(document).ready (function() {
 			
 	});
 	});
+	$('#userdetails_button').click(function() {
+		$('.contents').hide();
+		$('#content9').show();
+	});
 	
 	
 	// Edasi nupud
@@ -137,6 +141,11 @@ $(document).ready (function() {
 	    $('#content1').show();
 	});
 	$('#tagasi_broneeri').click(function() {
+		$('.contents').hide();
+	    $('#content1').show();
+	});
+	
+	$('#tagasi_userdetails').click(function() {
 		$('.contents').hide();
 	    $('#content1').show();
 	});

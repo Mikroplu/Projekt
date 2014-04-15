@@ -27,16 +27,13 @@
 		}
 	}
 %>
-<div id="headerLoggedin">
-	<p id="headeri_kasutaja_info">
-		Olete sisse logitud kasutajana: <%=userName%>
-	</p>
-	<div id="buttons_menu">
-		<button class="menu_button" id="register_button">Register</button>
-		<button class="menu_button" id="addpub_button">Add pub</button>
-		<button class="menu_button" id="userdetails_button">Profile</button>
-		<form action="<%=response.encodeURL("logout")%>" method="post">
-			<input type="submit" value="Logout">
-		</form>
+<div id="content9" class="contents">
+	<div class="subcontent">
+		<div class="content">
+			Nimi: <%=userNimi%><br>
+			Perenimi: <%=userSurname%><br>
+			Asukoht: <%=userLocation%> <br>
+			<button class="menu_button" id="tagasi_userdetails">Home</button>
+		</div>
 	</div>
 </div>
