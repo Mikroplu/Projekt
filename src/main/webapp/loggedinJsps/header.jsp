@@ -2,7 +2,7 @@
 
 <div id="headerLoggedin">
 	<p id="headeri_kasutaja_info">
-		Olete sisse logitud kasutajana: <%=userName%>
+		Tere, <%=userName%>
 	</p>
 	<div id="buttons_menu">
 		<button class="menu_button" id="register_button">Register</button>

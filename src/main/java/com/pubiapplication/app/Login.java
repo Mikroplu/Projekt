@@ -71,11 +71,11 @@ public class Login extends HttpServlet {
 	            resp.addCookie(userNimi);
 	            resp.addCookie(userSurname);
 	            resp.addCookie(userLocation);
-	            String encodedURL = resp.encodeRedirectURL("indexLoggedin.jsp");
+	            String encodedURL = resp.encodeRedirectURL("index.jsp");
 	            resp.sendRedirect(encodedURL);
 			}
 			else{
-				resp.sendRedirect(resp.encodeRedirectURL("index.jsp"));
+				resp.sendRedirect(resp.encodeRedirectURL("offline.jsp"));
 			}
 		} catch (SQLException e) {
 			response(resp, "SQL EXCEPTION");

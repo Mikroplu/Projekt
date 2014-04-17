@@ -1,202 +1,239 @@
-body, html{
-	width:100%;
-	height:100%;
-	margin:0;
-	font-family: sans-serif;
-	font-size: 16px;
-	
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 81.25%;
+
 }
 
-#header{
-	width:100%;
-	height:10%;
-	background-color: #1C538A ;
-}
-
-button::-moz-focus-inner {
-  border: 0;
-}
-
-#headerLoggedin{
-	width:100%;
-	height:10%;
-	background-color: red ;
-}
-#headeri_kasutaja_info{
-	float:left;
-}
-
-#footer{
-	width:100%;
-	height:10%;
-	background-color: #143D66;
-}
-#footerLoggedin{
-	width:100%;
-	height:10%;
-	background-color:red;
-}
-.content{
-	padding: 3%;	
-}
-
-.subcontent{
-	position:relative;
-	margin:auto;
-	width:65%;
-	height:100%;
-	background-color: white;
-	text-align: center;
-	
-	
-}
-@media only screen and (max-width: 500px) {
-    .subcontent{
-        width:800px;
+@media screen and (min-width: 68em) and (min-height: 53em) {
+    body {
+        font-size: 87.5%;
     }
 }
 
-#content1{
-	width:100%;
-	height:80%;
-	background-color:  #EAF5FF;
-	display: block;
+@media screen and (min-width: 75em) and (min-height: 57em) {
+    body {
+        font-size: 93.75%;
+    }
 }
 
-.content{
-	position:relative;
-	top:50%;
-	left:50%;
-	-webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-	width:450px;
-	height:400px;
-	background-color:white;
-	clear:  both;
-	
-}
-.content input{
-	width:100%;
-	clear: both;
-}
-.content label{
-	float:left;
-}
-#content2{
-	width:100%;
-	height:80%;
-	background-color: #EAF5FF;
-	display:none;
-	
+@media screen and (min-width: 80em) and (min-height: 62em) {
+    body {
+        font-size: 100%;
+    }
 }
 
-#content3{
-	width:100%;
-	height:80%;
-	background-color: #EAF5FF;
-	display:none;
+#header {
+    width: 100%;
+    height: 20%;
+    background-color: #1C538A;
 }
 
-#content4{
-	width:100%;
-	height:80%;
-	background-color: #EAF5FF;
-	display:none;
-}
-#content5{
-	width:100%;
-	height:80%;
-	background-color: #EAF5FF;
-	display:none;
-	
-}
-#content6{
-	width:100%;
-	height:80%;
-	background-color: #EAF5FF;
-	display:none;
-}
-#content7{
-	width:100%;
-	height:80%;
-	background-color: #EAF5FF;
-	display:none;
-}
-#content9{
-	width:100%;
-	height:80%;
-	background-color: #EAF5FF;
-	display:none;
+button::-moz-focus-inner {
+    border: 0;
 }
 
-#login_button{
-	float:right;
+#headerLoggedin {
+    width: 100%;
+    height: 20%;
+    background-color: red;
 }
 
-#register_button{
-	float:right;
-}
-#addpub_button{
-	float:right;
+#headeri_kasutaja_info {
+    float: left;
 }
 
-.menu_button{
-	float:left;
-	background-color: #F6FAFF;
-	border: 2px solid black;
-	padding: 9px;
-	font-family: sans-serif;
-	font-size: 19px;
-	font-weight: bold;
-	margin-left: 1%;
-	margin-right: 1%;
-	margin-top: 1%;
+#footer {
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    background-color: #1C538A;
+    bottom: 0;
+
+}
+
+#footerLoggedin {
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    background-color: red;
+    bottom: 0;
+}
+
+.subcontent {
+    position: relative;
+    margin: auto;
+    width: 40%;
+    height: 100%;
+    background-color: #1C538A;
+    text-align: center;
+    float: right;
+
+}
+
+#content1 {
+    width: 100%;
+    height: 65%;
+    background-color: #EAF5FF;
+    display: block;
+}
+
+.content {
+    position: relative;
+    margin: auto;
+    width: 60%;
+    height: 100%;
+    text-align: center;
+    background-color: white;
+    float: right;
+}
+
+.content input {
+    width: 40%;
+    clear: both;
+    box-shadow: 1px 2px 3px #1C538A;
+}
+
+.Tartu {
+    background-image: url("http://www.teleprojekt.ee/TARTU_km.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.Tallinn {
+
+    background-image: url(" http://www.telegram.ee/wp-content/uploads/2013/04/tallinn-town-hall-square.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.Itaalia {
+    background-image: url(" http://www.germalo.ee/admin/upload/image/reisid/img/suur/reis-sorrento-0.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.Rakvere {
+    background-image: url("http://upload.wikimedia.org/wikipedia/et/0/06/Estonia_johvi.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.Rapla {
+    background-image: url("http://www.goodnews.ee/wp-content/uploads/2013/02/Rapla-linn.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.content select {
+    width: 40%;
+    box-shadow: 1px 2px 3px #1C538A;
+
+}
+
+.content label {
+    float: left;
+}
+
+#content2 {
+    width: 100%;
+    height: 65%;
+    background-color: #EAF5FF;
+    display: none;
+
+}
+
+#content3 {
+    width: 100%;
+    height: 65%;
+    background-color: #EAF5FF;
+    display: none;
+}
+
+#content4 {
+    width: 100%;
+    height: 65%;
+    background-color: #EAF5FF;
+    display: none;
+}
+
+#content5 {
+    width: 100%;
+    height: 65%;
+    background-color: #EAF5FF;
+    display: none;
+
+}
+
+#content6 {
+    width: 100%;
+    height: 65%;
+    background-color: #EAF5FF;
+    display: none;
+}
+
+#content7 {
+    width: 100%;
+    height: 65%;
+    background-color: #EAF5FF;
+    display: none;
+}
+
+#content9 {
+    width: 100%;
+    height: 65%;
+    background-color: #EAF5FF;
+    display: none;
+}
+
+#addpub_button #userdetails_button #register_button #login_button {
+    float: right;
+}
+
+.menu_button {
+    float: left;
+    background-color: #F6FAFF;
+    border: 1px solid black;
+    font-family: sans-serif;
+    font-weight: bold;
 }
 
 .menu_button:hover {
-	float:left;
-	background-color: #91BCE8;
-	border: 2px solid black;
-	padding: 9px;
-	font-family: sans-serif;
-	font-size: 19px;
-	font-weight: bold;
-	margin-left: 1%;
-	margin-right: 1%;
-	margin-top: 1%;	
-	
+    float: left;
+    background-color: #91BCE8;
+    border: 2px solid black;
+    font-family: sans-serif;
+    font-weight: bold;
+
 }
 
 .menu_button_clicked {
-	float:left;
-	background-color: #66A3E0;
-	border: 2px solid black;
-	padding: 9px;
-	font-family: sans-serif;
-	font-size: 19px;
-	font-weight: bold;
-	margin-left: 1%;
-	margin-right: 1%;
-	margin-top: 1%;	
+    float: left;
+    background-color: #66A3E0;
+    border: 2px solid black;
+    font-family: sans-serif;
+    font-weight: bold;
 
 }
 
-
-#buttons_menu{
-	padding-left: 5%;
-	width:90%;	
-}
-.allparemal{
-	position:absolute;
-	right:0;
-	bottom:0;
+#buttons_menu {
+    padding-left: 5%;
+    width: 90%;
 }
 
-.allvasakul{
-	position:absolute;
-	left:0;
-	bottom:0;
+.allparemal {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
+
+.allvasakul {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
 
 
 

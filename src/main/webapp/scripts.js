@@ -39,6 +39,9 @@ $(document).ready (function() {
 	});
 	
 	//------------------------------------------------------------------------------------------
+
+
+
 	$("#broneeri").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var linnad = document.getElementById("linnad");
@@ -48,7 +51,25 @@ $(document).ready (function() {
 			
 	});
 });
-	
+
+
+    //-------------------------------------------------------------------------------------
+    $('select#linnad').change (function() {
+        $('.subcontent').removeClass('Tartu Tallinn Itaalia Rakvere Rapla').addClass($(this).find('option:selected').text());
+
+    }).change();
+
+
+
+    $('select#linnad').change(function(){
+            $('subcontent').css('background','#fff000').fadeIn();
+        },
+        function(){
+            $('subcontent').css('background','url(" http://www.telegram.ee/wp-content/uploads/2013/04/tallinn-town-hall-square.jpg")').fadeIn();
+        });
+    //------------------------------------------------------------
+
+
 	$("#pubi_valik").click (function(event) {
 		var pubid = document.getElementById("pubid");
 		var pubi_nimi = pubid.options[pubid.selectedIndex].text;
