@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="pubipubi:war exploded">
+    <output-path>$PROJECT_DIR$/target/helloworld</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="pubipubi/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="pubipubi" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.2.4" />
+          <element id="library" level="project" name="Maven: javax:javaee-api:6.0" />
+          <element id="library" level="project" name="Maven: org.facebook4j:facebook4j-core:2.1.0" />
+          <element id="library" level="project" name="Maven: com.restfb:restfb:1.6.14" />
+          <element id="library" level="project" name="Maven: org.postgresql:postgresql:9.3-1100-jdbc41" />
+          <element id="library" level="project" name="Maven: com.google.code.facebook-java-api:facebook-java-api:1.4" />
+          <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.1" />
+          <element id="library" level="project" name="Maven: javax.xml.stream:stax-api:1.0-2" />
+          <element id="library" level="project" name="Maven: javax.activation:activation:1.1" />
+          <element id="library" level="project" name="Maven: org.json:json:20070829" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
