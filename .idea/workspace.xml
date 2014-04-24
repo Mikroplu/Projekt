@@ -2,14 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47898703-9578-48a3-bd6b-c1742fc22bd7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/Setlinn.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/Setpubi.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Broneeri.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/Broneeri.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/loggedinJsps/broneerilaud.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/loggedinJsps/broneerilaud.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/pubiapplication/app/fetchPubid.java" afterPath="$PROJECT_DIR$/src/main/java/com/pubiapplication/app/fetchPubid.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsps/linnavalik.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/linnavalik.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsps/pubivalik.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/pubivalik.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/scripts.js" afterPath="$PROJECT_DIR$/src/main/webapp/scripts.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="helloworld.iws" />
@@ -543,17 +535,21 @@
       <workItem from="1397725167737" duration="14263000" />
       <workItem from="1397743252348" duration="430000" />
       <workItem from="1398067143504" duration="13879000" />
-      <workItem from="1398157119824" duration="24501000" />
+      <workItem from="1398157119824" duration="24539000" />
     </task>
     <task id="LOCAL-00001" summary="meh">
       <created>1398332803935</created>
       <updated>1398332803935</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="dava">
+      <created>1398342475941</created>
+      <updated>1398342475941</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55925000" />
+    <option name="totallyTimeSpent" value="55963000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="0" />
@@ -608,7 +604,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="meh" />
-    <option name="LAST_COMMIT_MESSAGE" value="meh" />
+    <MESSAGE value="dava" />
+    <option name="LAST_COMMIT_MESSAGE" value="dava" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
