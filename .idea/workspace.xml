@@ -2,29 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="47898703-9578-48a3-bd6b-c1742fc22bd7" name="Default" comment="meh">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/pubiapplication/app/Broneeri.java" afterPath="$PROJECT_DIR$/src/main/java/com/pubiapplication/app/Broneeri.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Broneeri.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/Broneeri.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/BroneeriSuccess.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/BroneeriSuccess.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Error.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/Error.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/Home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/pubiapplication/app/Login.java" afterPath="$PROJECT_DIR$/src/main/java/com/pubiapplication/app/Login.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/Register.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/Register.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/RegisterSuccess.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/RegisterSuccess.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsps/ajutineboneeri.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/ajutineboneeri.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/loggedinJsps/ajutineboneeri.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/loggedinJsps/ajutineboneeri.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/loggedinJsps/broneerilaud.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/loggedinJsps/broneerilaud.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/loggedinJsps/header.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/loggedinJsps/header.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsps/linnavalik.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/linnavalik.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsps/login.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/login.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/logincheck.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/logincheck.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/offline.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/offline.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsps/pubivalik.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/pubivalik.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/jsps/registreeri.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/jsps/registreeri.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/scripts.js" afterPath="$PROJECT_DIR$/src/main/webapp/scripts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/pubiapplication/app/stringToHash.java" afterPath="$PROJECT_DIR$/src/main/java/com/pubiapplication/app/stringToHash.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/styles.css" afterPath="$PROJECT_DIR$/src/main/webapp/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/loggedinJsps/userdetails.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/loggedinJsps/userdetails.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitattributes" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/Checkout.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/pubiapplication/app/Pubid.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/andmebaas.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/indexLoggedin.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/indexloggedin.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/loggedinJsps/linnavalik.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/loggedinJsps/lisapubi.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/loggedinJsps/login.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/loginSuccess.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/logout.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/loggedinJsps/pubivalik.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/loggedinJsps/registreeri.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/success.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="helloworld.iws" />
@@ -48,12 +39,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.541666" vertical-offset="428" max-vertical-offset="1005">
+            <state vertical-scroll-proportion="1.4298093" vertical-offset="0" max-vertical-offset="1005">
               <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding />
+              <folding>
+                <marker date="1398332665423" expanded="true" signature="1899:1915" placeholder="..." />
+                <marker date="1398332665423" expanded="true" signature="1899:1914" placeholder="..." />
+                <marker date="1398332665423" expanded="true" signature="1899:1907" placeholder="..." />
+                <marker date="1398332665423" expanded="true" signature="1899:1906" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -62,9 +58,9 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pubiapplication/app/Broneeri.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="735">
-              <caret line="50" column="9" selection-start-line="34" selection-start-column="8" selection-end-line="50" selection-end-column="9" />
+              <caret line="50" column="9" selection-start-line="47" selection-start-column="47" selection-end-line="50" selection-end-column="9" />
               <folding>
-                <marker date="1398161031702" expanded="true" signature="1157:1229" placeholder="UPDATE lauad..." />
+                <marker date="1398332664283" expanded="true" signature="1157:1229" placeholder="UPDATE lauad..." />
               </folding>
             </state>
           </provider>
@@ -102,10 +98,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Broneeri.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Broneeri.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/Broneeri.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46793762" vertical-offset="15" max-vertical-offset="735">
+            <state vertical-scroll-proportion="-11.25" vertical-offset="15" max-vertical-offset="735">
               <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
               <folding>
                 <marker date="1398331569726" expanded="true" signature="542:614" placeholder="UPDATE lauad..." />
@@ -195,12 +191,12 @@
         <option value="$PROJECT_DIR$/src/main/webapp/logincheck.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsps/registreeri.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/Register.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/loggedinJsps/broneerilaud.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/BroneeriSuccess.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/RegisterSuccess.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/Error.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/Broneeri.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
       </list>
     </option>
   </component>
@@ -659,12 +655,12 @@
       <workItem from="1397725167737" duration="14263000" />
       <workItem from="1397743252348" duration="430000" />
       <workItem from="1398067143504" duration="13879000" />
-      <workItem from="1398157119824" duration="14408000" />
+      <workItem from="1398157119824" duration="14770000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45832000" />
+    <option name="totallyTimeSpent" value="46194000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1366" height="744" extended-state="0" />
@@ -693,7 +689,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297546" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23641704" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23641704" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -734,7 +730,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="885">
           <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding>
-            <marker date="1398161031702" expanded="true" signature="1157:1229" placeholder="UPDATE lauad..." />
+            <marker date="1398332664283" expanded="true" signature="1157:1229" placeholder="UPDATE lauad..." />
           </folding>
         </state>
       </provider>
@@ -840,7 +836,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1830">
           <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
           <folding>
-            <marker date="1398157782046" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..kasutajad..." />
+            <marker date="1398332664763" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..kasutajad..." />
           </folding>
         </state>
       </provider>
@@ -981,7 +977,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1710">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="35" />
           <folding>
-            <marker date="1398157782046" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..kasutajad..." />
+            <marker date="1398332664763" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..kasutajad..." />
           </folding>
         </state>
       </provider>
@@ -1017,9 +1013,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="1545">
           <caret line="76" column="49" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
           <folding>
-            <marker date="1397721448111" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..kasutajad..." />
-            <marker date="1397721448111" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..kasutajad..." />
-            <marker date="1397721448111" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1398332665267" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..kasutajad..." />
+            <marker date="1398332665267" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..kasutajad..." />
+            <marker date="1398332665267" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
           </folding>
         </state>
       </provider>
@@ -1089,9 +1085,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pubiapplication/app/Broneeri.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="44" max-vertical-offset="735">
-          <caret line="50" column="9" selection-start-line="34" selection-start-column="8" selection-end-line="50" selection-end-column="9" />
+          <caret line="50" column="9" selection-start-line="47" selection-start-column="47" selection-end-line="50" selection-end-column="9" />
           <folding>
-            <marker date="1398161031702" expanded="true" signature="1157:1229" placeholder="UPDATE lauad..." />
+            <marker date="1398332664283" expanded="true" signature="1157:1229" placeholder="UPDATE lauad..." />
           </folding>
         </state>
       </provider>
@@ -1120,14 +1116,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.541666" vertical-offset="428" max-vertical-offset="1005">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/Error.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="255">
@@ -1146,10 +1134,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/Broneeri.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46793762" vertical-offset="15" max-vertical-offset="735">
+        <state vertical-scroll-proportion="-11.25" vertical-offset="15" max-vertical-offset="735">
           <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
           <folding>
             <marker date="1398331569726" expanded="true" signature="542:614" placeholder="UPDATE lauad..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4298093" vertical-offset="0" max-vertical-offset="1005">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <marker date="1398332665423" expanded="true" signature="1899:1915" placeholder="..." />
+            <marker date="1398332665423" expanded="true" signature="1899:1914" placeholder="..." />
+            <marker date="1398332665423" expanded="true" signature="1899:1907" placeholder="..." />
+            <marker date="1398332665423" expanded="true" signature="1899:1906" placeholder="..." />
           </folding>
         </state>
       </provider>
