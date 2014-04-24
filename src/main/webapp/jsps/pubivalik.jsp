@@ -6,14 +6,14 @@
     </div>
     <div class="content">
         PUBI VALIK
-        <p>
 
-            <select id="pubid">
+        <form action="Setpubi.jsp" method="POST">
+            <select id="pubid" name="pubid">
             </select>
-        <p>
-            Vali endale sobiv pubi, ning seejärel vajuta EDASI.
-        </p>
-        <button class="menu_button allparemal" id="pubi_valik">Edasi</button>
+        <button  type="submit" class="menu_button allparemal" id="pubi_valik">Edasi</button>
+        </form>
+
+
         <button class="menu_button allvasakul" id="tagasi_pubi">Tagasi</button>
     </div>
 </div>

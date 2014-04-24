@@ -10,12 +10,9 @@
             </ul>
         </div>
 
-        <form action="Broneeri.jsp" method="post">
+        <form action="../Broneeri.jsp" method="post">
             <label>
               Laua number:<input type="number" name="laud">
-            </label>
-            <label>
-               Pubi id:<input type="number" name="pubi">
             </label>
             <input type="submit">
         </form>

@@ -19,18 +19,17 @@
         PreparedStatement prepStmt = conn.prepareStatement(query2);
         int laua_number = (Integer) Integer.parseInt(request.getParameter("laud"));
         int kasutajaId= (Integer) session.getAttribute("id");
-        int pubiId= (Integer) Integer.parseInt(request.getParameter("pubi"));
+        int pubiId= (Integer) session.getAttribute("pubi_id");
 
         prepStmt.setInt(1, kasutajaId);
         prepStmt.setInt(2, pubiId);
         prepStmt.setInt(3, laua_number);
         prepStmt.executeUpdate();
-        response.sendRedirect("index.jsp");
+        response.sendRedirect("BroneeriSuccess.jsp");
     } catch (Exception e) {
-        out.print(request.getAttribute("id"));
-        out.print(request.getParameter("laud"));
 
-        //response.sendRedirect("Error.jsp");
+
+        response.sendRedirect("Error.jsp");
     }
 %>
 <html>

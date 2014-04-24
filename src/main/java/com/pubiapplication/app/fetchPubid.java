@@ -61,14 +61,14 @@ public static ArrayList<Pubi> getNrOfTablesByPubi(String pubi_nimi,String valitu
 	connection = DatabaseConnection.getConnection();
 	ArrayList<Pubi> yks_pubi = new ArrayList<Pubi>();
 	try {
-		//Lause mis võttis pub tabelist laudade arvu. tegin lause mis kasutab joini asemele
+		//Lause mis vï¿½ttis pub tabelist laudade arvu. tegin lause mis kasutab joini asemele
 		//***Vana lihtne ja ilus lause****
 		//String query ="SELECT laudade_arv FROM pub WHERE nimi=? AND asukoht=?";
 		
-		//See annab tulemuse lauad tabelist lugedes ja on tehtud join lause näiteks. 
-		//***TEGU ON VÄGA KOLEDA JA MÕTTETU VIISIGA***
+		//See annab tulemuse lauad tabelist lugedes ja on tehtud join lause nï¿½iteks. 
+		//***TEGU ON Vï¿½GA KOLEDA JA Mï¿½TTETU VIISIGA***
 	    String query ="select count(*) as laudade_arv  from (SELECT lauad.laua_nr, lauad.broneeritud, lauad.kohti as Broneeritud_kohti, kasutajad.kasutajanimi as Broneerija_nimi, pub.nimi as Pubi_nimi from lauad inner join pub	on lauad.pubi=pub.id left join kasutajad on lauad.kasutaja=kasutajad.id) as foo	where pubi_nimi=?	group by pubi_nimi";
-	    //Kui tahad vana viisi tagasi kommenteeri see välja ja võta vanalt kommentaarid ära	
+	    //Kui tahad vana viisi tagasi kommenteeri see vï¿½lja ja vï¿½ta vanalt kommentaarid ï¿½ra	
 		
 		PreparedStatement prepStmt = connection.prepareStatement(query);
 		prepStmt.setString(1,pubi_nimi);
@@ -83,4 +83,25 @@ public static ArrayList<Pubi> getNrOfTablesByPubi(String pubi_nimi,String valitu
 	}
 	return yks_pubi;
 }
+
+    public static int getIDByName(String pubi_nimi){
+        connection =DatabaseConnection.getConnection();
+        Pubi pubi=new Pubi();
+        try{
+            String query = "SELECT id FROM pub WHERE nimi=?";
+            PreparedStatement prep = connection.prepareStatement(query);
+            prep.setString(1,pubi_nimi);
+            ResultSet rs = prep.executeQuery();
+            while (rs.next()){
+                pubi.setID(rs.getInt("id"));
+            }
+
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return pubi.getID();
+    }
 }

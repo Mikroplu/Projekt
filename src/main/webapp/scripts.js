@@ -4,16 +4,17 @@ $(document).ready (function() {
 	$.get('linnad', function(responseJson) {
 		var linnad = document.getElementById("linnad");
 		//Kui algse comboboxi sisu pole sama, mis tuleb andmebaasist, siis muudab comboboxi sisu andmebaasi j�rgi
-		if (linnad != responseJson){
-			while (linnad.firstChild) {
-				linnad.removeChild(linnad.firstChild);
-			}
-			$.each(responseJson, function(key, value) {
-				$("#linnad").append(
-						'<option value='+value.asukoht+'>' + value.asukoht
-								+ '</option>');
-			});
-		}
+        if (linnad == responseJson) {
+        } else {
+            while (linnad.firstChild) {
+                linnad.removeChild(linnad.firstChild);
+            }
+            $.each(responseJson, function (key, value) {
+                $("#linnad").append($("<option></option>")
+                    .attr("value",value.asukoht)
+                    .text(value.asukoht));
+            });
+        }
 	});	
 	}
 	
@@ -25,16 +26,17 @@ $(document).ready (function() {
 				var linnad = document.getElementById("linnad");
 				var valitud_linn = linnad.options[linnad.selectedIndex].text;
 				$.get('pubinimed', {"asukoht" : valitud_linn}, function(responseJson) {
-					if (pubid != responseJson){
-						while (pubid.firstChild){
-							pubid.removeChild(pubid.firstChild);
-						}
-						$.each(responseJson, function(key, value) {
-							$("#pubid").append(
-									'<option value='+value.nimi+'>' + value.nimi
-											+ '</option>');
-						});
-					}
+                    if (pubid == responseJson) {
+                    } else {
+                        while (pubid.firstChild) {
+                            pubid.removeChild(pubid.firstChild);
+                        }
+                        $.each(responseJson, function (key, value) {
+                            $("#pubid").append($("<option></option>")
+                                .attr("value",value.nimi)
+                                .text(value.nimi));
+                        });
+                    }
 			});
 	});
 	
