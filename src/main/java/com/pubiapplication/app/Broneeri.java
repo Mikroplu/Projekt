@@ -25,37 +25,27 @@ import com.google.gson.JsonObject;
 
 @WebServlet(value = "/broneeri")
 public class Broneeri extends HttpServlet {
-	int row_count = 0;
 	private static Connection conn = null;
-
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 
 	}
-
 	protected void doPost(HttpServletRequest request,
 			HttpServletResponse response) throws ServletException, IOException {
 		conn = DatabaseConnection.getConnection();
 		response.setContentType("text/html");
-		int laua_number = Integer.parseInt(request.getParameter("lauaNumber"));
-		String pubi_nimi = request.getParameter("pubinimi");
-		//need andmed on vaja kätte saada sisselogitud kasutajalt
-		String broneeritud = "true";
-		int kastuajaid = 1;
-		String kohtade_arv = "4";
-
 		try {
-			String query2 = "INSERT INTO lauad VALUES(default,?,?,?,?,?)";
+			String query2 = "UPDATE lauad SET broneeritud=true, kasutaja=? WHERE pubi=? AND laua_nr=?";
 			PreparedStatement prepStmt = conn.prepareStatement(query2);
-			prepStmt.setInt(1, laua_number);
-			prepStmt.setString(2, pubi_nimi);
-			prepStmt.setString(3, broneeritud);
-			prepStmt.setInt(4, kastuajaid);
-			prepStmt.setString(5, kohtade_arv);
+            int laua_number = (Integer) request.getAttribute("lauaNumber");
+            int kasutajaId= (Integer) request.getAttribute("userId");
+            int pubiId= (Integer) request.getAttribute("pubiId");
+
+			prepStmt.setInt(1, kasutajaId);
+			prepStmt.setInt(2, pubiId);
+			prepStmt.setInt(3, laua_number);
 			prepStmt.executeUpdate();
-			response(response, "Laud " + laua_number
-					+ " edukalt lisatud, kasutaja " + kastuajaid
-					+ " poolt, pubisse " + pubi_nimi);
+            response.sendRedirect("index.jsp");
 		} catch (Exception e) {
 			response(response,e.getMessage());
 		}

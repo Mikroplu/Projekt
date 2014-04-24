@@ -5,7 +5,10 @@
 	</div>
     <div class="content">
         Register
-        <form action="register" method="post">
+        <p>
+            Endale kasutaja tegemiseks, täida allolev vorm:
+        </p>
+        <form action="Register.jsp" method="post">
             <label>Name</label>
             <input type="text" name=name><br>
             <label>Surname</label>

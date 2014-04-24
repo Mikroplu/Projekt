@@ -44,6 +44,6 @@
 </head>
 <body>
 hello, <%=userName%>, <%=userNimi%>, <%=userSurname%>, <%=userLocation%>,<%=userID%>
-<a href="jsps/Logout.jsp">Logout</a>
+<a href="Logout.jsp">Logout</a>
 </body>
 </html>

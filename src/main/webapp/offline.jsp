@@ -25,14 +25,6 @@
 	<div id="sisu" class="contents"></div>
 
 	<div id="footer">
-	
-<!-- 	<div id="fb-root"></div>
-		<div id="status">
-		</div>
-		<div id="message">
-			Logs:<br />
-		</div> -->
-		
 	<div id="fb-root">
 		<div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="true">Log in</div>
 	</div>

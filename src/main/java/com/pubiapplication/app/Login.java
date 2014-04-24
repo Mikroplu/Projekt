@@ -36,7 +36,7 @@ public class Login extends HttpServlet {
 		try {
 			pass = stringToHash(req.getParameter("password"));
 		} catch (NoSuchAlgorithmException e1) {
-			// TODO Auto-generated catch block
+
 			e1.printStackTrace();
 		}
 		
@@ -48,25 +48,27 @@ public class Login extends HttpServlet {
 			prepStmt.setString(2,pass);
 			ResultSet rs= prepStmt.executeQuery();
 			if(rs.next()){
+                HttpSession session = req.getSession();
 				int ID=rs.getInt("ID");
-				String eesnimi=rs.getString("EESNIMI");
-				String perenimi=rs.getString("PERENIMI");
-				String elukoht=rs.getString("ELUKOHT");
-				String email=rs.getString("EMAIL");
-				String telefon= rs.getString("TELEFON");
-				HttpSession session = req.getSession();
+                String idstring = Integer.toString(ID);
+                session.setAttribute("id",ID);
 	            session.setAttribute("user", user);
 	            session.setAttribute("password", pass);
-	            session.setAttribute("eesnimi", eesnimi);
-	            session.setAttribute("perenimi", user);
-	            session.setAttribute("elukoht", elukoht);
-	            session.setAttribute("email", email);
-	            session.setAttribute("telefon", telefon);
+	            session.setAttribute("eesnimi", rs.getString("EESNIMI"));
+	            session.setAttribute("perenimi", rs.getString("PERENIMI"));
+	            session.setAttribute("elukoht", rs.getString("ELUKOHT"));
+	            session.setAttribute("email", rs.getString("EMAIL"));
+	            session.setAttribute("telefon", rs.getString("TELEFON"));
+
 	            session.setMaxInactiveInterval(30*60);
+
+                Cookie userId =  new Cookie("id",idstring);
 	            Cookie userName = new Cookie("user", user);
-	            Cookie userNimi = new Cookie("name", eesnimi);
-	            Cookie userSurname = new Cookie("surname", perenimi);
-	            Cookie userLocation = new Cookie("location", elukoht);
+	            Cookie userNimi = new Cookie("name", rs.getString("EESNIMI"));
+	            Cookie userSurname = new Cookie("surname",rs.getString("PERENIMI"));
+	            Cookie userLocation = new Cookie("location", rs.getString("ELUKOHT"));
+
+                resp.addCookie(userId);
 	            resp.addCookie(userName);
 	            resp.addCookie(userNimi);
 	            resp.addCookie(userSurname);
@@ -78,9 +80,9 @@ public class Login extends HttpServlet {
 				resp.sendRedirect(resp.encodeRedirectURL("offline.jsp"));
 			}
 		} catch (SQLException e) {
-			response(resp, "SQL EXCEPTION");
+
 		} catch (Exception e) {
-			response(resp, "EXCEPTION");
+
 		}
 	}
 	
@@ -90,18 +92,8 @@ public class Login extends HttpServlet {
 	
 	}
 
-	public static void response(HttpServletResponse resp, String msg)
-			throws IOException {
-		PrintWriter out = resp.getWriter();
-		out.println("<html>");
-		out.println("<body>");
-		out.println("<t1>" + msg + "</t1>");
-		out.println("</body>");
-		out.println("</html>");
-	}
-	public static String lisa_ylakomad(String a) {
-		return "'" + a + "'";
-	}
+
+
 	public static String stringToHash(String password)
 			throws NoSuchAlgorithmException {
 		MessageDigest md = MessageDigest.getInstance("SHA-256");

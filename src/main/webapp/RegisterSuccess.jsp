@@ -1,16 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: indrek
-  Date: 24.04.14
-  Time: 11:49
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <html>
 <head>
-    <title></title>
+    <meta http-equiv="Refresh" content="5;url=index.jsp">
+    <title>JSP Page</title>
 </head>
 <body>
-
+<h1>Account successfully created, you can now login with your credentials, you will be redirected in 5 seconds....</h1>
 </body>
 </html>

@@ -44,7 +44,7 @@
             response.addCookie(userNimi);
             response.addCookie(userSurname);
             response.addCookie(userLocation);
-            response.sendRedirect("Home.jsp");
+            response.sendRedirect("index.jsp");
         } else {
             response.sendRedirect("Error.jsp");
         }

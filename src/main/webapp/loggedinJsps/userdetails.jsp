@@ -4,6 +4,10 @@
 
 	</div>
     <div class="content">
+        <p>
+            Siin lehe kuvatakse sinu andmed.
+        </p>
+        ID: <%=userID%><br>
         Nimi: <%=userNimi%><br>
         Perenimi: <%=userSurname%><br>
         Asukoht: <%=userLocation%> <br>

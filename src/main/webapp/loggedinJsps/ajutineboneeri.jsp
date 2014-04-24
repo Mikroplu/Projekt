@@ -1,15 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
-<div id="content7" class="contents">
-	<div class="subcontent">
-
-	</div>
-    <div class="content">
-        BRONEERI
-        <form action="broneeri" method="post">
-            Laua number: <input type="text" name="lauaNumber" id="laua_number"><br>
-            <button class="menu_button allparemal"  type="submit" value="Submit" id="broneeri">Broneeri</button>
-        </form>
-        <button class="menu_button allvasakul" id="tagasi_broneeri">Home</button>
-
-    </div>
-</div>
+<%
+    request.setAttribute("userId",Integer.parseInt(request.getParameter("kasutajaId")));
+    request.setAttribute("lauaNumber",Integer.parseInt(request.getParameter("lauaNumber")));
+    request.setAttribute("pubiId",Integer.parseInt(request.getParameter("pubiId")));
+    String strViewPage="/broneeri";
+    RequestDispatcher dispatcher = request.getRequestDispatcher(strViewPage);
+    if (dispatcher != null){
+        dispatcher.forward(request, response);
+    }
+    else{
+    }
+%>

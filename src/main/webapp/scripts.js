@@ -123,11 +123,9 @@ $(document).ready (function() {
 		$('.contents').hide();
 		$('#content3').show();
 		
-	    pageurl="pubivalik";
-	    
-        if(pageurl!=window.location){
-            window.history.pushState({path:pageurl},'',pageurl);
-        }
+	    pageurl="lauavalik";
+	    window.history.pushState({path:pageurl},'',pageurl);
+
 	});
 	
 	$('#laua_valik').click(function() {
@@ -142,10 +140,15 @@ $(document).ready (function() {
 	$('#tagasi_pubi').click(function() {
 		$('.contents').hide();
 	    $('#content1').show();
+
+        pageurl="linnavalik";
+        window.history.pushState({path:pageurl},'',pageurl);
 	});
 	$('#tagasi_addpub').click(function() {
 		$('.contents').hide();
 	    $('#content1').show();
+
+
 	});
 	
 	$('#tagasi_laud').click(function() {

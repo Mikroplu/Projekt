@@ -10,6 +10,9 @@
             <select name="linnad" id="linnad">
             </select>
         </p>
+        <p>
+            Vali endale sobiv linn ning seejärel vajuta EDASI.
+        </p>
         <button class="menu_button allparemal" id="linna_valik">Edasi</button>
     </div>
 </div>

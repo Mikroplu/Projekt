@@ -2,10 +2,10 @@
 
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Refresh" content="5;url=index.jsp">
     <title>JSP Page</title>
 </head>
 <body>
-<h1>Some Error has occured,Please try again later...</h1>
+<h1>Some Error has occured, you will be redirected to home page in 5 seconds...</h1>
 </body>
 </html>
